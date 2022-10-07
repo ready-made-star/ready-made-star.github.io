@@ -1,0 +1,7 @@
+.display-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 28px;
+    height:61px;
+}
