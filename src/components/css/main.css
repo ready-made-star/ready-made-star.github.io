@@ -1,0 +1,161 @@
+.profilecard {
+    border: 1px rgba(255, 255, 255, 0.2) solid;
+    border-radius: 20px;
+    width: 80%;
+    height: fit-content;
+}
+
+.main {
+    margin: 28px;
+    width: 100%;
+}
+
+.gradient {
+    background: linear-gradient(90deg, #4B355A 2.57%, #3784AB 25.48%, #40C397 51.66%, #F0E681 74.93%, #EB4949 99.48%);
+    height: 82px;
+    border-radius: 20px;
+}
+
+.profileavatar {
+    position: relative;
+    bottom: 25%;
+
+}
+
+.profile_person {
+    display: flex;
+    padding: 12px 24px 0 24px;
+}
+
+.profile_connect {
+    width: 74px;
+    height: 28px;
+    background: transparent;
+    border: 1px solid #FFFFFF;
+    border-radius: 36px;
+    color: #ffffff;
+    font-family: 'Recoleta';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 120%;
+}
+
+.profile_arrow {
+    width: 28px;
+    height: 28px;
+    background: transparent;
+    border: 1px solid #FFFFFF;
+    border-radius: 36px;
+    color: #ffffff;
+}
+
+.profile_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.person_content {
+    text-align: left;
+    width: 80%;
+    padding-top: 12px;
+    font-family: 'Vulf Sans Demo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: rgba(255, 255, 255, 0.6);
+
+}
+
+.profile_state {
+    padding-left: 32px;
+    text-align: left;
+    font-family: 'Vulf Sans Demo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.vertical_divider {
+    position: absolute;
+    width: 1px;
+    height: 191px;
+    left: 809px;
+    top: 171px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.hori_divider {
+    position: absolute;
+    width: 1px;
+    height: 316px;
+    left: 1096px;
+    top: 240px;
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(90deg);
+
+}
+
+.font20 {
+    font-family: 'Recoleta';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.avatar_group {
+    display: flex;
+    border: 1px rgba(255, 255, 255, 0.2) solid;
+    border-radius: 20px;
+    width: 80%;
+    height: fit-content;
+    gap: 20px;    
+}
+
+.avatar_group img {
+    width: 72px;
+    height: 72px;
+}
+.mySwiper{
+    padding: 12px 15px;
+}
+.mainswiper{
+    /* display:block; */
+}
+.card_group{
+
+    width: 80%;
+    height:100PX;
+}
+.scroll
+{
+    max-height: 200px;
+    overflow-y: scroll;
+    /* overflow-y: hidden; */
+}
+.scroll::-webkit-scrollbar {
+    display: none;
+}
+.cardbtn{
+    background: transparent;
+    border-radius: 5px;
+    color: #ffff;
+    border: 1px rgba(255, 255, 255, 0.6) solid;
+}
+.pinbtn{
+    background: #3784AB;
+    color: #ffff;
+    border-radius: 5px;
+
+}
+.card_content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 12px;
+}

@@ -1,0 +1,15 @@
+.channels{
+    width: 79px;
+    padding: 20px 12px;
+    border: 1px rgba(255, 255, 255, 0.2) solid;
+}
+.channel_item{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+.channel_spotify{
+    bottom: 10px;
+    position: absolute;
+    left: 24px;
+}
