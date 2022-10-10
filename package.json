@@ -13,7 +13,8 @@
     "react-icons": "^4.4.0",
     "react-scripts": "5.0.1",
     "swiper": "^8.4.3",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "yarn": "^1.22.19"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -39,7 +40,8 @@
       "last 1 safari version"
     ]
   },
-    "engines": {
-      "node": ">=15.0.0 <=19.0.0"
-    }
+  "engines": {
+    "node": ">=15.0.0 <=19.0.0",
+    "trim-newlines": "^1.0.0"
+  }
 }
