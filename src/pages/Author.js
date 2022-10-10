@@ -1,12 +1,12 @@
-import Header from "../components/Header";
-import Channels from "../components/Channels";
-import Main from "../components/Main";
+import Header from "../components/Author/Header";
+import Channels from "../components/Author/Channels";
+import Main from "../components/Author/Main";
 
 function Author() {
     return (
         <>
             <Header />
-            <div style={{ display: 'flex' }}>
+            <div className="author_body">
                 <Channels />
                 <Main />
             </div>

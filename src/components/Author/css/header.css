@@ -1,0 +1,35 @@
+.display-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 28px;
+    height: 9%;
+    border-bottom: 1px rgba(255, 255, 255, 0.2) solid;
+}
+
+.profile {
+    display: flex;
+    gap: 40px;
+}
+
+.profile_set {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.help {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Vulf Sans Demo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: rgba(255, 255, 255, 0.2);
+}
+
+img {
+    height: fit-content;
+}

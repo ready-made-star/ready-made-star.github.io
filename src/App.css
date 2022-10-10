@@ -5,13 +5,26 @@
   height: 100%;
 }
 
-html, body{
-  height: 100%; 
-  width: 100%; 
-  margin: 0; 
+.author_body {
+  display: flex;
+  height: 91%;
 }
-#root{
-  height: 100%; 
+
+html,
+body {
+  height: 100%;
   width: 100%;
-  margin: 0; 
+  margin: 0;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+.space_between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
