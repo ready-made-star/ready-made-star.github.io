@@ -1,13 +1,11 @@
-.author {
+.switch_mode{
   text-align: center;
-  background: #1E1E1E;
   color: #FFFFFF;
-  height: 100%;
 }
-
 .author_body {
   display: flex;
-  height: 91%;
+  position: absolute;
+  top: 9%;
 }
 
 html,
@@ -27,4 +25,23 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.mobile_version{
+  display: none;
+}
+.desktop_version{
+  display: block;
+}
+@media screen and (max-width: 680px) {
+  .mobile_version{
+    display: block;
+  }
+  .desktop_version{
+    display: none;
+  }
+  .author_body {
+    display: flex;
+    position: static;
+    padding-top: 48px;
+  }
 }

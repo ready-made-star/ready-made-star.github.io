@@ -9,6 +9,10 @@
     padding: 28px;
     width: 100%;
     height: 91%;
+    display: flex;
+    gap: 5%;
+    margin-left: 100px;
+    background: black;
 }
 
 .gradient {
@@ -29,11 +33,14 @@
 
 .profile_person {
     display: flex;
+    width: 80%;
+    margin-left: 20%;
 }
 
 .profile_description {
     border-right: 1px rgba(255, 255, 255, 0.6) solid;
     padding: 12px 24px;
+    width: 55%;
 }
 
 .profile_connect {
@@ -86,11 +93,14 @@
     font-weight: 400;
     font-size: 12px;
     line-height: 18px;
+    width: 45%;
 }
 
 .state_value {
     border-bottom: 1px rgba(255, 255, 255, 0.2) solid;
     padding: 12px 24px;
+    display: flex;
+    gap: 20px;
 }
 
 .font20 {
@@ -127,8 +137,8 @@
 
 .mySwiper {
     padding: 12px 15px;
+    z-index: 0 !important;
 }
-
 .card_group {
     height: 100PX;
 }
@@ -136,7 +146,7 @@
 /* .scroll {
     max-height: 250px;
     overflow-y: scroll; */
-    /* overflow-y: hidden; */
+/* overflow-y: hidden; */
 /* } */
 
 .scroll::-webkit-scrollbar {
@@ -180,4 +190,124 @@
     border-radius: 5px;
     color: #ffff;
     padding: 18px 16px;
+}
+
+.main .ant-card-body {
+    padding: 0;
+    color: #ffff;
+}
+
+.main .ant-card {
+    background: none;
+}
+
+.ant-modal-content {
+    background-color: black !important;
+    color: white;
+    border-radius: 12px !important;
+}
+
+.ant-modal-header {
+    background: none !important;
+}
+
+.ant-modal-title {
+    color: white !important;
+}
+
+.phonenumber {
+    background: transparent;
+    border: none;
+}
+
+.dashborder {
+    margin-top: 20px;
+    padding: 11px 20px 12px;
+    border: 2px dashed #FFFFFF;
+    border-radius: 56px;
+    width: fit-content;
+    margin: auto;
+}
+.ant-modal-footer{
+    background: #565656 !important;
+    border-radius: 0 0 12px 12px !important;
+}
+.main_first_part{
+    width:75%;
+    flex-direction: column;
+}
+
+.main_second_part{
+    right: 2%;
+    width: 20%;
+    position: fixed;
+}
+.ant-input-affix-wrapper > input.ant-input {
+    background: black;
+    color: white;
+    border-bottom: 1px rgba(255, 255, 255, 0.6) solid !important;
+}
+.ant-select-selection-search{
+    border-bottom: 1px rgba(255, 255, 255, 0.6) solid;
+}
+.ant-input-affix-wrapper{
+    border: none !important;
+}
+.state_half{
+    display: flex;
+    gap: 20px;
+}
+@media screen and (max-width: 680px) {
+    .desktop_version {
+        display: none
+    }
+    .main{
+        display: block;
+        margin-left: 0px;
+    }
+    .main_first_part{
+        width: 100%;
+    }
+    .profile_person {
+        display: block;
+        width: 100%;
+        margin-left: 0%;
+    }
+    .profile_description{
+        width: 87%;
+        border: none;
+    }
+    .profileavatar{
+        left: 10%;
+    }
+    .profile_header {
+        margin-left: 42%;
+        width: 80%;
+    }
+    .person_content {
+        padding-top: 42px;
+    }
+    .profile_state{
+        border-top: 1px rgba(255, 255, 255, 0.2) solid;
+        width: 100%;
+        display: flex;
+    }
+    .state_first_part{
+        width: 50%;
+        border-right: 1px rgba(255, 255, 255, 0.2) solid;
+        
+    }
+    .state_second_part{
+        width: 50%;
+
+    }
+    .state_value{
+        border: none;
+        display:block;
+    }
+    .main_second_part{
+        margin-top: 20px;
+        width: 100%;
+        position: static;
+    }
 }

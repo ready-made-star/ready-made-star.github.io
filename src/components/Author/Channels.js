@@ -10,31 +10,31 @@ import './css/channels.css';
 function Header() {
     return (
         <div className='channels'>
-            <div>
+            <div style={{ cursor: "pointer" }}>
                 <img src={channel} alt='' />
                 <div>Channels</div>
             </div>
-            <div className='channel_item' style={{marginTop:30}}>
+            <div className='channel_item' style={{ marginTop: 30, cursor: "pointer" }}>
                 <img src={ellipse} alt='' />
                 <div>Now</div>
             </div>
-            <div className='channel_item'>
+            <div className='channel_item' style={{ cursor: "pointer" }}>
                 <img src={presale} alt='' />
                 <div>Presale</div>
             </div>
-            <div className='channel_item'>
+            <div className='channel_item' style={{ cursor: "pointer" }}>
                 <img src={raffle} alt='' />
                 <div>Raffle</div>
             </div>
-            <div className='channel_item'>
+            <div className='channel_item' style={{ cursor: "pointer" }}>
                 <img src={pin} alt='' />
                 <div>Pin</div>
             </div>
             <div className='channel_spotify'>
                 <div>
-                <img src={spotify} alt='' />
+                    <img src={spotify} alt='' />
                 </div>
-                <img src={switcher} alt='' />
+                <img src={switcher} alt='' style={{cursor:"pointer"}}/>
             </div>
         </div>
     )

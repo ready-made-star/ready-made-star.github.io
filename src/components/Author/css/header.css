@@ -1,10 +1,14 @@
-.display-header {
+.author_header .display-header {
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 28px;
     height: 9%;
     border-bottom: 1px rgba(255, 255, 255, 0.2) solid;
+    z-index: 1;
+    width: 100%;
+    background: black;
 }
 
 .profile {
@@ -27,9 +31,34 @@
     font-weight: 400;
     font-size: 12px;
     line-height: 18px;
-    color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255,0.6);
 }
 
 img {
     height: fit-content;
+}
+
+.mobile_version {
+    display: none;
+}
+
+@media screen and (max-width: 680px) {
+    .help {
+        display: none;
+    }
+
+    .logo {
+        padding-right: 10px;
+        border-right: 1px rgba(255, 255, 255, 0.2) solid;
+    }
+
+    .mobile_version {
+        display: block;
+    }
+
+    .mobile_menu {
+        color: white;
+        align-items: center;
+        display: flex;
+    }
 }

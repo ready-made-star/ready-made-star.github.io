@@ -5,7 +5,7 @@ function Location() {
         <div className="location">
             <div className='font20'>Location</div>
             <div style={{display:'flex', marginTop:9, gap:10}}>
-                <img src={redlocation} alt='' />
+                <img src={redlocation} alt='' style={{cursor:"pointer"}} />
                 <div className='font12'>Los Angeles, CA</div>
             </div>
         </div>

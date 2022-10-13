@@ -1,4 +1,4 @@
-import './css/main.css';
+import './layout.css';
 import avatar1 from '../assets/avatar1.png';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -11,70 +11,70 @@ function AvatarGroup() {
     else
         avatar_count = 10.1;
     return (
-        <div className="avatar_group">
+        <div className="home_avatar_group">
             <Swiper watchSlidesProgress={true} slidesPerView={avatar_count} className="mySwiper">
                 <SwiperSlide>
-                    <div style={{cursor:"pointer"}}>
+                    <div className='each_avatar' style={{cursor:"pointer"}}>
                         <img src={avatar1} alt='' />
                         <div>Minimal</div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div style={{cursor:"pointer"}}>
+                    <div className='each_avatar' style={{cursor:"pointer"}}>
                         <img src={avatar1} alt='' />
                         <div>Minimal</div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div style={{cursor:"pointer"}}>
+                    <div className='each_avatar' style={{cursor:"pointer"}}>
                         <img src={avatar1} alt='' />
                         <div>Minimal</div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div style={{cursor:"pointer"}}>
+                    <div className='each_avatar' style={{cursor:"pointer"}}>
                         <img src={avatar1} alt='' />
                         <div>Minimal</div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div style={{cursor:"pointer"}}>
+                    <div className='each_avatar' style={{cursor:"pointer"}}>
                         <img src={avatar1} alt='' />
                         <div>Minimal</div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div style={{cursor:"pointer"}}>
+                    <div className='each_avatar' style={{cursor:"pointer"}}>
                         <img src={avatar1} alt='' />
                         <div>Minimal</div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div style={{cursor:"pointer"}}>
+                    <div className='each_avatar' style={{cursor:"pointer"}}>
                         <img src={avatar1} alt='' />
                         <div>Minimal</div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div style={{cursor:"pointer"}}>
+                    <div className='each_avatar' style={{cursor:"pointer"}}>
                         <img src={avatar1} alt='' />
                         <div>Minimal</div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div style={{cursor:"pointer"}}>
+                    <div className='each_avatar' style={{cursor:"pointer"}}>
                         <img src={avatar1} alt='' />
                         <div>Minimal</div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div style={{cursor:"pointer"}}>
+                    <div className='each_avatar' style={{cursor:"pointer"}}>
                         <img src={avatar1} alt='' />
                         <div>Minimal</div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div style={{cursor:"pointer"}}>
+                    <div className='each_avatar' style={{cursor:"pointer"}}>
                         <img src={avatar1} alt='' />
                         <div>Minimal</div>
                     </div>

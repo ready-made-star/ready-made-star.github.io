@@ -1,0 +1,11 @@
+.display-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 28px;
+    height: 9%;
+    border-bottom: 1px rgba(255, 255, 255, 0.2) solid;
+    z-index: 1;
+    width: 100%;
+    background: black;
+}

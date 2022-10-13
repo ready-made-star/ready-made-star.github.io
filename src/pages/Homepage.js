@@ -1,15 +1,16 @@
 import AuthorHeader from "../components/Author/AuthorHeader";
 import Channels from "../components/Author/Channels";
-import Main from "../components/Author/Main";
-
-function Author() {
+import Main from "../components/Homepage/Body";
+import {Drawer } from 'antd';
+function Author(props) {
     return (
         <>
             <AuthorHeader />
             <div className="author_body">
                 <Channels />
-                <Main />
+                <Main show={props}/>
             </div>
+            
         </>
     )
 }
