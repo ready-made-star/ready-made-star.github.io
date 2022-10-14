@@ -15,12 +15,19 @@ import user_avatar from '../../assets/user_avatar.png';
 import empty_location from '../../assets/empty_location.png';
 import video_play from '../../assets/video_play.svg';
 import heart from '../../assets/heart.svg';
+import Video from '../Video';
+import Checkout from '../../Checkout';
 import './productcard.css';
 
-function GraphicCard(props) {
+function GraphicCard() {
     const [showCard, setShowCard] = useState(false);
+    const [showVideo, setShowVideo] = useState(false);
     const [showPlayButton1, setShowPlayButton1] = useState('none');
     const [showPlayButton2, setShowPlayButton2] = useState('none');
+    const handleVideo = () => {
+        // alert(showVideo);
+        setShowVideo(true);
+    }
     const handlePlayBtn1 = () => {
         setShowPlayButton1('block');
     }
@@ -67,7 +74,7 @@ function GraphicCard(props) {
                         <div>
                             <Swiper watchSlidesProgress={true} slidesPerView={2.3} className="mySwiper">
                                 <SwiperSlide>
-                                    <div className='video_image' style={{ cursor: "pointer" }}>
+                                    <div className='video_image' style={{ cursor: "pointer" }}  onClick={handleVideo}>
                                         <img src={video_image} alt='' style={{ width: '130px' }} onMouseOver={handlePlayBtn1} onMouseLeave={() => setShowPlayButton1('none')} />
                                     </div>
                                     <img className='video_play' src={video_play} alt='' style={{ display: showPlayButton1 }} />
@@ -184,7 +191,11 @@ function GraphicCard(props) {
                     </div>
 
                 </Drawer>
-
+                
+                <Video
+                    show={showVideo}
+                    onHide={() => setShowVideo(false)}
+                />
             </div>
         </>
     )

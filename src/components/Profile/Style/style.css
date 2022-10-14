@@ -1,0 +1,10 @@
+.style{
+    display: block;
+    width: 30%;
+    padding: 38px 48px;
+    border-right: 1px rgba(255, 255, 255, 0.2) solid;
+    height: 91%;
+    background: black;
+    margin-left: calc(18% + 100px);
+    text-align: left;
+}

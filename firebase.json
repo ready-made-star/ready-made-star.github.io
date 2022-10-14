@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "site": "frontend-78742b0f6smx",
+    "public": "build",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

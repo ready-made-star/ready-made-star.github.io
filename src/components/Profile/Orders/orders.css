@@ -1,0 +1,53 @@
+
+.orders1{
+    display: block;
+    width: 25%;
+    padding: 28px;
+    border-right: 1px rgba(255, 255, 255, 0.2) solid;
+    height: 91%;
+    background: black;
+    margin-left: calc(18% + 100px);
+    text-align: left;
+}
+.ant-radio-wrapper{
+    color: white !important;
+}
+.orders2{
+    display: block;
+    width: calc(57% - 100px);
+    padding: 28px;
+    border-right: 1px rgba(255, 255, 255, 0.2) solid;
+    height: 91%;
+    background: black;
+    /* margin-left: calc(18% + 100px); */
+    text-align: left;
+}
+
+@font-face {
+  font-family: "Recoleta";
+  src: url("/public/fonts/Recoleta-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Vulf Sans Demo";
+  src: url("/public/fonts/VulfSansDemo-Regular.otf");
+}
+
+.recoleta {
+  font-family: "Recoleta" !important;
+}
+
+.vulfmono {
+  font-family: "Vulf Sans Demo" !important;
+}
+
+#map {
+  height: 346px;
+  width: 100%;
+  border-radius: 20px;
+}
+.space-between{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}

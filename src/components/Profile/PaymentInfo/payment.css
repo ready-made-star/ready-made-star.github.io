@@ -1,0 +1,10 @@
+.payment_info{
+    display: block;
+    width: 25%;
+    padding: 48px;
+    border-right: 1px rgba(255, 255, 255, 0.2) solid;
+    height: 91%;
+    background: black;
+    margin-left: calc(18% + 100px);
+    text-align: left;
+}
