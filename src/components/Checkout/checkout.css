@@ -27,6 +27,7 @@
     background: #565656;
     padding: 16px;
     border-radius: 0 0 12px 12px;
+    cursor: pointer;
 }
 label{
     margin-bottom: 0;

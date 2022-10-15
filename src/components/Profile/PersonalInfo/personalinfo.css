@@ -1,4 +1,4 @@
-.personal_info1{
+.personal_info1 {
     display: block;
     width: 25%;
     padding: 48px;
@@ -8,10 +8,12 @@
     margin-left: calc(18% + 100px);
     text-align: left;
 }
-.ant-radio-wrapper{
+
+.ant-radio-wrapper {
     color: white !important;
 }
-.personal_info2{
+
+.personal_info2 {
     display: block;
     width: 25%;
     padding: 48px;
@@ -20,4 +22,68 @@
     background: black;
     /* margin-left: calc(18% + 100px); */
     text-align: left;
+}
+
+.info_title {
+    margin-bottom: 28px;
+}
+
+.info_each {
+    margin: 24px 0;
+}
+
+.drop_under {
+    border-bottom: 1px solid #333333;
+}
+
+.personal_info1 .ant-input-affix-wrapper {
+    padding: 0;
+}
+
+.ant-radio-wrapper {
+    padding: 7px !important;
+    border: 1px solid #333333;
+    margin-right: 0px !important;
+}
+
+.save_buttons {
+    padding: 30px;
+    background: black;
+    gap: 20px;
+    display: flex;
+    margin-left: calc(100px + 18%);
+}
+
+.save_button {
+    background: #EB4949;
+    border-radius: 12px;
+    width: 150px;
+    height:56px;
+}
+.cancel_button{
+    background: transparent;
+    border:none;
+    width: 100px;
+    height:56px;
+}
+.personal_info{
+    display: flex;
+    background: black;
+}
+@media screen and (max-width: 680px) {
+    .personal_info1 {
+        margin-left:0;
+        width: 100%;
+    }
+    .personal_info2 {
+        /* margin-left:0; */
+        width: 100%;
+    }
+    .personal_info{
+        display: block;
+    }
+    .save_buttons{
+        margin: 0;
+        justify-content: space-between;
+    }
 }

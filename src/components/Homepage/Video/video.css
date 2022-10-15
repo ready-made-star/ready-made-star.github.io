@@ -27,7 +27,6 @@
 }
 
 .pre_images {
-
     width: min-content;
 }
 
@@ -88,4 +87,12 @@
     background: #ffc600;
     flex: 0;
     flex-basis: 0%;
+}
+@media screen and (max-width: 680px) {
+    .pre_images{
+        display: flex;
+    }
+    .pre_image{
+        width: 65px;
+    }
 }

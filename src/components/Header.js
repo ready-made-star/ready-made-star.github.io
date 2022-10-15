@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Modal } from 'antd';
 import net from './assets/net.png';
-import logo from './assets/logo.png';
+import logo from './assets/logo.svg';
 import location from './assets/location.png';
 import profile from './assets/profile.png';
 import bag from './assets/bag.png';
@@ -12,11 +12,16 @@ import en from 'world_countries_lists/data/countries/en/world.json';
 import 'antd-country-phone-input/dist/index.css';
 import ReactInputVerificationCode from 'react-input-verification-code';
 import Timer from './Author/Timer';
+import CheckOut from './Checkout';
 
 function Header() {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [isEnterCode, setIsEnterCode] = useState(false);
     const [modalShow, setModalShow] = React.useState(false);
+    const [checkoutShow, setCheckoutShow] = useState(false);
+    const handleCheckout = () => {
+        setCheckoutShow(true);
+    }
 
     const handleLogin = () => {
         setIsModalOpen(true);
@@ -51,8 +56,8 @@ function Header() {
 
             <div className='display-header'>
                 <div style={{ display: 'flex', gap: 10 }}>
-                    <img className='logo' src={logo} alt='' style={{ cursor: "pointer" }} />
-                    <h6 className='mobile_version mobile_menu' style={{ cursor: "pointer" }}>Menu</h6>
+                    <img className='logo' onClick={()=>window.location.href="/"} src={logo} alt='' style={{ cursor: "pointer" }} />
+                    <label className='mobile_version mobile_menu font20' style={{ cursor: "pointer" }}>Menu</label>
                 </div>
 
                 <div className='profile'>
@@ -63,7 +68,7 @@ function Header() {
                     <div className='profile_set'>
                         <img src={location} alt='' style={{ cursor: "pointer" }} />
                         <img src={profile} alt='' onClick={handleLogin} style={{ cursor: "pointer" }} />
-                        <img src={bag} alt='' style={{ cursor: "pointer" }} />
+                        <img src={bag} alt='' onClick={handleCheckout} style={{ cursor: "pointer" }} />
                     </div>
                 </div>
             </div>
@@ -116,7 +121,7 @@ function Header() {
                 onCancel={handleCancel}
                 width={400}
                 footer={[
-                    <div style={{ textAlign: 'center', cursor: "pointer" }} onClick={handleCancel}>
+                    <div style={{ textAlign: 'center', cursor: "pointer" }} onClick={() => window.location.href = "/profile/personalinfo"}>
                         Continue
                     </div>
                 ]}
@@ -137,6 +142,11 @@ function Header() {
                     </div>
                 </div>
             </Modal>
+
+            <CheckOut
+                show={checkoutShow}
+                onHide={() => setCheckoutShow(false)}
+            />
 
 
 

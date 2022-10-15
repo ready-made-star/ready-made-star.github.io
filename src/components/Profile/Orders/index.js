@@ -7,6 +7,7 @@ import './orders.css';
 import { styled } from "@mui/material/styles";
 import Map from '../map/Map';
 import Marker from '../map/Marker';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import { useState } from 'react';
 
 const apiKey = "AIzaSyAT9SH59Z75iR8OUEcfv-mTklD6xMDHs80";
@@ -31,43 +32,120 @@ function PersonalInfo() {
     const zoom = 4;
 
     const position = {
-      lat: 35,
-      lng: -100,
+        lat: 35,
+        lng: -100,
     };
     return (
         <>
-            <div className='d-flex' style={{ background: 'black' }}>
-                <div className='orders1'>
-                    <ProductCard />
-                    <ProductCard />
-                    <ProductCard />
-                </div>
-                <div className='orders2'>
-                    <div>
-                        <label>Thank you, Stedman!</label>
-                        <label>ORDER #123456</label>
+            <div className='desktop_version'>
+                <div className='order'>
+                    <div className='orders1'>
+                        <div style={{ marginBottom: 24 }}>
+                            <ProductCard />
+                        </div>
+                        <div style={{ marginBottom: 24 }}>
+                            <ProductCard />
+                        </div>
+                        <div style={{ marginBottom: 24 }}>
+                            <ProductCard />
+                        </div>
                     </div>
-                    <div style={{ display: 'flex' }}>
+                    <div className='orders2'>
+                        <div className='space_between'>
+                            <label className='font20'>Thank you, Stedman!</label>
+                            <label className='font12'>ORDER #123456</label>
+                        </div>
+                        <div className='delivery'>
+                            <div>
+                                <img src="/images/step11.png" alt='' />
+                                <label className='font12'>Confirmed</label>
+                                <label className='font12'>Jun 3</label>
+                            </div>
+                            <StepLine1 />
+                            <div>
+                                <img src="/images/step2.png" alt='' />
+                                <label className='font12'>On its way</label>
+                                <label className='font12'>Jun 13</label>
+                            </div>
+                            <StepLine1 />
+                            <div>
+                                <img src="/images/step3.png" alt='' />
+                                <label className='font12'>Out for delivery</label>
+                            </div>
+                            <StepLine1 />
+                            <div>
+                                <img src="/images/step4.png" alt='' />
+                                <label className='font12'>Delivered</label>
+                            </div>
+                        </div>
+                        <div>
+                            <Map id="map" apiKey={apiKey} center={position} zoom={zoom}>
+                                <Marker position={position} />
+                            </Map>
+                        </div>
+                        <div className='space_between order_view'>
+                            <div style={{ display: 'grid' }}>
+                                <label>Your order is on its way</label>
+                                <label className='font16'>You will receive updates on its progress</label>
+                            </div>
+                            <div style={{ display: 'grid' }}>
+                                <label>USPS tracking number:</label>
+                                <label className='font16'>1234567890</label>
+                            </div>
+                        </div>
+                        <div>
+                            <label>Got questions?</label>
+                            <a href='/contactus'>contact us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className='mobile_version'>
+                <div>
+                    <Swiper watchSlidesProgress={true} slidesPerView={1.2} className="mySwiper">
+                        <SwiperSlide>
+                            <div style={{ cursor: "pointer", margin: '0 10px' }}>
+                                <ProductCard />
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div style={{ cursor: "pointer", margin: '0 10px' }}>
+                                <ProductCard />
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div style={{ cursor: "pointer", margin: '0 10px' }}>
+                                <ProductCard />
+                            </div>
+                        </SwiperSlide>
+                    </Swiper>
+                </div>
+                <div className='mobile_order2'>
+                    <div className='space_between'>
+                        <label className='font20'>Thank you, Stedman!</label>
+                        <label className='font12'>ORDER #123456</label>
+                    </div>
+                    <div className='delivery'>
                         <div>
                             <img src="/images/step11.png" alt='' />
-                            <label>Confirmed</label>
-                            <label>Jun 3</label>
+                            <label className='font12'>Confirmed</label>
+                            <label className='font12'>Jun 3</label>
                         </div>
                         <StepLine1 />
                         <div>
                             <img src="/images/step2.png" alt='' />
-                            <label>On its way</label>
-                            <label>Jun 13</label>
+                            <label className='font12'>On its way</label>
+                            <label className='font12'>Jun 13</label>
                         </div>
                         <StepLine1 />
                         <div>
                             <img src="/images/step3.png" alt='' />
-                            <label>Out for delivery</label>
+                            <label className='font12'>Out for delivery</label>
                         </div>
                         <StepLine1 />
                         <div>
                             <img src="/images/step4.png" alt='' />
-                            <label>Delivered</label>
+                            <label className='font12'>Delivered</label>
                         </div>
                     </div>
                     <div>
@@ -75,17 +153,17 @@ function PersonalInfo() {
                             <Marker position={position} />
                         </Map>
                     </div>
-                    <div className='space-between'>
-                        <div style={{display:'block'}}>
+                    <div className='order_view'>
+                        <div style={{ display: 'grid' }}>
                             <label>Your order is on its way</label>
-                            <label>You will receive updates on its progress</label>
+                            <label className='font16'>You will receive updates on its progress</label>
                         </div>
-                        <div style={{display:'block'}}>
+                        <div style={{ display: 'grid' }}>
                             <label>USPS tracking number:</label>
-                            <label>1234567890</label>
+                            <label className='font16'>1234567890</label>
                         </div>
                     </div>
-                    <div>
+                    <div className='text-left'>
                         <label>Got questions?</label>
                         <a href='/contactus'>contact us</a>
                     </div>

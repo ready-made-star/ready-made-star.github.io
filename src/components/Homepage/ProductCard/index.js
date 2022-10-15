@@ -1,4 +1,4 @@
-import { Card, Modal } from 'antd';
+import { Card, Divider } from 'antd';
 import '../../Author/css/main.css';
 import '../../Author/css/card.css';
 import cardimg from '../../assets/cardimg.png';
@@ -7,7 +7,7 @@ import close from '../../assets/close.svg';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import React, { useState } from 'react';
-import { Drawer, Button, Divider } from 'antd';
+import { Drawer, Button} from 'antd';
 import video_image from '../../assets/video_image.png';
 import arrow from '../../assets/arrow.png';
 import dolce from '../../assets/dolce.png';
@@ -24,11 +24,24 @@ function GraphicCard() {
     const [showVideo, setShowVideo] = useState(false);
     const [showPlayButton1, setShowPlayButton1] = useState('none');
     const [showPlayButton2, setShowPlayButton2] = useState('none');
+    const [drawerSize, setDrawerSize] = useState(450);
+    
+    window.addEventListener('resize', function(event){
+        event.preventDefault();
+        event.stopPropagation();
+        if (window.innerWidth < 680) {
+            // console.log(window.innerWidth+'px');
+            setDrawerSize(String(window.innerWidth)+'px');
+            // return(true);
+        }
+    })
     const handleVideo = () => {
         // alert(showVideo);
         setShowVideo(true);
     }
-    const handlePlayBtn1 = () => {
+    const handlePlayBtn1 = (e) => {
+        e.preventDefault();
+        e.stopPropagation()
         setShowPlayButton1('block');
     }
     const handlePlayBtn2 = () => {
@@ -61,9 +74,9 @@ function GraphicCard() {
                     closable={false}
                     onClose={() => setShowCard(false)}
                     open={showCard}
-                    size='450px'
+                    size={drawerSize}
                 >
-                    <div>
+                    <div style={{padding:24}}>
                         <div className='space_between'>
                             <div>
                                 <Button type='round'>Dolce && Gabbana</Button>
@@ -73,21 +86,21 @@ function GraphicCard() {
                         </div>
                         <div>
                             <Swiper watchSlidesProgress={true} slidesPerView={2.3} className="mySwiper">
-                                <SwiperSlide>
-                                    <div className='video_image' style={{ cursor: "pointer" }}  onClick={handleVideo}>
-                                        <img src={video_image} alt='' style={{ width: '130px' }} onMouseOver={handlePlayBtn1} onMouseLeave={() => setShowPlayButton1('none')} />
+                                <SwiperSlide onMouseOver={(e)=>handlePlayBtn1(e)} onMouseLeave={(e) => {e.preventDefault(); e.stopPropagation();setShowPlayButton1('none')}}>
+                                    <div className='video_image' style={{ cursor: "pointer" }}>
+                                        <img src={video_image} alt='' style={{ width: '100%' }}  />
                                     </div>
-                                    <img className='video_play' src={video_play} alt='' style={{ display: showPlayButton1 }} />
+                                    <img className='video_play' onClick={handleVideo} src={video_play} alt='' style={{ display: showPlayButton1 }} />
+                                </SwiperSlide>
+                                <SwiperSlide onMouseOver={handlePlayBtn2} onMouseLeave={() => setShowPlayButton2('none')}>
+                                    <div className='video_image' style={{ cursor: "pointer" }} >
+                                        <img src={video_image} alt='' style={{ width: '100%' }}  />
+                                    </div>
+                                    <img className='video_play' onClick={handleVideo} src={video_play} alt='' style={{ display: showPlayButton2 }} />
                                 </SwiperSlide>
                                 <SwiperSlide>
                                     <div className='video_image' style={{ cursor: "pointer" }}>
-                                        <img src={video_image} alt='' style={{ width: '130px' }} onMouseOver={handlePlayBtn2} onMouseLeave={() => setShowPlayButton2('none')} />
-                                    </div>
-                                    <img className='video_play' src={video_play} alt='' style={{ display: showPlayButton2 }} />
-                                </SwiperSlide>
-                                <SwiperSlide>
-                                    <div className='video_image' style={{ cursor: "pointer" }}>
-                                        <img src={video_image} alt='' style={{ width: '130px' }} />
+                                        <img src={video_image} alt='' style={{ width: '100%' }} />
                                     </div>
                                 </SwiperSlide>
                             </Swiper>
@@ -104,11 +117,14 @@ function GraphicCard() {
                             </div>
                         </div>
                         <div>
+                        <Divider />
+                        </div>
+                        <div>
                             <button className='cardbtn' style={{ cursor: "pointer" }} ><img src={pin} alt='' />Fashion</button>
                             <button className='pinbtn' style={{ cursor: "pointer" }} ><img src={pin} alt='' />Pin</button>
                             <button className='cardbtn' style={{ cursor: "pointer" }} >Selling fast!</button>
                         </div>
-                        <div style={{ display: 'flex' }}>
+                        <div style={{ display: 'flex', margin:'20px 0' }}>
                             <div className='size_part'>
                                 <button className='size_button'>S 46</button>
                                 <button className='size_button'>M 17</button>
@@ -127,7 +143,7 @@ function GraphicCard() {
                                 <img src={empty_location} alt='' />
                                 <label>3531 Sunset Blvd, Los Angeles, CA 90026</label>
                             </div>
-                            <div style={{ width: '80%' }}>
+                            <div style={{ width: '80%', margin:'20px 0' }}>
                                 <label>
                                     Dolce & Gabbana's AW21 Womenswea r collection is a celebration of bold colour and '90s influences. This is reflected in the bright graffiti-style print of this shirt jacket.
                                 </label>
@@ -160,6 +176,7 @@ function GraphicCard() {
                             </div>
 
                         </div>
+                        <div><Divider/></div>
                         <div className='space_between'>
                             <div>
                                 <label className='font20'>Drop from</label>
@@ -171,8 +188,8 @@ function GraphicCard() {
                         </div>
 
                     </div>
-                    <div className='space_between' style={{background:'red'}}>
-                        <div style={{width: '30%', borderRight: '1px solid rgb(0,0,0,0.2)'}}>
+                    <div className='space_between' style={{background:'#EB4949', padding:24}}>
+                        <div style={{width: '30%', borderRight: '1px solid rgb(0,0,0,0.2)', paddingRight: 15}}>
                             <div className='space_between'>
                                 <label>shipping</label>
                                 <label>$35</label>

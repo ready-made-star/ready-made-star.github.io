@@ -22,43 +22,41 @@ const menu = (
         ]}
     />
 );
-const plainOptions = ['Credit Card', 'Apple Pay'];
-const options = [
+const plainOptions = [
     {
-        label: 'Text message',
-        value: 'Text message',
+        label: 'Credit card',
+        value: 'Credit card',
     },
     {
-        label: 'Email',
-        value: 'Email',
-    },
-
+        label: 'Apple pay',
+        value: 'Apple pay',
+    }
 ];
 
+
 function PersonalInfo() {
-    const [value1, setValue1] = useState('Email');
-    const onChange1 = ({ target: { value } }) => {
-        console.log('radio1 checked', value);
-        setValue1(value);
-    };
+    const [value2, setValue2] = useState('Credit card');
+
     return (
         <>
             <div className='d-flex' style={{ background: 'black' }}>
                 <div className='payment_info'>
-                    <Radio.Group options={plainOptions} optionType="button" buttonStyle="solid" />
-                    <div>
-                        <label>Credit Card Number</label>
-                        <Input />
+                    <div className='payment_select'>
+                        <Radio.Group options={plainOptions} optionType="button" buttonStyle="solid" value={value2} />
                     </div>
                     <div>
-                        <label>Name on Card</label>
+                        <label className='font12'>Credit Card Number</label>
+                        <Input />
+                    </div>
+                    <div style={{marginTop:24}}>
+                        <label className='font12'>Name on Card</label>
                         <Input />
                     </div>
 
 
-                    <div style={{ display: 'flex' }}>
-                        <div>
-                            <label>Day</label>
+                    <div className='space_between' style={{ display: 'flex', marginTop:24, gap:10 }}>
+                        <div className='day_year'>
+                            <label className='font12'>Day</label>
                             <Dropdown overlay={menu}>
                                 <a onClick={(e) => e.preventDefault()}>
                                     <Space>
@@ -68,8 +66,8 @@ function PersonalInfo() {
                                 </a>
                             </Dropdown>
                         </div>
-                        <div>
-                            <label>Year</label>
+                        <div className='day_year'>
+                            <label className='font12'>Year</label>
                             <Dropdown overlay={menu}>
                                 <a onClick={(e) => e.preventDefault()}>
                                     <Space>
@@ -79,17 +77,21 @@ function PersonalInfo() {
                                 </a>
                             </Dropdown>
                         </div>
-                        <div>
-                            <label>CVC</label>
+                        <div style={{width:'100%'}}>
+                            <label className='font12 text-center'>CVC</label>
                             <Input />
                         </div>
                     </div>
                 </div>
 
             </div>
-            <div>
-                <Button>Save Changes</Button>
-                <Button>Cancel</Button>
+            <div className='payment_buttons'>
+                <div>
+                    <button className='save_button'>Save Changes</button>
+                </div>
+                <div>
+                    <button className='cancel_button'>Cancel</button>
+                </div>
             </div>
         </>
     )

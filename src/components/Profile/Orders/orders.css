@@ -3,7 +3,7 @@
     display: block;
     width: 25%;
     padding: 28px;
-    border-right: 1px rgba(255, 255, 255, 0.2) solid;
+    /* border-right: 1px rgba(255, 255, 255, 0.2) solid; */
     height: 91%;
     background: black;
     margin-left: calc(18% + 100px);
@@ -16,9 +16,11 @@
     display: block;
     width: calc(57% - 100px);
     padding: 28px;
-    border-right: 1px rgba(255, 255, 255, 0.2) solid;
+    border: 1px rgba(255, 255, 255, 0.2) solid;
     height: 91%;
+    border-radius: 12px;
     background: black;
+    margin: 28px 28px 28px 0;
     /* margin-left: calc(18% + 100px); */
     text-align: left;
 }
@@ -46,8 +48,26 @@
   width: 100%;
   border-radius: 20px;
 }
-.space-between{
+.delivery{
+    margin: 18px 0 24px 0;
     display:flex;
-    justify-content: space-between;
-    align-items: center;
+}
+.order_view{
+    margin:24px 0 74px 0;
+    text-align: left;
+}
+.order{
+  display: flex;
+  background: black;
+}
+.mobile_order2{
+  border-radius: 12px;
+  border:1px #333333 solid;
+  margin: 20px 0;
+  padding: 24px;
+}
+@media screen and (max-width: 680px) {
+  .order_view{
+    margin: 24px 0;
+  }
 }

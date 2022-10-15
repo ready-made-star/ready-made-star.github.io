@@ -43,132 +43,146 @@ function PersonalInfo() {
         setValue1(value);
     };
     return (
-        <><div className='d-flex' style={{ background: 'black' }}>
-            <div className='personal_info1'>
-                <div className='font20'>
-                    <div>Personal Info</div>
-                </div>
-                <div>
-                    <label>Full name</label>
-                    <Input />
-                </div>
-                <div>
-                    <label>Nike name</label>
-                    <Input />
-                </div>
-
-                <div>
-                    <label>Day</label>
-                    <div style={{ display: 'flex' }}>
-                        <Dropdown overlay={menu}>
-                            <a onClick={(e) => e.preventDefault()}>
-                                <Space>
-                                    12
-                                    <DownOutlined />
-                                </Space>
-                            </a>
-                        </Dropdown>
-                        <Dropdown overlay={menu}>
-                            <a onClick={(e) => e.preventDefault()}>
-                                <Space>
-                                    5
-                                    <DownOutlined />
-                                </Space>
-                            </a>
-                        </Dropdown>
-                        <Dropdown overlay={menu}>
-                            <a onClick={(e) => e.preventDefault()}>
-                                <Space>
-                                    1997
-                                    <DownOutlined />
-                                </Space>
-                            </a>
-                        </Dropdown>
+        <>
+            <div className='personal_info'>
+                <div className='personal_info1'>
+                    <div className='font20 info_title'>
+                        <div>Personal Info</div>
                     </div>
-                </div>
-                <div>
-                    <PhoneNumber />
-                </div>
-                <div>
-                    <label>Email</label>
-                    <Input />
-                </div>
-                <div>
-                    <label>Preferred Communication</label>
+                    <div className='info_each'>
+                        <label>Full name</label>
+                        <Input />
+                    </div>
+                    <div className='info_each'>
+                        <label>Nike name</label>
+                        <Input />
+                    </div>
+
+                    <div className='info_each'>
+                        <label>Day</label>
+                        <div style={{ display: 'flex', gap: 10 }}>
+                            <div className='day_year'>
+                                <Dropdown overlay={menu}>
+                                    <a onClick={(e) => e.preventDefault()}>
+                                        <Space>
+                                            12
+                                            <DownOutlined />
+                                        </Space>
+                                    </a>
+                                </Dropdown>
+                            </div>
+                            <div className='day_year'>
+                                <Dropdown overlay={menu}>
+                                    <a onClick={(e) => e.preventDefault()}>
+                                        <Space>
+                                            5
+                                            <DownOutlined />
+                                        </Space>
+                                    </a>
+                                </Dropdown>
+                            </div>
+                            <div className='day_year'>
+                                <Dropdown overlay={menu}>
+                                    <a onClick={(e) => e.preventDefault()}>
+                                        <Space>
+                                            1997
+                                            <DownOutlined />
+                                        </Space>
+                                    </a>
+                                </Dropdown>
+                            </div>
+                        </div>
+                    </div>
                     <div>
-                        <Radio.Group options={plainOptions} onChange={onChange1} value={value1} />
+                        <PhoneNumber />
+                    </div>
+                    <div className='info_each'>
+                        <label>Email</label>
+                        <Input />
+                    </div>
+                    <div className='info_each'>
+                        <label>Preferred Communication</label>
+                        <div>
+                            <Radio.Group options={plainOptions} onChange={onChange1} value={value1} />
+                        </div>
                     </div>
                 </div>
-                <div>
+
+                <div className='personal_info2'>
+                    <div className='font20 info_title'>
+                        <div>Address</div>
+                    </div>
+                    <div className='info_each'>
+                        <label>Country</label>
+                        <div className='drop_under'>
+                            <Dropdown overlay={menu}>
+                                <a onClick={(e) => e.preventDefault()}>
+                                    <Space>
+                                        United States of America
+                                        <DownOutlined />
+                                    </Space>
+                                </a>
+                            </Dropdown>
+                        </div>
+                    </div>
+                    <div className='info_each'>
+                        <label>Street</label>
+                        <Input />
+                    </div>
+
+                    <div className='info_each' style={{ display: 'flex', gap: 10 }}>
+                        <div>
+                            <label>Building</label>
+                            <Input />
+                        </div>
+                        <div>
+                            <label>Apartment</label>
+                            <Input />
+                        </div>
+                        <div>
+                            <label>Zip</label>
+                            <Input />
+                        </div>
+                    </div>
+
+                    <div>
+                        <label>City</label>
+                        <div className='drop_under'>
+                            <Dropdown overlay={menu}>
+                                <a onClick={(e) => e.preventDefault()}>
+                                    <Space>
+                                        Los Angeles
+                                        <DownOutlined />
+                                    </Space>
+                                </a>
+                            </Dropdown>
+                        </div>
+                    </div>
+                    <div className='info_each'>
+                        <label>States</label>
+                        <div className='drop_under'>
+                            <Dropdown overlay={menu}>
+                                <a onClick={(e) => e.preventDefault()}>
+                                    <Space>
+                                        California
+                                        <DownOutlined />
+                                    </Space>
+                                </a>
+                            </Dropdown>
+                        </div>
+                    </div>
 
                 </div>
-
-
-
             </div>
-            <div className='personal_info2'>
-                <div className='font20'>
-                    <div>Address</div>
+            <div className='save_buttons'>
+                <div>
+                    <button className='save_button'>Save Changes</button>
                 </div>
                 <div>
-                    <label>Country</label>
-                    <Dropdown overlay={menu}>
-                        <a onClick={(e) => e.preventDefault()}>
-                            <Space>
-                                United States of America
-                                <DownOutlined />
-                            </Space>
-                        </a>
-                    </Dropdown>
+                    <button className='cancel_button'>Cancel</button>
                 </div>
-                <div>
-                    <label>Street</label>
-                    <Input />
-                </div>
-
-                <div style={{ display: 'flex' }}>
-                    <div>
-                        <label>Building</label>
-                        <Input />
-                    </div>
-                    <div>
-                        <label>Apartment</label>
-                        <Input />
-                    </div>
-                    <div>
-                        <label>Zip</label>
-                        <Input />
-                    </div>
-                </div>
-
-                <div>
-                    <label>City</label>
-                    <Dropdown overlay={menu}>
-                        <a onClick={(e) => e.preventDefault()}>
-                            <Space>
-                                Los Angeles
-                                <DownOutlined />
-                            </Space>
-                        </a>
-                    </Dropdown>
-                </div>
-                <div>
-                    <label>States</label>
-                    <Dropdown overlay={menu}>
-                        <a onClick={(e) => e.preventDefault()}>
-                            <Space>
-                                California
-                                <DownOutlined />
-                            </Space>
-                        </a>
-                    </Dropdown>
-                </div>
-
             </div>
-        </div><div>
-                <Button>Save Changes</Button>
-                <Button>Cancel</Button>
-            </div></>
+        </>
     )
 }
 export default PersonalInfo;

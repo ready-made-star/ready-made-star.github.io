@@ -119,6 +119,12 @@
     align-items: center;
     display: flex;
 }
+.font16 {
+    font-family: 'Recoleta';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+}
 
 .avatar_group {
     display: flex;

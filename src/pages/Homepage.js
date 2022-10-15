@@ -6,7 +6,7 @@ function Author(props) {
     return (
         <>
             <AuthorHeader />
-            <div className="author_body">
+            <div className="homepage_body">
                 <Channels />
                 <Main show={props}/>
             </div>

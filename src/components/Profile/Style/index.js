@@ -39,7 +39,7 @@ function Style() {
         <>
             <div className='d-flex' style={{ background: 'black' }}>
                 <div className='style'>
-                    <label>Wear men's clothing, women's clothing, or both?</label>
+                    <label className='font12 style_space'>Wear men's clothing, women's clothing, or both?</label>
                     <Select
                         mode="multiple"
                         showArrow
@@ -50,7 +50,7 @@ function Style() {
                         }}
                         options={options}
                     />
-                    <label>How would you describe your style</label>
+                    <label className='font12 style_space'>How would you describe your style</label>
                     <Select
                         mode="multiple"
                         showArrow
@@ -61,7 +61,7 @@ function Style() {
                         }}
                         options={options}
                     />
-                    <label>Нour shoe size</label>
+                    <label className='font12 style_space'>Нour shoe size</label>
                     <Select
                         mode="multiple"
                         showArrow
@@ -72,7 +72,7 @@ function Style() {
                         }}
                         options={options}
                     />
-                    <label>Favorite colors</label>
+                    <label className='font12 style_space'>Favorite colors</label>
                     <Select
                         mode="multiple"
                         showArrow
@@ -83,7 +83,7 @@ function Style() {
                         }}
                         options={options}
                     />
-                    <label>How much you spend</label>
+                    <label className='font12 style_space'>How much you spend</label>
                     <Select
                         mode="multiple"
                         showArrow
@@ -94,7 +94,7 @@ function Style() {
                         }}
                         options={options}
                     />
-                    <label>Your shirt size</label>
+                    <label className='font12 style_space'>Your shirt size</label>
                     <Select
                         mode="multiple"
                         showArrow
@@ -107,9 +107,13 @@ function Style() {
                     />
                 </div>
             </div>
-            <div>
-                <Button>Save Changes</Button>
-                <Button>Cancel</Button>
+            <div className='save_buttons'>
+                <div>
+                    <button className='save_button'>Save Changes</button>
+                </div>
+                <div>
+                    <button className='cancel_button'>Cancel</button>
+                </div>
             </div>
         </>
     )
