@@ -1,5 +1,5 @@
 .profilecard {
-    border: 1px rgba(255, 255, 255, 0.2) solid;
+    border: 1px var(--font_color2) solid;
     border-radius: 20px;
 
     height: fit-content;
@@ -12,7 +12,7 @@
     display: flex;
     gap: 5%;
     margin-left: 100px;
-    background: black;
+    background: var(--background-color);
 }
 
 .gradient {
@@ -26,19 +26,20 @@
     flex-direction: column;
     position: absolute;
     align-items: center;
-    width: 20%;
+    width: 12%;
     top: 50%;
     justify-content: center;
+    left:1%;
 }
 
 .profile_person {
     display: flex;
-    width: 80%;
-    margin-left: 20%;
+    width: 88%;
+    margin-left: 12%;
 }
 
 .profile_description {
-    border-right: 1px rgba(255, 255, 255, 0.6) solid;
+    border-right: 1px var(--font_color6) solid;
     padding: 12px 24px;
     width: 55%;
 }
@@ -47,9 +48,9 @@
     width: 74px;
     height: 28px;
     background: transparent;
-    border: 1px solid #FFFFFF;
+    border: 1px solid var(--font_color);
     border-radius: 36px;
-    color: #ffffff;
+    color: var(--font_color);
     font-family: 'Recoleta';
     font-style: normal;
     font-weight: 600;
@@ -63,7 +64,7 @@
     background: transparent;
     border: 1px solid #FFFFFF;
     border-radius: 36px;
-    color: #ffffff;
+    color: var(--font_color);
 }
 
 .profile_header {
@@ -76,12 +77,13 @@
 .person_content {
     text-align: left;
     padding-top: 12px;
+    width: 78%;
     font-family: 'Vulf Sans Demo';
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
     line-height: 18px;
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--font_color6);
 
 }
 
@@ -97,7 +99,7 @@
 }
 
 .state_value {
-    border-bottom: 1px rgba(255, 255, 255, 0.2) solid;
+    border-bottom: 1px var(--font_color2) solid;
     padding: 12px 24px;
     display: flex;
     gap: 20px;
@@ -119,6 +121,43 @@
     align-items: center;
     display: flex;
 }
+
+.font12_6 {
+    font-family: 'Vulf Sans Demo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    align-items: center;
+    display: flex;
+    color: var(--font_color6);
+}
+
+.font14 {
+    font-family: 'Recoleta';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 120%;
+}
+
+.font10 {
+    font-family: 'Vulf Sans Demo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 18px;
+    color: var(--font_color6);
+}
+
+.font10_2 {
+    font-family: 'Vulf Sans Demo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 18px;
+    color: var(--font_color2);
+}
+
 .font16 {
     font-family: 'Recoleta';
     font-style: normal;
@@ -128,7 +167,7 @@
 
 .avatar_group {
     display: flex;
-    border: 1px rgba(255, 255, 255, 0.2) solid;
+    border: 1px var(--font_color2) solid;
     border-radius: 20px;
     height: fit-content;
     gap: 20px;
@@ -145,6 +184,7 @@
     padding: 12px 15px;
     z-index: 0 !important;
 }
+
 .card_group {
     height: 100PX;
 }
@@ -162,16 +202,20 @@
 .cardbtn {
     background: transparent;
     border-radius: 5px;
-    color: #ffff;
-    border: 1px rgba(255, 255, 255, 0.6) solid;
+    color: var(--font_color);
+    border: 1px var(--font_color6) solid;
+    display:flex;
+    align-items: center;
 }
 
 .pinbtn {
     background: #3784AB;
-    color: #ffff;
+    color: var(--font_color);
     border-radius: 5px;
     border: none;
-    margin-left: 5px;
+    margin: 0 10px;
+    display:flex;
+    align-items: center;
 }
 
 .card_content {
@@ -183,24 +227,28 @@
 
 .location {
     width: 100%;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid var(--font_color2);
     border-radius: 20px;
     padding: 16px 20px;
     text-align: left;
 }
 
 #button-tooltip {
-    width: 283px;
-    background: #0D0D0D;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 300px;
+    background-color: var(--background-color);
+    border: 1px solid var(--font_color2);
     border-radius: 5px;
-    color: #ffff;
+    color: var(--font_color);
     padding: 18px 16px;
 }
-
+.tooltip-inner{
+    max-width: 100%;
+    background-color: var(--background-color);
+    color:var(--font_color);
+}
 .main .ant-card-body {
     padding: 0;
-    color: #ffff;
+    color: var(--font_color);
 }
 
 .main .ant-card {
@@ -208,8 +256,8 @@
 }
 
 .ant-modal-content {
-    background-color: black !important;
-    color: white;
+    background-color: var(--background-color) !important;
+    color: var(--font_color);
     border-radius: 12px !important;
 }
 
@@ -218,7 +266,7 @@
 }
 
 .ant-modal-title {
-    color: white !important;
+    color: var(--font_color) !important;
 }
 
 .phonenumber {
@@ -229,89 +277,109 @@
 .dashborder {
     margin-top: 20px;
     padding: 11px 20px 12px;
-    border: 2px dashed #FFFFFF;
+    border: 2px dashed var(--font_color);
     border-radius: 56px;
     width: fit-content;
     margin: auto;
 }
-.ant-modal-footer{
+
+.ant-modal-footer {
     background: #565656 !important;
     border-radius: 0 0 12px 12px !important;
 }
-.main_first_part{
-    width:75%;
+
+.main_first_part {
+    width: 75%;
     flex-direction: column;
 }
 
-.main_second_part{
+.main_second_part {
     right: 2%;
     width: 20%;
     position: fixed;
 }
-.ant-input-affix-wrapper > input.ant-input {
-    background: black;
-    color: white;
-    border-bottom: 1px rgba(255, 255, 255, 0.6) solid !important;
+
+.ant-input-affix-wrapper>input.ant-input {
+    background-color: var(--background-color);
+    color: var(--font_color);
+    border-bottom: 1px var(--font_color6) solid !important;
 }
-.ant-select-selection-search{
-    border-bottom: 1px rgba(255, 255, 255, 0.6) solid;
+
+.ant-select-selection-search {
+    border-bottom: 1px var(--font_color6) solid;
 }
-.ant-input-affix-wrapper{
+
+.ant-input-affix-wrapper {
     border: none !important;
 }
-.state_half{
+
+.state_half {
     display: flex;
     gap: 20px;
 }
+
 @media screen and (max-width: 680px) {
     .desktop_version {
         display: none
     }
-    .main{
+
+    .main {
         display: block;
         margin-left: 0px;
     }
-    .main_first_part{
+
+    .main_first_part {
         width: 100%;
     }
+
     .profile_person {
         display: block;
         width: 100%;
         margin-left: 0%;
     }
-    .profile_description{
+
+    .profile_description {
         width: 87%;
         border: none;
     }
-    .profileavatar{
-        left: 10%;
+
+    .profileavatar {
+        left: 13%;
     }
+
     .profile_header {
         margin-left: 42%;
         width: 80%;
     }
+
     .person_content {
         padding-top: 42px;
+        width: 100%;
     }
-    .profile_state{
-        border-top: 1px rgba(255, 255, 255, 0.2) solid;
+
+    .profile_state {
+        border-top: 1px var(--font_color2) solid;
         width: 100%;
         display: flex;
     }
-    .state_first_part{
+
+    .state_first_part {
         width: 50%;
-        border-right: 1px rgba(255, 255, 255, 0.2) solid;
-        
-    }
-    .state_second_part{
-        width: 50%;
+        border-right: 1px var(--font_color2) solid;
 
     }
-    .state_value{
-        border: none;
-        display:block;
+
+    .state_second_part {
+        width: 50%;
+        padding-top: 12%
     }
-    .main_second_part{
+
+    .state_value {
+        border: none;
+        display: block;
+    }
+
+    .main_second_part {
         margin-top: 20px;
         width: 100%;
         position: static;

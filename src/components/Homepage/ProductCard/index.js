@@ -7,7 +7,7 @@ import close from '../../assets/close.svg';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import React, { useState } from 'react';
-import { Drawer, Button} from 'antd';
+import { Drawer, Button } from 'antd';
 import video_image from '../../assets/video_image.png';
 import arrow from '../../assets/arrow.png';
 import dolce from '../../assets/dolce.png';
@@ -18,6 +18,7 @@ import heart from '../../assets/heart.svg';
 import Video from '../Video';
 import Checkout from '../../Checkout';
 import './productcard.css';
+import {TbPin} from 'react-icons/tb';
 
 function GraphicCard() {
     const [showCard, setShowCard] = useState(false);
@@ -25,13 +26,13 @@ function GraphicCard() {
     const [showPlayButton1, setShowPlayButton1] = useState('none');
     const [showPlayButton2, setShowPlayButton2] = useState('none');
     const [drawerSize, setDrawerSize] = useState(450);
-    
-    window.addEventListener('resize', function(event){
+
+    window.addEventListener('resize', function (event) {
         event.preventDefault();
         event.stopPropagation();
         if (window.innerWidth < 680) {
             // console.log(window.innerWidth+'px');
-            setDrawerSize(String(window.innerWidth)+'px');
+            setDrawerSize(String(window.innerWidth) + 'px');
             // return(true);
         }
     })
@@ -53,19 +54,28 @@ function GraphicCard() {
                 <Card
                     hoverable
                     style={{
-                        width: '100%', borderRadius: 12, border: '1px solid rgba(255,255,255,0.2)'
+                        width: '100%', borderRadius: 12, border: '1px solid var(--font_color2)'
                     }}
                     onClick={() => setShowCard(true)}
                     cover={<img alt="example" src={cardimg} style={{ width: '100%', borderRadius: '12px 12px 0 0', maxWidth: '-webkit-fill-available' }} />}
                 >
-                    <div className='card_content'>
-                        <div>
-                            <div>Date released</div>
-                            <div>12/26/2022</div>
+                    <div className='home_card_content'>
+                        <div className='space_between p-1' style={{borderBottom:'1px var(--font_color2) solid'}}>
+                            <div>
+                                <div className='font10_2'>Date released</div>
+                                <div className='font10'>12/26/2022</div>
+                            </div>
+                            <div className='d-flex'>
+                                <button className='cardbtn' style={{ cursor: "pointer" }} ><TbPin />Fashion</button>
+                                <button className='pinbtn' style={{ cursor: "pointer" }} ><TbPin />Pin</button>
+                            </div>
                         </div>
-                        <div>
-                            <button className='cardbtn' style={{ cursor: "pointer" }} ><img src={pin} alt='' />Fashion</button>
-                            <button className='pinbtn' style={{ cursor: "pointer" }} ><img src={pin} alt='' />Pin</button>
+                        <div className='space_between p-1'>
+                            <label className='font10_2'>Drop from</label>
+                            <div className='d-flex' style={{gap: 10}}>
+                                <label>@hannamontana</label>
+                                <div><img src={user_avatar} alt='' style={{width:30}}/></div>
+                            </div>
                         </div>
                     </div>
                 </Card>
@@ -76,25 +86,26 @@ function GraphicCard() {
                     open={showCard}
                     size={drawerSize}
                 >
-                    <div style={{padding:24}}>
+                    <div className='mobile_version' style={{height: 200, background: 'transparent'}}></div>
+                    <div className='tray'>
                         <div className='space_between'>
-                            <div>
-                                <Button type='round'>Dolce && Gabbana</Button>
+                            <div className='font14'>
+                                <Button type='round' style={{color:'black'}}>Dolce && Gabbana</Button>
                                 <Button type='round' className='white_btn'>Off-White</Button>
                             </div>
-                            <img src={close} alt='' onClick={() => setShowCard(false)} />
+                            <img src={close} alt='' onClick={() => setShowCard(false)}  style={{cursor: 'pointer'}}/>
                         </div>
                         <div>
                             <Swiper watchSlidesProgress={true} slidesPerView={2.3} className="mySwiper">
-                                <SwiperSlide onMouseOver={(e)=>handlePlayBtn1(e)} onMouseLeave={(e) => {e.preventDefault(); e.stopPropagation();setShowPlayButton1('none')}}>
+                                <SwiperSlide onMouseOver={(e) => handlePlayBtn1(e)} onMouseLeave={(e) => { e.preventDefault(); e.stopPropagation(); setShowPlayButton1('none') }}>
                                     <div className='video_image' style={{ cursor: "pointer" }}>
-                                        <img src={video_image} alt='' style={{ width: '100%' }}  />
+                                        <img src={video_image} alt='' style={{ width: '100%' }} />
                                     </div>
                                     <img className='video_play' onClick={handleVideo} src={video_play} alt='' style={{ display: showPlayButton1 }} />
                                 </SwiperSlide>
                                 <SwiperSlide onMouseOver={handlePlayBtn2} onMouseLeave={() => setShowPlayButton2('none')}>
                                     <div className='video_image' style={{ cursor: "pointer" }} >
-                                        <img src={video_image} alt='' style={{ width: '100%' }}  />
+                                        <img src={video_image} alt='' style={{ width: '100%' }} />
                                     </div>
                                     <img className='video_play' onClick={handleVideo} src={video_play} alt='' style={{ display: showPlayButton2 }} />
                                 </SwiperSlide>
@@ -108,8 +119,8 @@ function GraphicCard() {
 
                         <div className='space_between'>
                             <div>
-                                <label className='font20'>Dolce && Gabbana</label>
-                                <label className='font12'>Graffiti-print shirt jacket</label>
+                                <label className='font16'>Dolce && Gabbana</label>
+                                <label className='font12_6'>Graffiti-print shirt jacket</label>
                             </div>
                             <div>
                                 <button className='profile_arrow'><img src={arrow} alt='' style={{ cursor: "pointer" }} /></button>
@@ -117,14 +128,14 @@ function GraphicCard() {
                             </div>
                         </div>
                         <div>
-                        <Divider />
+                            <Divider />
                         </div>
-                        <div>
-                            <button className='cardbtn' style={{ cursor: "pointer" }} ><img src={pin} alt='' />Fashion</button>
-                            <button className='pinbtn' style={{ cursor: "pointer" }} ><img src={pin} alt='' />Pin</button>
+                        <div className='d-flex'>
+                            <button className='cardbtn' style={{ cursor: "pointer" }} ><TbPin />Fashion</button>
+                            <button className='pinbtn' style={{ cursor: "pointer" }} ><TbPin />Pin</button>
                             <button className='cardbtn' style={{ cursor: "pointer" }} >Selling fast!</button>
                         </div>
-                        <div style={{ display: 'flex', margin:'20px 0' }}>
+                        <div style={{ display: 'flex', margin: '20px 0', gap:10 }}>
                             <div className='size_part'>
                                 <button className='size_button'>S 46</button>
                                 <button className='size_button'>M 17</button>
@@ -140,30 +151,30 @@ function GraphicCard() {
 
                         <div className='drawer_contents'>
                             <div className='location_part'>
-                                <img src={empty_location} alt='' />
-                                <label>3531 Sunset Blvd, Los Angeles, CA 90026</label>
+                                <img src={empty_location} alt='' style={{cursor: 'pointer'}}/>
+                                <label style={{marginLeft:'5px'}}>3531 Sunset Blvd, Los Angeles, CA 90026</label>
                             </div>
-                            <div style={{ width: '80%', margin:'20px 0' }}>
-                                <label>
+                            <div style={{ width: '80%', margin: '20px 0' }}>
+                                <label className='font12_6'>
                                     Dolce & Gabbana's AW21 Womenswea r collection is a celebration of bold colour and '90s influences. This is reflected in the bright graffiti-style print of this shirt jacket.
                                 </label>
                             </div>
 
-                            <div>
-                                <label style={{ width: '50%' }}>Drop ID# 1234567</label>
-                                <label>Return Policy</label>
+                            <div className='d-flex'>
+                                <label className='font12_6' style={{ width: '50%' }}>Drop ID# 1234567</label>
+                                <label className='font12'>Return Policy</label>
                             </div>
                             <div style={{ display: 'flex' }}>
-                                <div style={{ width: '50%' }}>
-                                    <label>Highlights</label>
-                                    <label>-multicolor</label>
-                                    <label>-multicolor</label>
-                                    <label>-multicolor</label>
-                                    <label>-multicolor</label>
-                                    <label>-multicolor</label>
+                                <div style={{ width: '50%', display:'grid' }}>
+                                    <label className='font12' style={{margin: '10px 0'}}>Highlights</label>
+                                    <label className='font12_6'>-multicolor</label>
+                                    <label className='font12_6'>-multicolor</label>
+                                    <label className='font12_6'>-multicolor</label>
+                                    <label className='font12_6'>-multicolor</label>
+                                    <label className='font12_6'>-multicolor</label>
                                 </div>
                                 <div>
-                                    <label>Tags</label>
+                                    <label style={{margin: '10px 0'}}>Tags</label>
                                     <div>
                                         <button className='tags_button'>#grapti</button>
                                         <button className='tags_button'>Bright</button>
@@ -171,25 +182,25 @@ function GraphicCard() {
                                 </div>
                             </div>
                             <div style={{ display: 'block' }}>
-                                <label>Composition</label>
-                                <label>Nylon 100%, Polyester 97%, Spandex/Elastane 3%</label>
+                                <label className='font12' style={{margin:'10px 0 15px'}}>Composition</label>
+                                <label className='font12_6'>Nylon 100%, Polyester 97%, Spandex/Elastane 3%</label>
                             </div>
 
                         </div>
-                        <div><Divider/></div>
+                        <div><Divider /></div>
                         <div className='space_between'>
                             <div>
-                                <label className='font20'>Drop from</label>
+                                <label className='font12_6'>Drop from</label>
                             </div>
-                            <div>
-                                <label>Hanna Montana</label>
+                            <div className='d-flex'>
+                                <label className='font12'>Hanna Montana</label>
                                 <img src={user_avatar} alt='' style={{ marginLeft: 10 }} />
                             </div>
                         </div>
 
                     </div>
-                    <div className='space_between' style={{background:'#EB4949', padding:24}}>
-                        <div style={{width: '30%', borderRight: '1px solid rgb(0,0,0,0.2)', paddingRight: 15}}>
+                    <div className='space_between add_bag_btn' style={{ background: '#EB4949', padding: 24 }}>
+                        <div style={{ width: '30%', borderRight: '1px solid rgb(0,0,0,0.2)', paddingRight: 15 }}>
                             <div className='space_between'>
                                 <label>shipping</label>
                                 <label>$35</label>
@@ -200,15 +211,15 @@ function GraphicCard() {
                             </div>
                         </div>
                         <div>
-                            <label className='font20'>add to bag</label>
+                            <label className='font20' style={{cursor: 'pointer'}}>add to bag</label>
                         </div>
                         <div>
-                            <img src={heart} alt='' />
+                            <img src={heart} alt='' style={{cursor: 'pointer'}}/>
                         </div>
                     </div>
 
                 </Drawer>
-                
+
                 <Video
                     show={showVideo}
                     onHide={() => setShowVideo(false)}

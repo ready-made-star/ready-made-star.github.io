@@ -50,16 +50,16 @@ function PersonalInfo() {
                         <div>Personal Info</div>
                     </div>
                     <div className='info_each'>
-                        <label>Full name</label>
+                        <label className='font12_6'>Full name</label>
                         <Input />
                     </div>
                     <div className='info_each'>
-                        <label>Nike name</label>
+                        <label className='font12_6'>Nike name</label>
                         <Input />
                     </div>
 
                     <div className='info_each'>
-                        <label>Day</label>
+                        <label className='font12_6'>Day</label>
                         <div style={{ display: 'flex', gap: 10 }}>
                             <div className='day_year'>
                                 <Dropdown overlay={menu}>
@@ -97,11 +97,11 @@ function PersonalInfo() {
                         <PhoneNumber />
                     </div>
                     <div className='info_each'>
-                        <label>Email</label>
+                        <label className='font12_6'>Email</label>
                         <Input />
                     </div>
                     <div className='info_each'>
-                        <label>Preferred Communication</label>
+                        <label className='font12_6'>Preferred Communication</label>
                         <div>
                             <Radio.Group options={plainOptions} onChange={onChange1} value={value1} />
                         </div>
@@ -110,10 +110,10 @@ function PersonalInfo() {
 
                 <div className='personal_info2'>
                     <div className='font20 info_title'>
-                        <div>Address</div>
+                        <div className='font12_6'>Address</div>
                     </div>
                     <div className='info_each'>
-                        <label>Country</label>
+                        <label className='font12_6'>Country</label>
                         <div className='drop_under'>
                             <Dropdown overlay={menu}>
                                 <a onClick={(e) => e.preventDefault()}>
@@ -126,27 +126,27 @@ function PersonalInfo() {
                         </div>
                     </div>
                     <div className='info_each'>
-                        <label>Street</label>
+                        <label className='font12_6'>Street</label>
                         <Input />
                     </div>
 
                     <div className='info_each' style={{ display: 'flex', gap: 10 }}>
                         <div>
-                            <label>Building</label>
+                            <label className='font12_6'>Building</label>
                             <Input />
                         </div>
                         <div>
-                            <label>Apartment</label>
+                            <label className='font12_6'>Apartment</label>
                             <Input />
                         </div>
                         <div>
-                            <label>Zip</label>
+                            <label className='font12_6'>Zip</label>
                             <Input />
                         </div>
                     </div>
 
                     <div>
-                        <label>City</label>
+                        <label className='font12_6'>City</label>
                         <div className='drop_under'>
                             <Dropdown overlay={menu}>
                                 <a onClick={(e) => e.preventDefault()}>
@@ -159,7 +159,7 @@ function PersonalInfo() {
                         </div>
                     </div>
                     <div className='info_each'>
-                        <label>States</label>
+                        <label className='font12_6'>States</label>
                         <div className='drop_under'>
                             <Dropdown overlay={menu}>
                                 <a onClick={(e) => e.preventDefault()}>
@@ -176,10 +176,10 @@ function PersonalInfo() {
             </div>
             <div className='save_buttons'>
                 <div>
-                    <button className='save_button'>Save Changes</button>
+                    <button className='save_button font16'>Save Changes</button>
                 </div>
                 <div>
-                    <button className='cancel_button'>Cancel</button>
+                    <button className='cancel_button font16'>Cancel</button>
                 </div>
             </div>
         </>

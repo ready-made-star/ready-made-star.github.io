@@ -1,9 +1,13 @@
 import order_icon from '../../components/assets/order_icon.png';
 import decrease from '../../components/assets/decrease.svg';
 import increase from '../../components/assets/increase.svg';
+import decrease2 from '../../components/assets/decrease2.png';
+import increase2 from '../../components/assets/increase2.png';
 import { MdClose } from 'react-icons/md';
 import { useState } from "react";
-function OrderedProduct() {
+import { connect } from 'react-redux';
+function OrderedProduct(props) {
+    const { theme } = { ...props };
 
     const [count, setCount] = useState(0);
     const handleDecrease = () => {
@@ -17,21 +21,21 @@ function OrderedProduct() {
 
     return (
         <div className='d-flex align-items-center' style={{ gap: 20 }}>
-            <MdClose />
+            <MdClose style={{ cursor: "pointer" }} />
             <img src={order_icon} alt='' />
             <div style={{ display: 'grid' }}>
                 <label>Brand name</label>
                 <label>Item name</label>
                 <div style={{ display: 'flex', gap: 5 }}>
-                    <img src={decrease} alt="test" onClick={handleDecrease} />
+                    <img src={theme ? decrease : decrease2} alt="test" onClick={handleDecrease} style={{ cursor: "pointer" }} />
                     <label>{count}</label>
-                    <img src={increase} alt="test" onClick={handleIncrease} />
+                    <img src={theme ? increase : increase2} alt="test" onClick={handleIncrease} style={{ cursor: "pointer" }} />
                 </div>
 
             </div>
             <div className='text-center' style={{ display: 'flex', gap: 10 }}>
                 <div>
-                    <div style={{display: 'flex', gap: 10}}>
+                    <div style={{ display: 'flex', gap: 10 }}>
                         <div style={{ display: 'grid' }}>
                             <label>Size</label>
                             <label>L</label>
@@ -49,4 +53,9 @@ function OrderedProduct() {
         </div>
     )
 }
-export default OrderedProduct;
+const mapStateToProps = state => {
+    return {
+        theme: state.theme,
+    };
+};
+export default connect(mapStateToProps)(OrderedProduct);

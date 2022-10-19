@@ -1,11 +1,16 @@
 .favorites{
     width: calc(82% - 100px);
     padding: 28px;
-    /* border-right: 1px rgba(255, 255, 255, 0.2) solid; */
+    /* border-right: 1px --font_color2 solid; */
     /* height: 91%; */
-    background: black;
+    background-color: var(--background-color);
     margin-left: calc(18% + 100px);
     /* text-align: left; */
+}
+.heart{
+    position: absolute;
+    bottom: 42%;
+    right: 10%;
 }
 @media screen and (max-width: 680px) {
     .favorites{

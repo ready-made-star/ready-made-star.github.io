@@ -2,24 +2,24 @@
     display: block;
     width: 25%;
     padding: 48px;
-    border-right: 1px rgba(255, 255, 255, 0.2) solid;
+    border-right: 1px var(--font_color2) solid;
     height: 91%;
-    background: black;
+    background-color: var(--background-color);
     margin-left: calc(18% + 100px);
     text-align: left;
 }
 
 .ant-radio-wrapper {
-    color: white !important;
+    color: var(--font_color) !important;
 }
 
 .personal_info2 {
     display: block;
     width: 25%;
     padding: 48px;
-    border-right: 1px rgba(255, 255, 255, 0.2) solid;
+    border-right: 1px var(--font_color2) solid;
     height: 91%;
-    background: black;
+    background-color: var(--background-color);
     /* margin-left: calc(18% + 100px); */
     text-align: left;
 }
@@ -33,7 +33,7 @@
 }
 
 .drop_under {
-    border-bottom: 1px solid #333333;
+    border-bottom: 1px solid var(--font_color2);
 }
 
 .personal_info1 .ant-input-affix-wrapper {
@@ -42,13 +42,13 @@
 
 .ant-radio-wrapper {
     padding: 7px !important;
-    border: 1px solid #333333;
+    border: 1px solid var(--font_color2);
     margin-right: 0px !important;
 }
 
 .save_buttons {
     padding: 30px;
-    background: black;
+    background-color: var(--background-color);
     gap: 20px;
     display: flex;
     margin-left: calc(100px + 18%);
@@ -68,8 +68,23 @@
 }
 .personal_info{
     display: flex;
-    background: black;
+    background-color: var(--background-color);
 }
+.personal_info .ant-select-arrow{
+    display: none;
+}
+.ant-radio-group-solid .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled){
+    background: rgba(51, 51, 51, 0.5) !important;
+    color: var(--font_color) !important;
+}
+.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled){
+    border: none !important;
+}
+
+.ant-radio-inner::after {
+    background-color: #EB4949 !important;
+}
+
 @media screen and (max-width: 680px) {
     .personal_info1 {
         margin-left:0;

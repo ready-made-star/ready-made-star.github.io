@@ -1,14 +1,16 @@
 .size_button{
     background: transparent;
-    padding: 5px 7px;
+    padding: 9px 7px;
     border-radius: 100px;
     width: 60px;
+    border:none;
+    cursor: pointer;
 }
 .size_button:hover{
-    background: red;;
+    background: #EB4949;;
 }
 .size_part{
-    border: 1px rgba(255, 255, 255, 0.3) solid;
+    border: 1px var(--font_color2) solid;
     border-radius: 100px;
     width: fit-content;
     display:flex;
@@ -19,12 +21,22 @@
 }
 .graphic_card .ant-card-body{
     padding:0;
-    background: black;
-    color: #fff;
+    background-color: var(--background-color);
+    color: var(--font_color);
     border-radius: 0 0 12px 12px;
+}
+.graphic_card .ant-card {
+    background: none;
+}
+.home_card_content{
+    display: block;
+    padding: 6px 12px;
 }
 @media screen and (max-width: 679px) {
     .ant-drawer-content-wrapper{
+        width: 100% !important;
+    }
+    .add_bag_btn{
         width: 100% !important;
     }
 }
@@ -34,26 +46,43 @@
     height: 30px;
     background-image: url('color.png');
     margin:5px;
+    cursor: pointer;
 }
 .location_part{
-    border: 1px rgba(255, 255, 255, 0.3) solid;
+    border: 1px var(--font_color2) solid;
     border-radius: 100px;
     width: fit-content;
     align-items: center;
     padding:10px;
 }
 .tags_button{
-    background: black;
+    background-color: var(--background-color);
     border-radius: 100px;
     /* height: 30px; */
-    /* background-image: url('color.png'); */
+    cursor: pointer;
     margin:3px;
     padding: 5px 10px;
-    border: 1px #fff solid;
+    border: 1px var(--font_color) solid;
 }
 .ant-divider-horizontal{
     background: white;
 }
 .ant-drawer-body{
     padding:0 !important;
+}
+.add_bag_btn{
+    position: fixed;
+    right:0%;
+    bottom:0%;
+    width: 450px;
+}
+.tray{
+    padding: 24px;
+    background: var(--background-color);
+}
+.tray::-webkit-scrollbar{
+    display:none;
+}
+.ant-drawer-body::-webkit-scrollbar{
+    display:none;
 }

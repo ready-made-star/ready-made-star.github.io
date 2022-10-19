@@ -80,6 +80,6 @@
   }
   
   .controlsTime {
-    color: white;
+    color: var(--font_color);
   }
   

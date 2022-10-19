@@ -2,9 +2,10 @@
     position: fixed;
     width: 100px;
     padding: 20px 12px;
-    border-right: 1px rgba(255, 255, 255, 0.2) solid;
+    border-right: 1px var(--font_color2) solid;
     height: 91%;
-    background: black;
+    /* background: black; */
+    background-color: var(--background-color);
 }
 .channel_item{
     display: flex;

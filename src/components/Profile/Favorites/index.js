@@ -1,7 +1,7 @@
-import GraphicCard from '../../../components/Author/GraphicCard';
+import ProductCard from '../../../components/Homepage/ProductCard';
 import { useState } from 'react';
 import './favorite.css';
-
+import heart from '../../../components/assets/heart.png';
 function Favorites() {
     const [value1, setValue1] = useState('Email');
     const onChange1 = ({ target: { value } }) => {
@@ -16,35 +16,44 @@ function Favorites() {
                     {/* <div className="scroll"> */}
                     {/* <div style={{ display: 'flex', gap: 10, margin: '10px 0' }}> */}
                     <div className='col-12 col-md-6 col-xl-4 mb-3'>
-                        <GraphicCard />
+                        <ProductCard />
+                        <img src={heart} alt='' className='heart' />
                     </div>
                     <div className='col-12 col-md-6 col-xl-4 mb-3'>
-                        <GraphicCard />
+                        <ProductCard />
+                        <img src={heart} alt='' className='heart' />
                     </div>
                     <div className='col-12 col-md-6 col-xl-4 mb-3'>
-                        <GraphicCard />
+                        <ProductCard />
+                        <img src={heart} alt='' className='heart' />
                     </div>
                     {/* </div> */}
                     {/* <div style={{ display: 'flex', gap: 10, margin: '20px 0' }}> */}
                     <div className='col-12 col-md-6 col-xl-4 mb-3'>
-                        <GraphicCard />
+                        <ProductCard />
+                        <img src={heart} alt='' className='heart' />
                     </div>
                     <div className='col-12 col-md-6 col-xl-4 mb-3'>
-                        <GraphicCard />
+                        <ProductCard />
+                        <img src={heart} alt='' className='heart' />
                     </div>
                     <div className='col-12 col-md-6 col-xl-4 mb-3'>
-                        <GraphicCard />
+                        <ProductCard />
+                        <img src={heart} alt='' className='heart' />
                     </div>
                     {/* // </div> */}
                     {/* <div style={{ display: 'flex', gap: 10, margin: '20px 0' }}> */}
                     <div className='col-12 col-md-6 col-xl-4 mb-3'>
-                        <GraphicCard />
+                        <ProductCard />
+                        <img src={heart} alt='' className='heart' />
                     </div>
                     <div className='col-12 col-md-6 col-xl-4 mb-3'>
-                        <GraphicCard />
+                        <ProductCard />
+                        <img src={heart} alt='' className='heart' />
                     </div>
                     <div className='col-12 col-md-6 col-xl-4 mb-3'>
-                        <GraphicCard />
+                        <ProductCard />
+                        <img src={heart} alt='' className='heart' />
                     </div>
                     {/* // </div> */}
                     {/* </div> */}

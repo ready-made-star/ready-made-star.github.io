@@ -39,10 +39,10 @@ function PersonalInfo() {
 
     return (
         <>
-            <div className='d-flex' style={{ background: 'black' }}>
+            <div className='d-flex' style={{ background: 'var(--background-color)' }}>
                 <div className='payment_info'>
                     <div className='payment_select'>
-                        <Radio.Group options={plainOptions} optionType="button" buttonStyle="solid" value={value2} />
+                        <Radio.Group options={plainOptions} optionType="button" buttonStyle="solid" value={value2} size='large' />
                     </div>
                     <div>
                         <label className='font12'>Credit Card Number</label>
@@ -87,10 +87,10 @@ function PersonalInfo() {
             </div>
             <div className='payment_buttons'>
                 <div>
-                    <button className='save_button'>Save Changes</button>
+                    <button className='save_button font16'>Save Changes</button>
                 </div>
                 <div>
-                    <button className='cancel_button'>Cancel</button>
+                    <button className='cancel_button font16'>Cancel</button>
                 </div>
             </div>
         </>

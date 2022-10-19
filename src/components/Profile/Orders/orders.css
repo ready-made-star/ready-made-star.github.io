@@ -3,23 +3,23 @@
     display: block;
     width: 25%;
     padding: 28px;
-    /* border-right: 1px rgba(255, 255, 255, 0.2) solid; */
+    /* border-right: 1px var(--font_color2) solid; */
     height: 91%;
-    background: black;
+    background-color: var(--background-color);
     margin-left: calc(18% + 100px);
     text-align: left;
 }
 .ant-radio-wrapper{
-    color: white !important;
+  color: var(--font_color) !important;
 }
 .orders2{
     display: block;
     width: calc(57% - 100px);
     padding: 28px;
-    border: 1px rgba(255, 255, 255, 0.2) solid;
+    border: 1px var(--font_color2) solid;
     height: 91%;
     border-radius: 12px;
-    background: black;
+    background-color: var(--background-color);
     margin: 28px 28px 28px 0;
     /* margin-left: calc(18% + 100px); */
     text-align: left;
@@ -58,11 +58,11 @@
 }
 .order{
   display: flex;
-  background: black;
+  background-color: var(--background-color);
 }
 .mobile_order2{
   border-radius: 12px;
-  border:1px #333333 solid;
+  border:1px var(--font_color2) solid;
   margin: 20px 0;
   padding: 24px;
 }

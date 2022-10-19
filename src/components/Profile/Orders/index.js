@@ -23,7 +23,7 @@ const StepLine1 = styled("div")(() => ({
 const StepLine2 = styled("div")(() => ({
     height: "2px",
     width: "305px",
-    background: "rgba(51, 51, 51, 0.2)",
+    background: "var(--font_color2)",
     marginTop: "25px",
     // marginBottom: "25px",
 }));
@@ -67,12 +67,12 @@ function PersonalInfo() {
                                 <label className='font12'>On its way</label>
                                 <label className='font12'>Jun 13</label>
                             </div>
-                            <StepLine1 />
+                            <StepLine2 />
                             <div>
                                 <img src="/images/step3.png" alt='' />
                                 <label className='font12'>Out for delivery</label>
                             </div>
-                            <StepLine1 />
+                            <StepLine2 />
                             <div>
                                 <img src="/images/step4.png" alt='' />
                                 <label className='font12'>Delivered</label>
@@ -137,12 +137,12 @@ function PersonalInfo() {
                             <label className='font12'>On its way</label>
                             <label className='font12'>Jun 13</label>
                         </div>
-                        <StepLine1 />
+                        <StepLine2 />
                         <div>
                             <img src="/images/step3.png" alt='' />
                             <label className='font12'>Out for delivery</label>
                         </div>
-                        <StepLine1 />
+                        <StepLine2 />
                         <div>
                             <img src="/images/step4.png" alt='' />
                             <label className='font12'>Delivered</label>

@@ -2,9 +2,9 @@
     position: fixed;
     width: 18%;
     padding: 20px 28px;
-    border-right: 1px rgba(255, 255, 255, 0.2) solid;
+    border-right: 1px var(--font_color2) solid;
     height: 91%;
-    background: black;
+    background-color: var(--background-color);
     left: 100px;
     text-align: left;
 }
@@ -24,16 +24,24 @@
     padding: 5px 12px 9px;
     gap: 10px;
     border-radius: 64px;
-    width: 112px;
+    margin: 20px 0;
     height: 36px;
     cursor: pointer;
     border: none;
+    font-family: 'Vulf Sans Demo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
 }
 
 .menu_button1:hover {
     background: #eb4949;
 }
+.active{
+    margin: 25px 0;
 
+}
 .menu_button1.active {
     background: #eb4949;
 }
@@ -43,9 +51,9 @@
 } */
 
 .editer {
-    position: absolute;
-    top: 30%;
-    right: 20%;
+    position: relative;
+    top: 45px;
+    right: 25px;
 }
 
 .profile_body {
@@ -54,13 +62,13 @@
     width: 100%;
     height: 91%;
     overflow: auto;
-    background: black;
+    background-color: var(--background-color);
 }
 
 .profile_body .ant-card-body {
     padding: 0;
-    color: #ffff;
-    
+    color: var(--font_color);
+
 }
 
 .profile_body .ant-card {
@@ -73,14 +81,27 @@
     align-items: center;
 }
 
+a {
+    
+    color: var(--font_color) !important;
+}
+.profile_menu a{
+    padding:10px 10px !important;
+}
+
+a:hover {
+    color: var(--font_color) !important;
+}
+
 @media screen and (max-width: 680px) {
     .mobile_profile_menu {
         padding: 20px 0;
         display: flex;
         align-items: center;
-        border-bottom: 1px #333333 solid;
+        border-bottom: 1px var(--font_color2) solid;
     }
-    .swiper-wrapper{
+
+    .swiper-wrapper {
         align-items: center;
     }
 }

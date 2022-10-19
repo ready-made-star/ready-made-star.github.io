@@ -2,9 +2,9 @@
     display: block;
     width: 25%;
     padding: 48px;
-    border-right: 1px rgba(255, 255, 255, 0.2) solid;
+    border-right: 1px var(--font_color2) solid;
     height: calc(100vh - 9%);
-    background: black;
+    background-color: var(--background-color);
     margin-left: calc(18% + 100px);
     text-align: left;
     
@@ -15,16 +15,23 @@
 }
 .day_year{
     width: 100%;
-    border-bottom: 1px solid #333333;
+    border-bottom: 1px solid var(--font_color2);
 }
 .payment_buttons{
     position:absolute;
     bottom:0%;
     padding: 30px;
-    background: black;
+    background-color: var(--background-color);
     gap: 20px;
     display: flex;
     margin-left: calc(100px + 18%);
+}
+
+.ant-radio-group-large .ant-radio-button-wrapper {
+    width: 50%;
+}
+.ant-radio-group{
+    display: flex !important;
 }
 @media screen and (max-width: 680px) {
     .payment_info{

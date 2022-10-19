@@ -8,9 +8,17 @@ import volume_icon from '../../../components/assets/volume.png';
 import video_image from '../../../components/assets/video_image.png';
 import screen from '../../../components/assets/screen.png';
 import option from '../../../components/assets/option.png';
+import close from '../../../components/assets/close.svg';
 
 function Video(props) {
+
   const [time, setTime] = useState("00:00");
+  const [showVideo, setShowVideo] = useState(false);
+
+  const closeModal = () => {
+    // console.log('button closed');
+    props.onHide(!showVideo)
+  }
   return (
     <Modal
       {...props}
@@ -19,6 +27,7 @@ function Video(props) {
     >
       <div className='video'>
         <Modal.Body>
+          <img src={close} alt='' className='video_close' onClick={closeModal} />
           <div className="player">
             <div className='d-flex'>
               <video
@@ -69,11 +78,12 @@ function Video(props) {
 
             </div>
           </div>
+          
           <div className='mobile_version'>
-          <div className='pre_images'>
-            <img className='pre_image' src={video_image} alt='' />
-            <img className='pre_image' src={video_image} alt='' />
-          </div>
+            <div className='pre_images'>
+              <img className='pre_image' src={video_image} alt='' />
+              <img className='pre_image' src={video_image} alt='' />
+            </div>
           </div>
         </Modal.Body>
       </div>

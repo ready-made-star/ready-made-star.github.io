@@ -1,6 +1,19 @@
+
+/* :root {
+  --background-color: #f00;
+  --border-color: #333;
+  --font-color: #fff;
+  --button-color: #0f0
+} */
+ 
+/* .custom-box {
+  box-shadow: var(--my-shadow, 2px 2px 5px blue); */
+
+
+
 .switch_mode{
   text-align: center;
-  color: #FFFFFF;
+  color: var(--font_color);
 }
 .author_body {
   display: flex;
@@ -15,9 +28,9 @@
 }
 .ant-input {
   border:none !important;
-  border-bottom: 1px #333333 solid !important;
+  border-bottom: 1px var(--font_color2) solid !important;
   background-color: transparent !important;
-  color: white !important;
+  color: var(--font_color) !important;
 }
 
 html,

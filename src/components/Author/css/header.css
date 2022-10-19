@@ -5,10 +5,10 @@
     align-items: center;
     padding: 0 28px;
     height: 9%;
-    border-bottom: 1px rgba(255, 255, 255, 0.2) solid;
+    border-bottom: 1px var(--font_color2) solid;
     z-index: 1;
     width: 100%;
-    background: black;
+    background-color: var(--background-color);
 }
 
 .profile {
@@ -31,7 +31,7 @@
     font-weight: 400;
     font-size: 12px;
     line-height: 18px;
-    color: rgba(255, 255, 255,0.6);
+    color: var(--font_color6);
 }
 
 img {
@@ -41,7 +41,17 @@ img {
 .mobile_version {
     display: none;
 }
-
+.close_login{
+    position: absolute;
+    right: -6%;
+    top: 7%;
+}
+.ant-modal-close-x{
+    display:none !important;
+}
+#login .ant-select-arrow{
+    display:none;
+}
 @media screen and (max-width: 680px) {
     .help {
         display: none;
@@ -49,7 +59,7 @@ img {
 
     .logo {
         padding-right: 10px;
-        border-right: 1px rgba(255, 255, 255, 0.2) solid;
+        border-right: 1px var(--font_color2) solid;
     }
 
     .mobile_version {
@@ -57,8 +67,12 @@ img {
     }
 
     .mobile_menu {
-        color: white;
+        color: var(--font_color);
         align-items: center;
         display: flex;
+        padding-top:5px
+    }
+    .ant-modal-content{
+        margin: 20px;
     }
 }

@@ -33,7 +33,7 @@
 }
 
 .ant-input-affix-wrapper{
-    background: black !important;
+    background-color: var(--background-color) !important;
 }
 .ant-select-arrow{
     display: none;

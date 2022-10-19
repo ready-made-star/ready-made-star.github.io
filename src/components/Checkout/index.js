@@ -1,20 +1,33 @@
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './checkout.css';
 import PhoneNumber from './PhoneNumber';
 import ReactInputVerificationCode from 'react-input-verification-code';
 import OrderedProduct from './OrderedProduct';
 import Timer from '../Author/Timer';
 import useravatar from '../../components/assets/user_avatar.png';
-import { Tabs, Input, Dropdown, Menu, message, Space } from 'antd';
+import { Tabs, Input, Dropdown, Menu, message, Space, Radio } from 'antd';
 import { DownOutlined } from '@ant-design/icons';
 import {HiQuestionMarkCircle} from 'react-icons/hi';
+import close from '../../components/assets/close.svg';
+import Success from './success';
 
 const onClick = ({ key }) => {
     message.info(`Click on item ${key}`);
   };
   
+
+  const plainOptions = [
+    {
+        label: 'Credit card',
+        value: 'Credit card',
+    },
+    {
+        label: 'Apple pay',
+        value: 'Apple pay',
+    }
+];
   const menu = (
     <Menu
       onClick={onClick}
@@ -36,13 +49,16 @@ const onClick = ({ key }) => {
   );
   
 function CheckOut(props) {
+    const [showCheckout, setShowCheckout] = useState(false);
     const [enterPhoneNumber, setEnterPhoneNumber] = useState('block');
     const [enterSMS, setEnterSMS] = useState('none');
     const [checkout, setCheckout] = useState('none');
     const [timer, setTimer] = useState('block');
     const [footerName, setFooterName] = useState('Continue');
     const [activeKey, setActiveKey] = useState('1');
-    const [input, setInput] = useState("");
+    const [showSuccess, setShowSuccess] = useState(false);
+
+    const [value2, setValue2] = useState('Credit card');
 
     const handleSendNumber = () => {
         setEnterPhoneNumber('none');
@@ -54,6 +70,9 @@ function CheckOut(props) {
         setFooterName('Continue to delivery address');
     }
 
+    const handleClose = () => {
+        setShowCheckout(false);
+    }
     const handleDelivery = () => {
         switch(activeKey){
             case "1": 
@@ -64,7 +83,9 @@ function CheckOut(props) {
                 setActiveKey("3");
                 setFooterName('Place your order');
                 break;
-            default: alert("ordered");
+            default:
+                setShowSuccess(true);
+                closeModal();
         }
         // case "2": 
         // alert(activeKey);
@@ -87,7 +108,6 @@ function CheckOut(props) {
                 <>
                     <div>
                         <PhoneNumber />
-
                     </div>
                     <div>
                         <div><label>Email</label></div>
@@ -154,9 +174,8 @@ function CheckOut(props) {
             key: String(3),
             children: (
                 <div>
-                    <div>
-                    <Button>Credit card</Button>
-                    <Button>Apple Pay</Button>
+                    <div className='payment_select'>
+                        <Radio.Group options={plainOptions} optionType="button" buttonStyle="solid" value={value2} />
                     </div>
                     <div>
                         <div><label>Credit card number</label></div>
@@ -166,34 +185,34 @@ function CheckOut(props) {
                         <div><label>Name on Credit</label></div>
                         <Input />
                     </div>
-                    <div style={{display:'flex'}}>
-                        <div>
-                            <div><label>Day</label></div>
+                    <div className='space_between' style={{ display: 'flex', marginTop:24, gap:10 }}>
+                        <div className='day_year'>
+                            <label className='font12'>Day</label>
                             <Dropdown overlay={menu}>
-                            <a onClick={(e) => e.preventDefault()}>
-                                <Space>
-                                    4
-                                    <DownOutlined />
-                                </Space>
-                            </a>
+                                <a onClick={(e) => e.preventDefault()}>
+                                    <Space>
+                                        12
+                                        <DownOutlined />
+                                    </Space>
+                                </a>
                             </Dropdown>
                         </div>
-                        <div>
-                            <div><label>Year</label></div>
+                        <div className='day_year'>
+                            <label className='font12'>Year</label>
                             <Dropdown overlay={menu}>
-                            <a onClick={(e) => e.preventDefault()}>
-                                <Space>
-                                    2022
-                                    <DownOutlined />
-                                </Space>
-                            </a>
+                                <a onClick={(e) => e.preventDefault()}>
+                                    <Space>
+                                        5
+                                        <DownOutlined />
+                                    </Space>
+                                </a>
                             </Dropdown>
                         </div>
-                        <div>
-                            <div><label>CVC</label></div>
-                            <div className='space-between'>
-                                <label>512</label>
-                                <HiQuestionMarkCircle />
+                        <div style={{width:'100%'}}>
+                            <label className='font12 text-center'>CVC</label>
+                            <div className='d-flex align-items-center'>
+                                <Input />
+                                <HiQuestionMarkCircle size={20}/>
                             </div>
                         </div>
                     </div>
@@ -202,21 +221,34 @@ function CheckOut(props) {
         },
     ];
 
+    const toggleShowCheckout = ()=> {
+        setShowCheckout(!showCheckout)
+    }
+
+    const closeModal = () => {
+        console.log('button closed');
+        props.onHide(!showCheckout)
+    }
+
+
     return (
+        <>
         <Modal
-            {...props}
+        {...props}
+            // show={showCheckout}
             size="lg"
             centered
+            // onHide={handleClose}
         >
-
-            <Modal.Body>
+            
+            <Modal.Body className='login_part'>
                 <div style={{ display: enterPhoneNumber }}>
                     <div className='checkout_header'>Enter Phone Number</div>
                     <div className='checkout_body'>
                         <PhoneNumber />
-                        <div className='dashborder'>Already a member? <a>Sign in</a></div>
+                        <div className='dashborder'>Already a member? <a style={{textDecoration: 'underline'}}>Sign in</a></div>
                     </div>
-                    <div className='checkout_footer text-center' onClick={handleSendNumber}>Continue</div>
+                    <div className='checkout_footer text-center font16' onClick={handleSendNumber}>Continue</div>
                 </div>
 
                 <div style={{ display: enterSMS }}>
@@ -236,7 +268,7 @@ function CheckOut(props) {
                             <div style={{ display: timer }}><Timer initialMinute={1} initialSeconds={59} /></div>
                         </div>
                     </div>
-                    <div className='checkout_footer text-center' onClick={handleSendSMS}>{footerName}</div>
+                    <div className='checkout_footer text-center font16' onClick={handleSendSMS}>{footerName}</div>
                 </div>
 
                 <div style={{ display: checkout }}>
@@ -258,10 +290,11 @@ function CheckOut(props) {
                         />
                     </div>
 
-                    <div className='checkout_footer text-center' onClick={handleDelivery}>{footerName}</div>
+                    <div className='checkout_footer text-center font16' onClick={handleDelivery}>{footerName}</div>
                 </div>
             </Modal.Body>
-            <Modal.Body>
+            <Modal.Body className='checkout_part'>
+            <img src={close} alt='' className='close_login' onClick={()=>closeModal()} style={{ cursor: "pointer" }}/>
                 <div>
                     <div className='checkout_header'>Order details</div>
                     <div className='checkout_body'>
@@ -289,6 +322,8 @@ function CheckOut(props) {
             </Modal.Body>
 
         </Modal>
+        <Success show={showSuccess} onHide={()=>setShowSuccess(false)} />
+        </>
     );
 }
 

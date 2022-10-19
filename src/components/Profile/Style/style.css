@@ -2,19 +2,19 @@
     display: block;
     width: 30%;
     padding: 38px 48px;
-    /* border-right: 1px rgba(255, 255, 255, 0.2) solid; */
+    /* border-right: 1px --font_color2 solid; */
     height: 91%;
-    background: black;
+    background-color: var(--background-color);
     margin-left: calc(18% + 100px);
     text-align: left;
 }
 .ant-select-arrow{
-    color: white !important;
+    color: var(--font_color) !important;
 }
 .ant-select-selector{
     background: transparent !important;
     border: none !important;
-    border-bottom:1px solid #333333 !important;
+    border-bottom:1px solid var(--font_color2) !important;
 }
 .ant-tag{
     border: 1px solid #fff !important;
