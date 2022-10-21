@@ -28,17 +28,23 @@ function GraphicCard(props) {
     const [showVideo, setShowVideo] = useState(false);
     const [showPlayButton1, setShowPlayButton1] = useState('none');
     const [showPlayButton2, setShowPlayButton2] = useState('none');
-    const [drawerSize, setDrawerSize] = useState(450);
+    // const [drawerSize, setDrawerSize] = useState(450);
+    let mobileView = false;
 
-    window.addEventListener('resize', function (event) {
-        event.preventDefault();
-        event.stopPropagation();
-        if (window.innerWidth < 680) {
-            // console.log(window.innerWidth+'px');
-            setDrawerSize(String(window.innerWidth) + 'px');
-            // return(true);
-        }
-    })
+    if(window.innerWidth<680){
+        mobileView = true;
+        // console.log('ss');
+    }
+
+    // window.addEventListener('resize', function (event) {
+    //     event.preventDefault();
+    //     event.stopPropagation();
+    //     if (window.innerWidth < 680) {
+    //         // console.log(window.innerWidth+'px');
+    //         setDrawerSize(String(window.innerWidth) + 'px');
+    //         // return(true);
+    //     }
+    // })
     const handleVideo = () => {
         // alert(showVideo);
         setShowVideo(true);
@@ -74,11 +80,11 @@ function GraphicCard(props) {
                     </div>
                 </Card>
                 <Drawer
-                    placement="right"
+                    placement={mobileView? 'bottom' : 'right'}
                     closable={false}
                     onClose={() => setShowCard(false)}
                     open={showCard}
-                    size={drawerSize}
+                    // size={drawerSize}
                 >
                     <div className='mobile_version' style={{height: 200, background: 'transparent'}}></div>
                     <div className='tray'>
@@ -117,8 +123,8 @@ function GraphicCard(props) {
                                 <label className='font12_6'>Graffiti-print shirt jacket</label>
                             </div>
                             <div>
-                                <button className='profile_arrow'><img src={theme? arrow:arrow2} alt='' style={{ cursor: "pointer" }} /></button>
-                                <img src={theme?dolce:dolce2} alt='' style={{ marginLeft: 10 }} />
+                                <img src={theme? arrow:arrow2} alt='' style={{ cursor: "pointer" }} />
+                                <img src={theme? dolce:dolce2} alt='' style={{ marginLeft: 10 }} />
                             </div>
                         </div>
                         <div>
@@ -191,6 +197,7 @@ function GraphicCard(props) {
                                 <img src={user_avatar} alt='' style={{ marginLeft: 10 }} />
                             </div>
                         </div>
+                        <div style={{height:100}}></div>
 
                     </div>
                     <div className='space_between add_bag_btn' style={{ background: '#EB4949', padding: 24 }}>

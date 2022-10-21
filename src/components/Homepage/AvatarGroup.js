@@ -7,7 +7,7 @@ import {Link} from 'react-router-dom';
 function AvatarGroup() {
     let avatar_count;
     if (window.innerWidth < 680) {
-        avatar_count = 2.6;
+        avatar_count = 4.2;
     }
     else
         avatar_count = 10.2;

@@ -67,7 +67,7 @@
     .home_main{
         margin:0;
         width: 100%;
-        padding-top: 0px;
+        padding: 0px 20px;
     }
     .each_avatar{
         padding: 18px 10px;

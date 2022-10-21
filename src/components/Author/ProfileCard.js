@@ -31,7 +31,7 @@ function ProfileCard(props) {
             <div className='space_between'>
                 <div><FaLink /></div>
                 <div><Link to='https://auradrops.com/brian_yips'>https://auradrops.com/brian</Link></div>
-                <div><FiCopy /></div>
+                <div style={{cursor:'pointer'}}><FiCopy /></div>
             </div>
             <div style={{ display: 'flex', alignItems: 'center', margin: '12px 0' }}>
                 <AiTwotoneMail /><div style={{ marginLeft: 20 }}>Email</div>

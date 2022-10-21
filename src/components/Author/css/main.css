@@ -29,7 +29,7 @@
     width: 12%;
     top: 50%;
     justify-content: center;
-    left:1%;
+    left: 1%;
 }
 
 .profile_person {
@@ -164,6 +164,22 @@
     font-weight: 600;
     font-size: 16px;
 }
+.font16_6 {
+    font-family: 'Vulf Sans Demo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.font24 {
+    font-family: 'Recoleta';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+}
 
 .avatar_group {
     display: flex;
@@ -204,7 +220,7 @@
     border-radius: 5px;
     color: var(--font_color);
     border: 1px var(--font_color6) solid;
-    display:flex;
+    display: flex;
     align-items: center;
 }
 
@@ -214,7 +230,7 @@
     border-radius: 5px;
     border: none;
     margin: 0 10px;
-    display:flex;
+    display: flex;
     align-items: center;
 }
 
@@ -241,11 +257,13 @@
     color: var(--font_color);
     padding: 18px 16px;
 }
-.tooltip-inner{
+
+.tooltip-inner {
     max-width: 100%;
     background-color: var(--background-color);
-    color:var(--font_color);
+    color: var(--font_color);
 }
+
 .main .ant-card-body {
     padding: 0;
     color: var(--font_color);

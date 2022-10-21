@@ -51,19 +51,19 @@ function Channels(props) {
             </div>
             <div className='channel_item' style={{ marginTop: 30, cursor: "pointer" }}>
                 <img src={theme ? ellipse : ellipse2} alt='' />
-                <div className='font12'>Now</div>
+                <div className='font12_6'>Now</div>
             </div>
             <div className='channel_item' style={{ cursor: "pointer" }}>
                 <img src={theme ? presale : presale2} alt='' />
-                <div className='font12'>Presale</div>
+                <div className='font12_6'>Presale</div>
             </div>
             <div className='channel_item' style={{ cursor: "pointer" }}>
                 <img src={theme ? raffle : raffle2} alt='' />
-                <div className='font12'>Raffle</div>
+                <div className='font12_6'>Raffle</div>
             </div>
             <div className='channel_item' style={{ cursor: "pointer" }}>
                 <img src={theme ? pin : pin2} alt='' />
-                <div className='font12'>Pin</div>
+                <div className='font12_6'>Pin</div>
             </div>
             <div className='channel_spotify'>
                 <div style={{margin:'15px 0'}}>

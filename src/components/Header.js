@@ -74,7 +74,7 @@ function Header(props) {
                 <div style={{ display: 'flex', gap: 10 }}>
                     {/* <img className='logo' onClick={()=>window.location.href="/"}  alt='' style={{ cursor: "pointer" }} />s */}
                     <Link to='/'><img className='logo' src={theme ? logo : logo2} alt='' style={{ cursor: "pointer" }} /></Link>
-                    <label className='mobile_version mobile_menu font20' style={{ cursor: "pointer" }}>Menu</label>
+                    <label className='mobile_version mobile_menu font16' style={{ cursor: "pointer" }}>Menu</label>
                 </div>
 
                 <div className='profile'>
