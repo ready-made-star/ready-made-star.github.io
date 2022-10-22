@@ -1,10 +1,9 @@
 .channels{
     position: fixed;
-    width: 100px;
+    width: var(--filter_width);
     padding: 20px 12px;
     border-right: 1px var(--font_color2) solid;
     height: 91%;
-    /* background: black; */
     background-color: var(--background-color);
 }
 .channel_item{
@@ -18,7 +17,42 @@
     position: absolute;
     left: 20px;
 }
-
+.filter .channel_spotify{
+    bottom: 10px;
+    position: absolute;
+    display: flex;
+    gap: 50px;
+}
+.filter{
+    position: fixed;
+    width: var(--filter_width);
+    padding: 20px 12px;
+    border-right: 1px var(--font_color2) solid;
+    height: 91%;
+    background-color: var(--background-color);
+}
+.ant-collapse{
+    background-color: var(--background-color) !important;
+    color: var(--font_color) !important;
+    border: none !important;
+}
+.ant-collapse-content{
+    background-color: var(--background-color) !important;
+    color: var(--font_color) !important;
+}
+.ant-collapse-header{
+    color: var(--font_color) !important;
+}
+.ant-collapse-item{
+    border: none !important;
+}
+.filter .channel_item{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin: 10px 0;
+    padding: 0 20px;
+}
 @media screen and (max-width: 680px) {
     .channels{
         display:none;

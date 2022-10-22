@@ -28,7 +28,6 @@
     border-top-left-radius: 100%;
 }
 
-.video-container {}
 
 .video_player video {
     height: 100%;
@@ -49,4 +48,5 @@
     width: 33%;
     height: 100%;
     display: flex;
+    z-index: 0;
 }

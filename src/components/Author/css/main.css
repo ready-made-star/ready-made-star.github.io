@@ -11,7 +11,7 @@
     height: 91%;
     display: flex;
     gap: 5%;
-    margin-left: 100px;
+    margin-left: var(--filter_width);
     background: var(--background-color);
 }
 
