@@ -1,10 +1,10 @@
 .favorites{
-    width: calc(82% - 100px);
+    width: calc(82% - var(--filter_width));
     padding: 28px;
     /* border-right: 1px --font_color2 solid; */
     /* height: 91%; */
     background-color: var(--background-color);
-    margin-left: calc(18% + 100px);
+    margin-left: calc(18% + var(--filter_width));
     /* text-align: left; */
 }
 .heart{

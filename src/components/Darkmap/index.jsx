@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { render } from 'react-dom'
-
+import Modal from 'react-bootstrap/Modal';
 // Import Google Map component
 import GoogleMapComponentWithMarker from './GoogleMapWithMarker'
 
@@ -40,9 +40,15 @@ class MapWrapper extends React.PureComponent {
 
   render() {
     return (
+      <Modal
+      show= {this.props.show}
+      onHide = {this.props.onHide}
+      size="lg"
+      centered
+    >
       <div style={styles}>
         <GoogleMapComponentWithMarker
-          googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key="
+          googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyAT9SH59Z75iR8OUEcfv-mTklD6xMDHs80"
           loadingElement={<div style={{ height: `100%` }} />}
           containerElement={<div style={{ height: `100%` }} />}
           mapElement={<div style={{ height: `100%` }} />}
@@ -54,9 +60,11 @@ class MapWrapper extends React.PureComponent {
           infoboxPosX={this.state.markerLat} // X coordinate for positioning info window
         />
       </div>
+      </Modal>
     )
   }
 }
 
 // Render everything in HTML
-render(<MapWrapper />, document.getElementById('root'))
+// render(<MapWrapper />, document.getElementById('root'))
+export default MapWrapper;

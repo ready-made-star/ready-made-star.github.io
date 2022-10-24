@@ -5,7 +5,7 @@
     border-right: 1px var(--font_color2) solid;
     height: 91%;
     background-color: var(--background-color);
-    margin-left: calc(18% + 100px);
+    margin-left: calc(18% + var(--filter_width));
     text-align: left;
 }
 
@@ -51,7 +51,7 @@
     background-color: var(--background-color);
     gap: 20px;
     display: flex;
-    margin-left: calc(100px + 18%);
+    margin-left: calc(var(--filter_width) + 18%);
 }
 
 .save_button {

@@ -1,6 +1,7 @@
 .banner {
     display: flex;
     align-items: center;
+    overflow: hidden;
     /* justify-content: flex-end; */
     border-radius: 12px;
     border: 1px var(--font_color2) solid;
@@ -13,9 +14,9 @@
 
 .innerDIV {
     display: flex;
-    width: 5%;
-    height: 83%;
-    border-bottom-left-radius: 47px;
+    width: 8%;
+    height: 100%;
+    border-bottom-left-radius: 50px;
     transform: rotate(51deg);
     border-left: 1px solid var(--font_color2);
     border-bottom: 1px solid var(--font_color2);

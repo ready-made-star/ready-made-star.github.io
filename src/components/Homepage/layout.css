@@ -21,11 +21,11 @@
 }
 .home_main{
     padding: 28px;
-    width:calc(100% - 100px);
+    width:calc(100% - var(--filter_width));
     height: 91%;
     display: flex;
     gap: 5%;
-    margin-left: 100px;
+    margin-left: var(--filter_width);
     background-color: var(--background-color);
 }
 .home_avatar_group {

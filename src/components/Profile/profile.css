@@ -5,7 +5,7 @@
     border-right: 1px var(--font_color2) solid;
     height: 91%;
     background-color: var(--background-color);
-    left: 100px;
+    left: var(--filter_width);
     text-align: left;
 }
 

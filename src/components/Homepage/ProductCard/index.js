@@ -22,6 +22,7 @@ import Checkout from '../../Checkout';
 import './productcard.css';
 import { TbPin } from 'react-icons/tb';
 import { connect } from 'react-redux';
+import MapWrapper from '../../Darkmap';
 
 function ProductCard(props) {
     const { theme } = { ...props };
@@ -29,6 +30,7 @@ function ProductCard(props) {
     const [showVideo, setShowVideo] = useState(false);
     const [showPlayButton1, setShowPlayButton1] = useState('none');
     const [showPlayButton2, setShowPlayButton2] = useState('none');
+    const [map, setMap] = useState(false);
     // const [drawerSize, setDrawerSize] = useState(1000);
     // const [mobileView, setMobileView] = useState(false)
 
@@ -63,6 +65,9 @@ function ProductCard(props) {
     }
     const handlePlayBtn2 = () => {
         setShowPlayButton2('block');
+    }
+    const handleMap = () => {
+        setMap(true);
     }
     return (
         <>
@@ -167,7 +172,7 @@ function ProductCard(props) {
 
                         <div className='drawer_contents'>
                             <div className='location_part'>
-                                <img src={empty_location} alt='' style={{ cursor: 'pointer' }} />
+                                <img src={empty_location} alt='' style={{ cursor: 'pointer' }} onClick={handleMap} />
                                 <label style={{ marginLeft: '5px' }}>3531 Sunset Blvd, Los Angeles, CA 90026</label>
                             </div>
                             <div style={{ width: '80%', margin: '20px 0' }}>
@@ -239,6 +244,10 @@ function ProductCard(props) {
                 <Video
                     show={showVideo}
                     onHide={() => setShowVideo(false)}
+                />
+                <MapWrapper
+                    show={map}
+                    onHide={() => setMap(false)}
                 />
             </div>
         </>

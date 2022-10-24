@@ -37,7 +37,7 @@ const tagRender = (props) => {
 function Style() {
     return (
         <>
-            <div className='d-flex' style={{ background: 'black' }}>
+            <div className='d-flex' style={{ background: 'var(--background-color)' }}>
                 <div className='style'>
                     <label className='font12 style_space'>Wear men's clothing, women's clothing, or both?</label>
                     <Select
