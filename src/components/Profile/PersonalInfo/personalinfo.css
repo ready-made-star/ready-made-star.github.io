@@ -1,7 +1,8 @@
 .personal_info1 {
     display: block;
     width: 25%;
-    padding: 48px;
+    padding: 0 48px 0 48px;
+    margin: 48px 0;
     border-right: 1px var(--font_color2) solid;
     height: 91%;
     background-color: var(--background-color);
@@ -11,13 +12,15 @@
 
 .ant-radio-wrapper {
     color: var(--font_color) !important;
+    width: 50%;
+    justify-content: center;
 }
 
 .personal_info2 {
     display: block;
     width: 25%;
     padding: 48px;
-    border-right: 1px var(--font_color2) solid;
+    /* border-right: 1px var(--font_color2) solid; */
     height: 91%;
     background-color: var(--background-color);
     /* margin-left: calc(18% + 100px); */
@@ -51,7 +54,7 @@
     background-color: var(--background-color);
     gap: 20px;
     display: flex;
-    margin-left: calc(var(--filter_width) + 18%);
+    margin-left: calc(var(--filter_width) + 19%);
 }
 
 .save_button {
@@ -83,6 +86,10 @@
 
 .ant-radio-inner::after {
     background-color: #EB4949 !important;
+}
+
+.ant-radio-checked .ant-radio-inner {
+    border-color: #EB4949 !important;
 }
 
 @media screen and (max-width: 680px) {

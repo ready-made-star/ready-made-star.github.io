@@ -67,6 +67,22 @@ label{
 .ant-select-selection-item{
     color: var(--font_color);
 }
+.ant-tabs-top > .ant-tabs-nav::before {
+    border: none !important;
+}
+.ant-tabs-nav-list{
+    border-bottom: 1px solid var(--font_color2);
+}
+.ant-tabs-tab{
+    color: var(--font_color2);
+}
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+    color: var(--font_color) !important;
+    /* color: #1890ff; */
+}
+.ant-radio-button-wrapper{
+    width: 50%;
+}
 @media screen and (max-width: 680px) {
     .modal-content{
         display:grid;

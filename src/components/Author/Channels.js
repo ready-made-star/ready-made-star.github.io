@@ -12,11 +12,38 @@ import spotify from '../assets/spotify.png';
 import switcher from '../assets/switcher.png';
 import switcher2 from '../assets/switcher2.png';
 import filter_arrow from '../assets/filter_arrow.png';
+import filter_arrow2 from '../assets/filter_arrow2.png';
+import collape_icon from '../assets/collape_icon.png';
+import collape_icon2 from '../assets/collape_icon2.png';
+import collape_icon_d from '../assets/collape_icon_d.png';
+import collape_icon_d2 from '../assets/collape_icon_d2.png';
+import user_avatar from '../assets/user_avatar.png';
+import summer from '../assets/summer.png';
+import winter from '../assets/winter.png';
+import spring from '../assets/spring.png';
+import fall from '../assets/fall.png';
+import fashion from '../assets/fashion.png';
+import goods from '../assets/goods.png';
+import tech from '../assets/tech.png';
+import beauty from '../assets/beauty.png';
 import close from '../assets/close.svg';
+import summer2 from '../assets/summer2.png';
+import winter2 from '../assets/winter2.png';
+import spring2 from '../assets/spring2.png';
+import fall2 from '../assets/fall2.png';
+import fashion2 from '../assets/fashion2.png';
+import goods2 from '../assets/goods2.png';
+import tech2 from '../assets/tech2.png';
+import beauty2 from '../assets/beauty2.png';
+import location from '../assets/location.png';
+import location2 from '../assets/location2.png';
+import location_click from '../assets/location_click.png';
+import location_click2 from '../assets/location_click2.png';
 import { useEffect, useState } from 'react';
 import './css/channels.css';
 import { toggleTheme } from '../../actions/index';
 import { connect } from 'react-redux';
+import {Link} from 'react-router-dom';
 import { MdGridView } from 'react-icons/md';
 import { CgLaptop } from 'react-icons/cg';
 import { Collapse, Drawer } from 'antd';
@@ -27,9 +54,10 @@ function Channels(props) {
     const [mode, setMode] = useState(false);
     const [filter, showFilter] = useState(false);
     const [showRaffle, setShowRaffle] = useState(false);
+    const [locateView, setLocationView] = useState(true);
     let mobileView = false;
 
-    if(window.innerWidth<680){
+    if (window.innerWidth < 680) {
         mobileView = true;
         // console.log('ss');
     }
@@ -46,6 +74,16 @@ function Channels(props) {
         console.log('text');
     }
 
+    const locationView = () => {
+        setLocationView(!locateView);
+
+    }
+    const full_view = () => {
+        setLocationView(true);
+    }
+    const grid_view = () => {
+        setLocationView(true);
+    }
     useEffect(() => {
         localStorage.setItem('mode', JSON.stringify(mode));
         if (theme == true) {
@@ -54,8 +92,6 @@ function Channels(props) {
             document.documentElement.style.setProperty('--font_color6', 'rgba(255, 255, 255,0.6)'); //white
             document.documentElement.style.setProperty('--font_color2', 'rgba(255, 255, 255,0.2)'); //white
             document.documentElement.style.setProperty('--btn_color', 'rgba(255, 255, 255,0.2)'); //white
-
-
         } else {
             document.documentElement.style.setProperty('--background-color', '#F8F0E3');
             document.documentElement.style.setProperty('--font_color', '#000');
@@ -107,13 +143,24 @@ function Channels(props) {
             <div className='filter' style={{ display: filter ? 'block' : 'none' }}>
                 <div style={{ cursor: "pointer", gap: 20 }}>
                     <label className='font16 p-3'>Channels</label>
-                    <img src={theme ? filter_arrow : filter_arrow} alt='' onClick={handleFilter} />
+                    <img src={theme ? filter_arrow : filter_arrow2} alt='' onClick={handleFilter} />
                 </div>
-                <div>
-                    <MdGridView size={25} />
-                    <CgLaptop size={25} />
+                <div className='channel_viewer pl-3'>
+                    <div className='grid_view' tabIndex="1" onClick={grid_view}>
+                        <MdGridView size={25} />
+                    </div>
+                    <div className='full_view' tabIndex="2" onClick={full_view}>
+                        <CgLaptop size={25} />
+                    </div>
+                    <Link to='/globemap'>
+                        <div onClick={locationView}>
+                            <img src={theme ? (locateView ? location : location_click) : (locateView ? location2 : location_click2)} alt='' style={{ cursor: "pointer", width: 20 }} />
+                        </div>
+                    </Link>
                 </div>
-                <Collapse defaultActiveKey={['1']} onChange={onChange} expandIconPosition='end'>
+                <Collapse defaultActiveKey={['1']} onChange={onChange} expandIconPosition='end'
+                    expandIcon={({ isActive }) => <img src={isActive ? (theme ? collape_icon : collape_icon_d) : (theme ? collape_icon2 : collape_icon_d2)} alt='collape' />}
+                >
                     <Panel header="Drop Type" key="1">
                         <div className='channel_item' style={{ cursor: "pointer" }}>
                             <img src={theme ? ellipse : ellipse2} alt='' />
@@ -133,19 +180,75 @@ function Channels(props) {
                         </div>
                     </Panel>
                     <Panel header="Creators" key="2">
-                        <p>text</p>
+                        <div className='d-flex align-items-center p-2' style={{ gap: 10 }}>
+                            <div><img src={user_avatar} alt='' style={{ width: 30, height: 30 }} /></div>
+                            <label className='font12_6'>@hannamontana</label>
+                        </div>
+                        <div className='d-flex align-items-center p-2' style={{ gap: 10 }}>
+                            <div><img src={user_avatar} alt='' style={{ width: 30, height: 30 }} /></div>
+                            <label className='font12_6'>@hannamontana</label>
+                        </div>
+                        <div className='d-flex align-items-center p-2' style={{ gap: 10 }}>
+                            <div><img src={user_avatar} alt='' style={{ width: 30, height: 30 }} /></div>
+                            <label className='font12_6'>@hannamontana</label>
+                        </div>
+                        <div className='d-flex align-items-center p-2' style={{ gap: 10 }}>
+                            <div><img src={user_avatar} alt='' style={{ width: 30, height: 30 }} /></div>
+                            <label className='font12_6'>@hannamontana</label>
+                        </div>
                     </Panel>
                     <Panel header="Categories" key="3">
-                        <p>text</p>
+                        <div className='channel_item' style={{ cursor: "pointer" }}>
+                            <img src={theme ? fashion : fashion2} alt='' />
+                            <div className='font12_6'>Fashion</div>
+                        </div>
+                        <div className='channel_item' style={{ cursor: "pointer" }}>
+                            <img src={theme ? beauty : beauty2} alt='' />
+                            <div className='font12_6'>Beauty</div>
+                        </div>
+                        <div className='channel_item' style={{ cursor: "pointer" }}>
+                            <img src={theme ? tech : tech2} alt='' />
+                            <div className='font12_6'>Tech</div>
+                        </div>
+                        <div className='channel_item' style={{ cursor: "pointer" }}>
+                            <img src={theme ? goods : goods2} alt='' />
+                            <div className='font12_6'>Goods</div>
+                        </div>
                     </Panel>
                     <Panel header="Price" key="4">
-                        <p>text</p>
+                        <div className='d-flex align-items-center p-2' style={{ gap: 10 }}>
+                            <label className='font12_6'>$120</label>
+                        </div>
+                        <div className='d-flex align-items-center p-2' style={{ gap: 10 }}>
+                            <label className='font12_6'>$120</label>
+                        </div>
+                        <div className='d-flex align-items-center p-2' style={{ gap: 10 }}>
+                            <label className='font12_6'>$120</label>
+                        </div>
+                        <div className='d-flex align-items-center p-2' style={{ gap: 10 }}>
+                            <label className='font12_6'>$120</label>
+                        </div>
                     </Panel>
                     <Panel header="Seasons" key="5">
-                        <p>text</p>
+                        <div className='channel_item' style={{ cursor: "pointer" }}>
+                            <img src={theme ? winter : winter2} alt='' />
+                            <div className='font12_6'>Winter</div>
+                        </div>
+                        <div className='channel_item' style={{ cursor: "pointer" }}>
+                            <img src={theme ? spring : spring2} alt='' />
+                            <div className='font12_6'>Spring</div>
+                        </div>
+                        <div className='channel_item' style={{ cursor: "pointer" }}>
+                            <img src={theme ? summer : summer2} alt='' />
+                            <div className='font12_6'>Summer</div>
+                        </div>
+                        <div className='channel_item' style={{ cursor: "pointer" }}>
+                            <img src={theme ? fall : fall2} alt='' />
+                            <div className='font12_6'>Fall</div>
+                        </div>
                     </Panel>
                 </Collapse>
-                
+
                 <div className='channel_spotify'>
                     <div style={{ margin: '15px 0' }}>
                         <img src={spotify} alt='' />
@@ -156,25 +259,25 @@ function Channels(props) {
                 </div>
             </div>
             <Drawer
-                    placement={mobileView? 'bottom' : 'right'}
-                    closable={false}
-                    onClose={() => setShowRaffle(false)}
-                    open={showRaffle}
-                    // size={drawerSize}
-                >
-                    <div className='mobile_version' style={{height: 200, background: 'transparent'}}></div>
-                    <div className='tray'>
-                        
-                            <img src={close} alt='' onClick={() => setShowRaffle(false)} style={{cursor:'pointer'}} />
-                        
-                        <div>
-                            
-                        </div>
+                placement={mobileView ? 'bottom' : 'right'}
+                closable={false}
+                onClose={() => setShowRaffle(false)}
+                open={showRaffle}
+            // size={drawerSize}
+            >
+                <div className='mobile_version' style={{ height: 200, background: 'transparent' }}></div>
+                <div className='tray'>
 
-                        
+                    <img src={close} alt='' onClick={() => setShowRaffle(false)} style={{ cursor: 'pointer' }} />
+
+                    <div>
+
                     </div>
 
-                </Drawer>
+
+                </div>
+
+            </Drawer>
         </>
     )
 }

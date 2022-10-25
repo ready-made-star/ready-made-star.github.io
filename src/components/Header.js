@@ -30,6 +30,13 @@ function Header(props) {
     const [isEnterCode, setIsEnterCode] = useState(false);
     const [modalShow, setModalShow] = useState(false);
     const [checkoutShow, setCheckoutShow] = useState(false);
+    const [timer, setTimer] = useState('block');
+
+    const handleChange = (e) => {
+        if (e.length === 6) {
+            setTimer('none');
+        }
+    }
 
     const handleCheckout = () => {
         setCheckoutShow(true);
@@ -83,7 +90,7 @@ function Header(props) {
                         <div>What can we help you find?</div>
                     </div>
                     <div className='profile_set'>
-                        <img className='desktop_version' src={theme ? location : location2} alt='' style={{ cursor: "pointer" }} />
+                        {/* <img className='desktop_version' src={theme ? location : location2} alt='' style={{ cursor: "pointer" }} /> */}
                         <img className='mobile_version' src={theme ? noti : noti2} alt='' style={{ cursor: "pointer" }} />
                         <img src={theme ? profile : profile2} alt='' onClick={handleLogin} style={{ cursor: "pointer" }} />
                         <img src={theme ? bag : bag2} alt='' onClick={handleCheckout} style={{ cursor: "pointer" }} />
@@ -107,7 +114,7 @@ function Header(props) {
             >
                 <div id='login'>
                     <img src={close} alt='' className='close_login' onClick={handleCancel} />
-                    <div>Phone</div>
+                    <div className='font12_6'>Phone</div>
                     <ConfigProvider
                         locale={en}
                         areaMapper={(area) => {
@@ -129,7 +136,7 @@ function Header(props) {
                             placeholder="233 225 4567"
                         />
                     </ConfigProvider>
-                    <div className='dashborder'>Already a member? <a style={{textDecoration: 'underline'}}>Sign in</a></div>
+                    <div className='dashborder font14'>Already a member? <a style={{ textDecoration: 'underline' }}>Sign in</a></div>
                 </div>
             </Modal>
 
@@ -149,18 +156,18 @@ function Header(props) {
             >
                 <img src={close} alt='' className='close_login' onClick={handleCancel} />
                 <div>
-                    <div>We just sent SMS with the confirmation code to your mobile number +17 323 451 7899</div>
+                    <div className='font14_w4'>We just sent SMS with the confirmation code to your mobile number <label style={{ color: '#CCB783' }}>+17 323 451 7899</label></div>
                     <div className="custom-styles">
                         <ReactInputVerificationCode
                             autoFocus
                             placeholder=""
                             length={6}
-                            onChange={console.log}
+                            onChange={handleChange}
                         />
                     </div>
                     <div style={{ display: 'flex', gap: 15, margin: 15 }}>
-                        <div style={{ cursor: "pointer" }}>Resend</div>
-                        <div><Timer initialMinute={1} initialSeconds={59} /></div>
+                        <div className='font12' style={{ cursor: "pointer", color: 'rgba(204, 183, 131, 0.4)' }}>Resend</div>
+                        <div className='font12_6' style={{ display: timer }}><Timer initialMinute={1} initialSeconds={59} /></div>
                     </div>
                 </div>
             </Modal>

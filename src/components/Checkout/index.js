@@ -102,7 +102,7 @@ function CheckOut(props) {
 
     const items = [
         {
-            label: `Professional Info`,
+            label: (<label className='font14_w4'>Professional Info</label>),
             key: String(1),
             children: (
                 <>
@@ -110,7 +110,7 @@ function CheckOut(props) {
                         <PhoneNumber />
                     </div>
                     <div>
-                        <div><label>Email</label></div>
+                        <div><label className='font12_6'>Email</label></div>
                         <Input placeholder="maskymlap@gmail.com" />
                     </div>
                 </>
@@ -118,11 +118,11 @@ function CheckOut(props) {
             ),
         },
         {
-            label: `Delivery`,
+            label: (<label className='font14_w4'>Delivery</label>),
             key: String(2),
             children: (
                 <div>
-                    <div><label>Country</label></div>
+                    <div><label className='font12_6 pb-2'>Country</label></div>
                     <Dropdown overlay={menu}>
                         <a onClick={(e) => e.preventDefault()}>
                             <Space>
@@ -131,23 +131,23 @@ function CheckOut(props) {
                             </Space>
                         </a>
                     </Dropdown>
-                    <div><label>Street</label></div>
+                    <div><label className='font12_6 pb-2 pt-2'>Street</label></div>
                     <Input placeholder='Vermont Ave' />
                     <div style={{display:'flex', gap: 5}}>
                         <div>
-                            <div><label>Building</label></div>
+                            <div><label className='font12_6 pb-2 pt-2'>Building</label></div>
                             <Input />
                         </div>
                         <div>
-                            <div><label>Apartment</label></div>
+                            <div><label className='font12_6 pb-2 pt-2'>Apartment</label></div>
                             <Input />
                         </div>
                         <div>
-                            <div><label>ZIP</label></div>
+                            <div><label className='font12_6 pb-2 pt-2'>ZIP</label></div>
                             <Input />
                         </div>
                     </div>
-                    <div><label>City</label></div>
+                    <div><label className='font12_6 pb-2 pt-2'>City</label></div>
                     <Dropdown overlay={menu}>
                         <a onClick={(e) => e.preventDefault()}>
                             <Space>
@@ -156,7 +156,7 @@ function CheckOut(props) {
                             </Space>
                         </a>
                     </Dropdown>
-                    <div><label>State</label></div>
+                    <div><label className='font12_6 pb-2 pt-2'>State</label></div>
                     <Dropdown overlay={menu}>
                         <a onClick={(e) => e.preventDefault()}>
                             <Space>
@@ -170,7 +170,7 @@ function CheckOut(props) {
             ),
         },
         {
-            label: `Payment`,
+            label: (<label className='font14_w4'>Payment</label>),
             key: String(3),
             children: (
                 <div>
@@ -178,16 +178,16 @@ function CheckOut(props) {
                         <Radio.Group options={plainOptions} optionType="button" buttonStyle="solid" value={value2} />
                     </div>
                     <div>
-                        <div><label>Credit card number</label></div>
+                        <div><label className='font12_6 pb-2 pt-2'>Credit card number</label></div>
                         <Input />
                     </div>
                     <div>
-                        <div><label>Name on Credit</label></div>
+                        <div><label className='font12_6 pb-2 pt-2'>Name on Credit</label></div>
                         <Input />
                     </div>
                     <div className='space_between' style={{ display: 'flex', marginTop:24, gap:10 }}>
                         <div className='day_year'>
-                            <label className='font12'>Day</label>
+                            <label className='font12_6 pb-2 pt-2'>Day</label>
                             <Dropdown overlay={menu}>
                                 <a onClick={(e) => e.preventDefault()}>
                                     <Space>
@@ -198,7 +198,7 @@ function CheckOut(props) {
                             </Dropdown>
                         </div>
                         <div className='day_year'>
-                            <label className='font12'>Year</label>
+                            <label className='font12_6 pb-2 pt-2'>Year</label>
                             <Dropdown overlay={menu}>
                                 <a onClick={(e) => e.preventDefault()}>
                                     <Space>
@@ -209,7 +209,7 @@ function CheckOut(props) {
                             </Dropdown>
                         </div>
                         <div style={{width:'100%'}}>
-                            <label className='font12 text-center'>CVC</label>
+                            <label className='font12_6 pb-2 pt-2 text-center'>CVC</label>
                             <div className='d-flex align-items-center'>
                                 <Input />
                                 <HiQuestionMarkCircle size={20}/>
@@ -243,18 +243,18 @@ function CheckOut(props) {
             
             <Modal.Body className='login_part'>
                 <div style={{ display: enterPhoneNumber }}>
-                    <div className='checkout_header'>Enter Phone Number</div>
+                    <div className='checkout_header font16'>Enter Phone Number</div>
                     <div className='checkout_body'>
                         <PhoneNumber />
-                        <div className='dashborder'>Already a member? <a style={{textDecoration: 'underline'}}>Sign in</a></div>
+                        <div className='dashborder font14'>Already a member? <a style={{textDecoration: 'underline'}}>Sign in</a></div>
                     </div>
                     <div className='checkout_footer text-center font16' onClick={handleSendNumber}>Continue</div>
                 </div>
 
                 <div style={{ display: enterSMS }}>
-                    <div className='checkout_header'>Enter the code</div>
+                    <div className='checkout_header font16'>Enter the code</div>
                     <div className='checkout_body'>
-                        <div>We just sent SMS with the confirmation code to your mobile number +17 323 451 7899</div>
+                        <div className='font14_w4'>We just sent SMS with the confirmation code to your mobile number <label style={{color:'#CCB783'}}>+17 323 451 7899</label></div>
                         <div className="custom-styles">
                             <ReactInputVerificationCode
                                 autoFocus
@@ -264,8 +264,8 @@ function CheckOut(props) {
                             />
                         </div>
                         <div style={{ display: 'flex', gap: 15, margin: 15 }}>
-                            <div style={{ cursor: "pointer" }}>Resend</div>
-                            <div style={{ display: timer }}><Timer initialMinute={1} initialSeconds={59} /></div>
+                            <div className='font12' style={{ cursor: "pointer", color: 'rgba(204, 183, 131, 0.4)' }}>Resend</div>
+                            <div className='font12_6' style={{ display: timer }}><Timer initialMinute={1} initialSeconds={59} /></div>
                         </div>
                     </div>
                     <div className='checkout_footer text-center font16' onClick={handleSendSMS}>{footerName}</div>
@@ -273,9 +273,9 @@ function CheckOut(props) {
 
                 <div style={{ display: checkout }}>
                     <div className='checkout_header space_between'>
-                        <label>Checkout</label>
+                        <label className='font16'>Checkout</label>
                         <div className='d-flex align-items-center' style={{ gap: 10 }}>
-                            <label>Hotaru Eri</label>
+                            <label className='font14'>Hotaru Eri</label>
                             <div>
                                 <img src={useravatar} alt='' />
                             </div>
@@ -303,19 +303,23 @@ function CheckOut(props) {
                     </div>
                     <div className='order_footer p-3'>
                         <div className='space_between'>
-                            <label>Subtotal</label>
-                            <label>$357</label>
+                            <label className='font12_6'>Subtotal</label>
+                            <label className='font12'>$357</label>
                         </div>
                         <div className='space_between'>
-                            <label>Delivery</label>
-                            <label>free</label>
+                            <label className='font12_6'>Delivery</label>
+                            <label className='font12'>free</label>
+                        </div>
+                        <div className='space_between'>
+                            <label className='font12_6'>Tax</label>
+                            <label className='font12'>$0</label>
                         </div>
                         <div className='order_footer_middle text-center p-2'>
-                            <label>We pledge 1% of our profit to positive environmental, climate, and social causes.</label>
+                            <label className='font12'>We pledge 1% of our profit to positive environmental, climate, and social causes.</label>
                         </div>
                         <div className='space_between p-2'>
-                            <label>Order Total</label>
-                            <label className='font20'>$2234</label>
+                            <label className='font12_6'>Order Total</label>
+                            <label className='font16'>$2234</label>
                         </div>
                     </div>
                 </div>

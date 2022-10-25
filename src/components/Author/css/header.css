@@ -45,6 +45,7 @@ img {
     position: absolute;
     right: -6%;
     top: 7%;
+    cursor: pointer;
 }
 .ant-modal-close-x{
     display:none !important;

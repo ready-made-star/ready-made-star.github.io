@@ -1,4 +1,4 @@
-.channels{
+.channels {
     position: fixed;
     width: var(--filter_width);
     padding: 20px 12px;
@@ -6,55 +6,98 @@
     height: 91%;
     background-color: var(--background-color);
 }
-.channel_item{
+
+.channel_item {
     display: flex;
     align-items: center;
     gap: 7px;
     margin: 10px 0;
 }
-.channel_spotify{
+
+.channel_spotify {
     bottom: 10px;
     position: absolute;
     left: 20px;
 }
-.filter .channel_spotify{
+
+.filter .channel_spotify {
     bottom: 10px;
     position: absolute;
     display: flex;
     gap: 50px;
 }
-.filter{
+
+.filter {
     position: fixed;
+    text-align: left;
     width: var(--filter_width);
     padding: 20px 12px;
     border-right: 1px var(--font_color2) solid;
     height: 91%;
     background-color: var(--background-color);
 }
-.ant-collapse{
+
+.ant-collapse {
     background-color: var(--background-color) !important;
     color: var(--font_color) !important;
     border: none !important;
 }
-.ant-collapse-content{
+
+.ant-collapse-content {
     background-color: var(--background-color) !important;
     color: var(--font_color) !important;
 }
-.ant-collapse-header{
+
+.ant-collapse-header {
     color: var(--font_color) !important;
 }
-.ant-collapse-item{
+
+.ant-collapse-item {
     border: none !important;
 }
-.filter .channel_item{
+
+.filter .channel_item {
     display: flex;
     align-items: center;
     gap: 7px;
     margin: 10px 0;
     padding: 0 20px;
 }
+
+.ant-collapse-header-text {
+    font-family: 'Vulf Sans Demo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+}
+.ant-tabs-ink-bar{
+    background: #EB4949 !important;
+    height:3px !important;
+}
+.channel_viewer{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.grid_view{
+    cursor: pointer;
+    color: var(--font_color6);
+    display:flex;
+}
+.full_view{
+    cursor: pointer;
+    color: var(--font_color6);
+    display: flex;
+}
+.full_view:focus{
+    color: var(--font_color);
+}
+.grid_view:focus{
+    color:var(--font_color);
+}
 @media screen and (max-width: 680px) {
-    .channels{
-        display:none;
+    .channels {
+        display: none;
     }
 }

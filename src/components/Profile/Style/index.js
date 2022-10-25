@@ -26,7 +26,7 @@ const tagRender = (props) => {
         closable={closable}
         onClose={onClose}
         style={{
-          marginRight: 3,
+          marginRight: 3, background: 'var(--background-color)'
         }}
       >
         {label}

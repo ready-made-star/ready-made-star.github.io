@@ -14,7 +14,7 @@ function PhoneNumber() {
     };
     return (
         <>
-            <div>Phone</div>
+            <div className='font12_6'>Phone</div>
             <ConfigProvider
                 locale={en}
                 areaMapper={(area) => {

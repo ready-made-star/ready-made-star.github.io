@@ -132,12 +132,38 @@
     color: var(--font_color6);
 }
 
+.font12_2 {
+    font-family: 'Vulf Sans Demo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: var(--font_color2);
+}
+
 .font14 {
     font-family: 'Recoleta';
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
     line-height: 120%;
+}
+.font14_w4{
+    font-family: 'Vulf Sans Demo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    /* color: var(--font_color2); */
+
+}
+.font14_8 {
+    font-family: 'Recoleta';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    color: var(--font_color6);
 }
 
 .font10 {
@@ -164,13 +190,14 @@
     font-weight: 600;
     font-size: 16px;
 }
+
 .font16_6 {
     font-family: 'Vulf Sans Demo';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--font_color6);
 }
 
 .font24 {
@@ -229,7 +256,7 @@
     color: var(--font_color);
     border-radius: 5px;
     border: none;
-    margin: 0 10px;
+    margin: 0 5px;
     display: flex;
     align-items: center;
 }

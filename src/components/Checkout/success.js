@@ -20,7 +20,7 @@ function Success(props) {
                 <img src={close} alt='' className='close_login' onClick={() =>   props.onHide(false)} style={{ cursor: "pointer" }}/>
                 <div>
                     <img className='d-flex' style={{margin:'auto'}} src={success} alt='' />
-                    <div className='font20 p-4 text-center'><label>The order has been successful placed</label></div>
+                    <div className='font20 p-4 text-center'><label>Payment Received</label></div>
                     <div className='success_footer text-center font16' onClick={() =>  props.onHide(false)} style={{ cursor: "pointer" }}>OK</div>
                 </div>
             </Modal.Body>

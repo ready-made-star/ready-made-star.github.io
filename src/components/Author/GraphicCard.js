@@ -19,6 +19,7 @@ import empty_location from '../assets/empty_location.png';
 import video_play from '../assets/video_play.svg';
 import heart from '../assets/heart.svg';
 import { TbPin } from 'react-icons/tb';
+import { BsGem } from 'react-icons/bs';
 import { connect } from 'react-redux';
 
 function GraphicCard(props) {
@@ -66,9 +67,8 @@ function GraphicCard(props) {
         <>
             <div className='graphic_card'>
                 <Card
-                    hoverable
                     style={{
-                        width: '100%', borderRadius: 12, border: '1px solid var(--font_color2)'
+                        width: '100%', borderRadius: 12, border: '1px solid var(--font_color2)', cursor: 'pointer'
                     }}
                     onClick={() => setShowCard(true)}
                     cover={<img alt="example" src={cardimg} style={{ width: '100%', borderRadius: '12px 12px 0 0', maxWidth: '-webkit-fill-available' }} />}
@@ -79,7 +79,7 @@ function GraphicCard(props) {
                             <div className='font10'>12/26/2022</div>
                         </div>
                         <div className='d-flex'>
-                            <button className='cardbtn' style={{ cursor: "pointer" }} ><TbPin />Fashion</button>
+                            <button className='cardbtn' style={{ cursor: "pointer" }} ><BsGem />Fashion</button>
                             <button className='pinbtn' style={{ cursor: "pointer" }} ><TbPin />Pin</button>
                         </div>
                     </div>
@@ -136,7 +136,7 @@ function GraphicCard(props) {
                             <Divider />
                         </div>
                         <div className='d-flex'>
-                            <button className='cardbtn' style={{ cursor: "pointer" }} ><TbPin />Fashion</button>
+                            <button className='cardbtn' style={{ cursor: "pointer" }} ><BsGem />Fashion</button>
                             <button className='pinbtn' style={{ cursor: "pointer" }} ><TbPin />Pin</button>
                             <button className='cardbtn' style={{ cursor: "pointer" }} >Selling fast!</button>
                         </div>

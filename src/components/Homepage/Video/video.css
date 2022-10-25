@@ -9,7 +9,6 @@
 
 .player {
     position: relative;
-    border: 5px solid rgba(0, 0, 0, 0.2);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     font-size: 0;
     overflow: hidden;
@@ -28,6 +27,9 @@
 
 .pre_images {
     width: min-content;
+    border: 1px solid rgba(0, 0, 0, 0.1);    
+    border-radius: 12px;
+    margin: 28px 28px 93px;
 }
 
 .pre_image {

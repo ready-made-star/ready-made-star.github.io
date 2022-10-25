@@ -27,7 +27,7 @@ function Success(props) {
                 <img src={close} alt='' className='close_login' onClick={() => closeModal()} />
                 <div>
                     <img className='d-flex' style={{margin:'auto'}} src={failed} alt='' />
-                    <div className='font20 p-4 text-center'><label>Not successful transactions</label></div>
+                    <div className='font20 p-4 text-center'><label>Uh oh…Payment Declined</label></div>
                     <div className='success_footer text-center' onClick={closeModal()}>Try again</div>
                 </div>
             </Modal.Body>

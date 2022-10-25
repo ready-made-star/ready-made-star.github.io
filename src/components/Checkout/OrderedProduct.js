@@ -24,8 +24,8 @@ function OrderedProduct(props) {
             <MdClose style={{ cursor: "pointer" }} />
             <img src={order_icon} alt='' />
             <div style={{ display: 'grid' }}>
-                <label>Brand name</label>
-                <label>Item name</label>
+                <label className='font12_2'>Brand name</label>
+                <label className='font14'>Item name</label>
                 <div style={{ display: 'flex', gap: 5 }}>
                     <img src={theme ? decrease : decrease2} alt="test" onClick={handleDecrease} style={{ cursor: "pointer" }} />
                     <label>{count}</label>
@@ -37,18 +37,18 @@ function OrderedProduct(props) {
                 <div>
                     <div style={{ display: 'flex', gap: 10 }}>
                         <div style={{ display: 'grid' }}>
-                            <label>Size</label>
+                            <label className='font12_6'>Size</label>
                             <label>L</label>
                         </div>
                         <div style={{ display: 'grid' }}>
-                            <label>Color</label>
+                            <label className='font12_6'>Color</label>
                             <div className='order_color'></div>
                         </div>
                     </div>
-                    <label className='font12'>Drop ID# 123456</label>
+                    <label className='font12_6'>Drop ID# 123456</label>
                 </div>
 
-                <label className='font20 d-flex align-items-center'>$52</label>
+                <label className='d-flex align-items-center font16'>$52</label>
             </div>
         </div>
     )
