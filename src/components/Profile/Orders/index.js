@@ -56,8 +56,8 @@ function PersonalInfo() {
                             <label className='font12'>ORDER #123456</label>
                         </div>
                         <div className='delivery'>
-                            <div>
-                                <img src="/images/step11.png" alt='' />
+                            <div style={{width:55}}>
+                                <img src="/images/step11.png" alt='' className='w-100'/>
                                 <label className='font12'>Confirmed</label>
                                 <label className='font12'>Jun 3</label>
                             </div>
@@ -68,8 +68,8 @@ function PersonalInfo() {
                                 <label className='font12'>Jun 13</label>
                             </div>
                             <StepLine2 />
-                            <div>
-                                <img src="/images/step3.png" alt='' />
+                            <div style={{width:70}}>
+                                <img src="/images/step3.png" alt='' className='w-100' />
                                 <label className='font12'>Out for delivery</label>
                             </div>
                             <StepLine2 />
@@ -126,8 +126,8 @@ function PersonalInfo() {
                         <label className='font12'>ORDER #123456</label>
                     </div>
                     <div className='delivery'>
-                        <div>
-                            <img src="/images/step11.png" alt='' />
+                        <div style={{width:55}}>
+                            <img src="/images/step11.png" alt='' className='w-100'/>
                             <label className='font12'>Confirmed</label>
                             <label className='font12'>Jun 3</label>
                         </div>

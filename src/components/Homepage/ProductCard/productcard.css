@@ -9,6 +9,15 @@
 .size_button:hover{
     background: #EB4949;;
 }
+.size_button:active{
+    background: #EB4949;;
+
+}
+.size_button:focus{
+    background: #EB4949;;
+
+}
+
 .size_part{
     border: 1px var(--font_color2) solid;
     border-radius: 100px;

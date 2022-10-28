@@ -12,9 +12,9 @@ class GlobalView extends Component {
     }
     render() {
         return (
-            <div className='globemap'>
+            <div className='globemap w-100'>
                 <div style={{ padding: "1rem 0" }}>
-                    <button
+                    {/* <button
                         className="btn"
                         onClick={this.changeCenter([-122.4194, 37.7749])}
                     >
@@ -25,9 +25,9 @@ class GlobalView extends Component {
                         onClick={this.changeCenter([151.2093, -33.8688])}
                     >
                         {"Sydney"}
-                    </button>
+                    </button> */}
+                    <Map center={this.state.center} />
                 </div>
-                <Map center={this.state.center} />
             </div>
         )
     }

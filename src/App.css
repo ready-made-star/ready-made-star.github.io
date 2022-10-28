@@ -1,33 +1,35 @@
-
 /* :root {
   --background-color: #f00;
   --border-color: #333;
   --font-color: #fff;
   --button-color: #0f0
 } */
- 
+
 /* .custom-box {
   box-shadow: var(--my-shadow, 2px 2px 5px blue); */
 
 
 
-.switch_mode{
+.switch_mode {
   text-align: center;
   color: var(--font_color);
 }
+
 .author_body {
   display: flex;
   position: absolute;
   top: 9%;
 }
-.homepage_body{
+
+.homepage_body {
   display: flex;
   position: absolute;
   top: 9%;
   width: 100%;
 }
+
 .ant-input {
-  border:none !important;
+  border: none !important;
   border-bottom: 1px var(--font_color2) solid !important;
   background-color: transparent !important;
   color: var(--font_color) !important;
@@ -51,19 +53,62 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-.mobile_version{
+
+.mobile_version {
   display: none;
 }
-.desktop_version{
+
+.desktop_version {
   display: block;
 }
+
+.cookies {
+  /* display: flex; */
+  gap:10px;
+  background: var(--cookies_back);
+  border: 1px solid rgba(163, 88, 88, 0.2);
+  /* backdrop-filter: blur(14px); */
+  border-radius: 12px;
+  position: fixed;
+  bottom: 40px;
+  transform: translate(50%, -50%);
+  height: 60px;
+  width: 50%;
+  padding: 13px;
+  justify-content: center;
+  align-items: center;
+}
+
+.cookies_btn {
+  /* backdrop-filter: blur(14px); */
+  /* background: #0D0D0D; */
+  border-radius: 36px;
+  /* border: 1px solid linear-gradient(90deg, #4B355A 2.57%, #3784AB 25.48%, #40C397 51.66%, #F0E681 74.93%, #EB4949 99.48%); */
+  font-family: 'Recoleta';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 120%;
+  border-radius: 100rem;
+  /* padding: 1rem; */
+  padding: 5px 10px 6px;
+  box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
+  border: solid 1px transparent;
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, #78e4ff, #ff48fa);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  box-shadow: 1px 1000px 1px var(--background-color) inset;
+}
+
 @media screen and (max-width: 680px) {
-  .mobile_version{
+  .mobile_version {
     display: block;
   }
-  .desktop_version{
+
+  .desktop_version {
     display: none;
   }
+
   .author_body {
     display: flex;
     position: static;

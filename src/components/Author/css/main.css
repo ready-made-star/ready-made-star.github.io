@@ -148,7 +148,8 @@
     font-size: 14px;
     line-height: 120%;
 }
-.font14_w4{
+
+.font14_w4 {
     font-family: 'Vulf Sans Demo';
     font-style: normal;
     font-weight: 400;
@@ -157,6 +158,7 @@
     /* color: var(--font_color2); */
 
 }
+
 .font14_8 {
     font-family: 'Recoleta';
     font-style: normal;
@@ -312,6 +314,10 @@
 
 .ant-modal-title {
     color: var(--font_color) !important;
+    font-family: 'Recoleta';
+    font-style: normal;
+    font-weight: 600 !important;
+    font-size: 16px;
 }
 
 .phonenumber {
@@ -361,6 +367,10 @@
 .state_half {
     display: flex;
     gap: 20px;
+}
+
+#button-tooltip {
+    margin-top: 15px;
 }
 
 @media screen and (max-width: 680px) {

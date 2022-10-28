@@ -22,7 +22,7 @@
 
 .filter .channel_spotify {
     bottom: 10px;
-    position: absolute;
+    position: fixed;
     display: flex;
     gap: 50px;
 }
@@ -30,11 +30,16 @@
 .filter {
     position: fixed;
     text-align: left;
+    overflow: scroll;
     width: var(--filter_width);
     padding: 20px 12px;
     border-right: 1px var(--font_color2) solid;
     height: 91%;
     background-color: var(--background-color);
+}
+
+.filter::-webkit-scrollbar {
+    display: none;
 }
 
 .ant-collapse {

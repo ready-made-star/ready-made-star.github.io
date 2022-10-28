@@ -24,6 +24,12 @@ import { TbPin } from 'react-icons/tb';
 import { BsGem } from 'react-icons/bs';
 import { connect } from 'react-redux';
 import MapWrapper from '../../Darkmap';
+import Tooltip from 'react-bootstrap/Tooltip';
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import { FaLink, FaTwitter } from 'react-icons/fa';
+import { AiTwotoneMail } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
+import { FiCopy } from 'react-icons/fi';
 
 function ProductCard(props) {
     const { theme } = { ...props };
@@ -34,10 +40,30 @@ function ProductCard(props) {
     const [map, setMap] = useState(false);
     // const [drawerSize, setDrawerSize] = useState(1000);
     // const [mobileView, setMobileView] = useState(false)
+    const [show, setShow] = useState(false);
+    const handleShare = () => {
+        setShow(!show);
+    }
+    const renderTooltip = (props) => (
+        <Tooltip id="button-tooltip" {...props}>
+            <div className='space_between'>
+                <div><FaLink /></div>
+                <div><Link to='https://auradrops.com/brian_yips'>https://auradrops.com/brian</Link></div>
+                <div style={{ cursor: 'pointer' }}><FiCopy /></div>
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', margin: '12px 0' }}>
+                <AiTwotoneMail /><div style={{ marginLeft: 20 }}>Email</div>
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+                <FaTwitter /><div style={{ marginLeft: 20 }}>Twitter</div>
+            </div>
+
+        </Tooltip>
+    );
 
     let mobileView = false;
 
-    if(window.innerWidth<680){
+    if (window.innerWidth < 680) {
         mobileView = true;
         // console.log('ss');
     }
@@ -50,7 +76,7 @@ function ProductCard(props) {
             // setMobileView(true);
             // setDrawerSize(String(window.innerHeight));
         }
-        else{
+        else {
             // setMobileView(false);
             // setDrawerSize(1000);
         }
@@ -101,11 +127,11 @@ function ProductCard(props) {
                     </div>
                 </Card>
                 <Drawer
-                    placement={mobileView? 'bottom': 'right'}
+                    placement={mobileView ? 'bottom' : 'right'}
                     closable={false}
                     onClose={() => setShowCard(false)}
                     open={showCard}
-                    // width={drawerSize}
+                // width={drawerSize}
                 >
                     <div className='mobile_version' style={{ height: 200, background: 'transparent' }}></div>
                     <div className='tray'>
@@ -143,9 +169,20 @@ function ProductCard(props) {
                                 <label className='font16'>Dolce && Gabbana</label>
                                 <label className='font12_6'>Graffiti-print shirt jacket</label>
                             </div>
-                            <div>
-                                <img src={theme?arrow:arrow2} alt='' style={{ cursor: "pointer" }} />
-                                <img src={theme?dolce:dolce2} alt='' style={{ marginLeft: 10 }} />
+                            <div className='d-flex' style={{gap:10}}>
+                                <div>
+                                    <OverlayTrigger
+                                        rootClose
+                                        trigger='click'
+                                        placement="bottom"
+                                        delay={{ show: 250, hide: 400 }}
+                                        overlay={renderTooltip}
+                                        onExit={() => setShow(false)}
+                                    >
+                                        <img src={theme ? arrow : arrow2} alt='' style={{ cursor: "pointer" }} className='profile_arrow' onClick={handleShare} />
+                                    </OverlayTrigger>
+                                </div>
+                                <div><img src={theme ? dolce : dolce2} alt='' style={{ marginLeft: 10 }} /></div>
                             </div>
                         </div>
                         <div>

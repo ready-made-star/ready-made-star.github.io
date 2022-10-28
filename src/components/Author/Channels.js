@@ -92,12 +92,14 @@ function Channels(props) {
             document.documentElement.style.setProperty('--font_color6', 'rgba(255, 255, 255,0.6)'); //white
             document.documentElement.style.setProperty('--font_color2', 'rgba(255, 255, 255,0.2)'); //white
             document.documentElement.style.setProperty('--btn_color', 'rgba(255, 255, 255,0.2)'); //white
+            document.documentElement.style.setProperty('--cookies_back', 'rgba(13, 13, 13, 0.7)'); //white
         } else {
             document.documentElement.style.setProperty('--background-color', '#F8F0E3');
             document.documentElement.style.setProperty('--font_color', '#000');
             document.documentElement.style.setProperty('--font_color6', 'rgba(13, 13, 13, 0.4)');
             document.documentElement.style.setProperty('--font_color2', 'rgba(13, 13, 13, 0.4)');
             document.documentElement.style.setProperty('--btn_color', '#0D0D0D'); //white
+            document.documentElement.style.setProperty('--cookies_back', 'rgba(248, 240, 227, 0.7)'); //white
         }
         if (filter) {
             document.documentElement.style.setProperty('--filter_width', '220px');

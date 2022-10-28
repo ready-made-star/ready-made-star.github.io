@@ -83,6 +83,16 @@ label{
 .ant-radio-button-wrapper{
     width: 50%;
 }
+.ant-tabs-tab:hover {
+    color: #EB4949 !important;
+}
+.ant-tabs-tab:active {
+    color: #EB4949 !important;
+}
+.ant-tabs-tab-btn:focus, .ant-tabs-tab-remove:focus, .ant-tabs-tab-btn:active, .ant-tabs-tab-remove:active {
+    color: #EB4949 !important;
+    
+}
 @media screen and (max-width: 680px) {
     .modal-content{
         display:grid;
