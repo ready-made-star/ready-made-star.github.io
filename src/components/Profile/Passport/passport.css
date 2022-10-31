@@ -1,0 +1,100 @@
+.passport {
+    /* display: flex; */
+    width: calc(82% - var(--filter_width));
+    padding: 50px 48px;
+    /* border-right: 1px --font_color2 solid; */
+    height: 100%;
+    background-color: var(--background-color);
+    margin-left: calc(18% + var(--filter_width));
+    text-align: left;
+    align-items: center;
+}
+
+.pass_main {
+    border: 1px solid rgba(204, 183, 131, 0.7);
+    border-radius: 44px;
+    width: 75%;
+    /* justify-content: center; */
+    margin: auto;
+    /* padding: 0 40px; */
+    text-align: start;
+    /* overflow: hidden; */
+    /* gap: 50px; */
+    height:75%;
+}
+
+.pass_item {
+    display: grid;
+    /* margin: 8px 0; */
+}
+
+.pass_row {
+    gap: 50px;
+    margin: 20px 30px;
+}
+
+.pass_title {
+    font-family: 'Vulf Mono Demo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    color: #ADADAD;
+    padding:8px 0;
+}
+
+.pass_content {
+    font-family: 'Recoleta';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 140%;
+    color: var(--font_color);
+}
+.pass_avatar{
+    border-radius: 12px;
+    border: 1px rgba(204, 183, 131, 0.7) solid;
+    background: var(--background-color);
+}
+.pass_code{
+    border-radius: 12px;
+    border: 1px rgba(204, 183, 131, 0.7) solid;
+    background: var(--background-color);
+}
+.pass_identify{
+    /* position:absolute; */
+    /* right: 15%; */
+    /* top: 10%; */
+    margin-top: -34px;
+}
+.barcode{
+    /* position: absolute; */
+    justify-content: end;
+    display: flex;
+    align-items: end;
+    height: 35%;
+}
+.pass_earth{
+    /* position: absolute; */
+    bottom:16%;
+    right: 12%;
+}
+.pass_front{
+    background-image: url(pass_earth.png);
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    height: 100%;
+}
+.pass_rotate{
+    gap: 20px;
+    cursor: pointer;
+    justify-content: center;
+}
+.pass_back{
+    background-image: url(pass_earth.png);
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}

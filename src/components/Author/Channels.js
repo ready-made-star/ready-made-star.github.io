@@ -43,7 +43,7 @@ import { useEffect, useState } from 'react';
 import './css/channels.css';
 import { toggleTheme } from '../../actions/index';
 import { connect } from 'react-redux';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { MdGridView } from 'react-icons/md';
 import { CgLaptop } from 'react-icons/cg';
 import { Collapse, Drawer } from 'antd';
@@ -83,6 +83,7 @@ function Channels(props) {
     }
     const grid_view = () => {
         setLocationView(true);
+
     }
     useEffect(() => {
         localStorage.setItem('mode', JSON.stringify(mode));
@@ -148,12 +149,16 @@ function Channels(props) {
                     <img src={theme ? filter_arrow : filter_arrow2} alt='' onClick={handleFilter} />
                 </div>
                 <div className='channel_viewer pl-3'>
-                    <div className='grid_view' tabIndex="1" onClick={grid_view}>
-                        <MdGridView size={25} />
-                    </div>
-                    <div className='full_view' tabIndex="2" onClick={full_view}>
-                        <CgLaptop size={25} />
-                    </div>
+                    <Link to='/'>
+                        <div className='grid_view' tabIndex="1" onClick={grid_view}>
+                            <MdGridView size={25} />
+                        </div>
+                    </Link>
+                    <Link to='/fullscreenview'>
+                        <div className='full_view' tabIndex="2" onClick={full_view}>
+                            <CgLaptop size={25} />
+                        </div>
+                    </Link>
                     <Link to='/globemap'>
                         <div onClick={locationView}>
                             <img src={theme ? (locateView ? location : location_click) : (locateView ? location2 : location_click2)} alt='' style={{ cursor: "pointer", width: 20 }} />

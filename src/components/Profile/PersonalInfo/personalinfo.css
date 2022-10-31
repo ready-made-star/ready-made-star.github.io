@@ -62,6 +62,7 @@
     border-radius: 12px;
     width: 150px;
     height:56px;
+    border: none;
 }
 .cancel_button{
     background: transparent;

@@ -122,6 +122,23 @@
     display: flex;
 }
 
+.font12_mono {
+    font-family: 'Vulf Mono Demo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 120%;
+    /* or 14px */
+
+    display: flex;
+    align-items: flex-end;
+    letter-spacing: -0.02em;
+
+    /* Greyscale/400 */
+
+    color: #ADADAD;
+}
+
 .font12_6 {
     font-family: 'Vulf Sans Demo';
     font-style: normal;
@@ -251,6 +268,7 @@
     border: 1px var(--font_color6) solid;
     display: flex;
     align-items: center;
+    padding: 4px 10px 4px 8px;
 }
 
 .pinbtn {
@@ -261,6 +279,7 @@
     margin: 0 5px;
     display: flex;
     align-items: center;
+    padding: 4px 10px 4px 8px;
 }
 
 .card_content {

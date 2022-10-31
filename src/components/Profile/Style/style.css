@@ -15,6 +15,7 @@
     background: transparent !important;
     border: none !important;
     border-bottom:1px solid var(--font_color2) !important;
+    height: 45px;
 }
 .ant-tag{
     border: 1px solid var(--font_color2) !important;
@@ -23,6 +24,12 @@
 }
 .style_space{
     margin: 31px 0 15px 0;
+}
+.ant-tag-has-color{
+    color: var(--font_color) !important;
+}
+.ant-tag-has-color .anticon-close {
+    color: var(--font_color) !important;
 }
 
 @media screen and (max-width: 680px) {

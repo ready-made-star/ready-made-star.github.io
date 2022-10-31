@@ -14,7 +14,7 @@ function App() {
           <Route element={<Author />} path="/author" />
           <Route element={<GlobeMap />} path="/globemap" />
           <Route element={<Profile />} path="/profile/*" />
-          <Route element={<Homepage />} path="/" />
+          <Route element={<Homepage />} path="/*" />
         </Routes>
       </div>
     </BrowserRouter>

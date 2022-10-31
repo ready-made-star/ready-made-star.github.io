@@ -8,44 +8,44 @@ import { version } from 'react-dom';
 function CardGroup(props) {
     return (
         <div className='container-fluid px-0'>
-        <div className='row'>
-            
-            {/* <div className="scroll"> */}
+            <div className='row'>
+
+                {/* <div className="scroll"> */}
                 {/* <div style={{ display: 'flex', gap: 10, margin: '10px 0' }}> */}
-                    <div className='col-12 col-md-6 col-xl-4 mb-3'>
+                <div className='col-12 col-md-6 col-xl-4 mb-3'>
                     <GraphicCard show={props.show} />
-                    </div>
-                    <div className='col-12 col-md-6 col-xl-4 mb-3'>
+                </div>
+                <div className='col-12 col-md-6 col-xl-4 mb-3'>
                     <GraphicCard />
-                    </div>
-                    <div className='col-12 col-md-6 col-xl-4 mb-3'>
+                </div>
+                <div className='col-12 col-md-6 col-xl-4 mb-3'>
                     <GraphicCard />
-                    </div>
+                </div>
                 {/* </div> */}
                 {/* <div style={{ display: 'flex', gap: 10, margin: '20px 0' }}> */}
-                    <div className='col-12 col-md-6 col-xl-4 mb-3'>
+                <div className='col-12 col-md-6 col-xl-4 mb-3'>
                     <GraphicCard />
-                    </div>
-                    <div className='col-12 col-md-6 col-xl-4 mb-3'>
+                </div>
+                <div className='col-12 col-md-6 col-xl-4 mb-3'>
                     <GraphicCard />
-                    </div>
-                    <div className='col-12 col-md-6 col-xl-4 mb-3'>
+                </div>
+                <div className='col-12 col-md-6 col-xl-4 mb-3'>
                     <GraphicCard />
-                    </div>
+                </div>
                 {/* // </div> */}
                 {/* <div style={{ display: 'flex', gap: 10, margin: '20px 0' }}> */}
-                    <div className='col-12 col-md-6 col-xl-4 mb-3'>
+                <div className='col-12 col-md-6 col-xl-4 mb-3'>
                     <GraphicCard />
-                    </div>
-                    <div className='col-12 col-md-6 col-xl-4 mb-3'>
+                </div>
+                <div className='col-12 col-md-6 col-xl-4 mb-3'>
                     <GraphicCard />
-                    </div>
-                    <div className='col-12 col-md-6 col-xl-4 mb-3'>
+                </div>
+                <div className='col-12 col-md-6 col-xl-4 mb-3'>
                     <GraphicCard />
-                    </div>
+                </div>
                 {/* // </div> */}
-            {/* </div> */}
-        </div>
+                {/* </div> */}
+            </div>
         </div>
     )
 }

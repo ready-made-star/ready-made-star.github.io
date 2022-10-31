@@ -26,7 +26,7 @@ const tagRender = (props) => {
         closable={closable}
         onClose={onClose}
         style={{
-          marginRight: 3, background: 'var(--background-color)'
+          marginRight: 3, background: 'var(--background-color)', height: 30, fontSize:14, padding:3
         }}
       >
         {label}
@@ -39,69 +39,70 @@ function Style() {
         <>
             <div className='d-flex' style={{ background: 'var(--background-color)' }}>
                 <div className='style'>
-                    <label className='font12 style_space'>Wear men's clothing, women's clothing, or both?</label>
+                    <label className='font12_mono style_space'>Wear men's clothing, women's clothing, or both?</label>
                     <Select
                         mode="multiple"
                         showArrow
                         tagRender={tagRender}
                         defaultValue={['Womenswear']}
                         style={{
-                            width: '100%',
+                            width: '100%', height: 45
+                        }}
+                        size='large'
+                        options={options}
+                    />
+                    <label className='font12_mono style_space'>How would you describe your style</label>
+                    <Select
+                        mode="multiple"
+                        showArrow
+                        tagRender={tagRender}
+                        defaultValue={['Womenswear']}
+                        style={{
+                            width: '100%', height: 45
                         }}
                         options={options}
                     />
-                    <label className='font12 style_space'>How would you describe your style</label>
+                    <label className='font12_mono style_space'>Нour shoe size</label>
                     <Select
                         mode="multiple"
                         showArrow
                         tagRender={tagRender}
                         defaultValue={['Womenswear']}
                         style={{
-                            width: '100%',
+                            width: '100%', height: 45
                         }}
                         options={options}
                     />
-                    <label className='font12 style_space'>Нour shoe size</label>
+                    <label className='font12_mono style_space'>Favorite colors</label>
                     <Select
                         mode="multiple"
                         showArrow
                         tagRender={tagRender}
                         defaultValue={['Womenswear']}
                         style={{
-                            width: '100%',
+                            width: '100%', height: 45
                         }}
                         options={options}
                     />
-                    <label className='font12 style_space'>Favorite colors</label>
+                    <label className='font12_mono style_space'>How much you spend</label>
                     <Select
                         mode="multiple"
                         showArrow
                         tagRender={tagRender}
                         defaultValue={['Womenswear']}
                         style={{
-                            width: '100%',
+                            width: '100%', height: 45
                         }}
                         options={options}
                     />
-                    <label className='font12 style_space'>How much you spend</label>
+                    <label className='font12_mono style_space'>Your shirt size</label>
                     <Select
                         mode="multiple"
                         showArrow
                         tagRender={tagRender}
                         defaultValue={['Womenswear']}
                         style={{
-                            width: '100%',
-                        }}
-                        options={options}
-                    />
-                    <label className='font12 style_space'>Your shirt size</label>
-                    <Select
-                        mode="multiple"
-                        showArrow
-                        tagRender={tagRender}
-                        defaultValue={['Womenswear']}
-                        style={{
-                            width: '100%',
+                            width: '100%', height: 45
                         }}
                         options={options}
                     />
