@@ -60,8 +60,8 @@ function ProfileCard(props) {
                 <div className='profile_description'>
                     <div className='profile_header'>
                         <div>
-                            <div className='font16' style={{fontFamily: 'Vulf Sans Demo'}}>Brian Yip</div>
-                            <div className='font12_6'>@brianyip</div>
+                            <div className='font16' style={{fontFamily: 'Vulf Sans Demo'}}>Alan Kingdom</div>
+                            <div className='font12_6'>@AlanKingdom</div>
                         </div>
                         <div style={{ display: 'flex', gap: 10 }}>
                             <div>
@@ -84,7 +84,7 @@ function ProfileCard(props) {
                     </div>
 
                     <div className='person_content font12_6'>
-                        My first entrepreneurial experience was buying and selling Yu-Gi-Oh cards in the middle school playground. Cards went for anywhere between $0.25 to $1, so I was especially thrilled when I accepted an offer for the Blue-Eyes White Dragon for $2.
+                        Allan Kingdom is a 3x Grammy Nominated recording artist, performer and producer. Coming from humble beginnings, and a loyal grassroots fanbase starting in his home town of St. Paul, Minnesota he represents a blend of Canadian, African, and American culture stemming from his diverse background. Allan has remained independent while touring internationally and collaborating with the likes of Paul McCartney, Kanye West, Denzel Curry, Flume, and many more... The young mogul continues to pave a new lane in Hip-Hop, entrepreneurship, and pop culture for younger generations to come.
                     </div>
                 </div>
                 <div className='profile_state'>

@@ -47,6 +47,7 @@ import { Link } from 'react-router-dom';
 import { MdGridView } from 'react-icons/md';
 import { CgLaptop } from 'react-icons/cg';
 import { Collapse, Drawer } from 'antd';
+import 'animate.css';
 const { Panel } = Collapse;
 
 function Channels(props) {
@@ -56,6 +57,15 @@ function Channels(props) {
     const [showRaffle, setShowRaffle] = useState(false);
     const [locateView, setLocationView] = useState(true);
     let mobileView = false;
+    // let filter = false;
+
+    const flag = (filter)=>{
+      
+        if(filter)
+            return "filter animate__animated animate__fadeInLeft"
+        else 
+            return "filter animate__animated animate__fadeOutLeft"
+    } 
 
     if (window.innerWidth < 680) {
         mobileView = true;
@@ -68,6 +78,23 @@ function Channels(props) {
     }
     const handleFilter = () => {
         showFilter(!filter);
+
+        // let element = document.querySelector('#fade_div_component');
+        // if(!filter){
+
+        //     element.className = "";
+        //     element.className ='filter animate__animated animate__fadeInLeft';
+        //     filter = !filter;
+        // }
+        // else {
+
+        //     element.className = "";
+        //     element.className ='filter animate__animated animate__fadeOutLeft';
+        //     filter = !filter;
+        // }
+
+
+
     }
 
     const onChange = () => {
@@ -93,7 +120,8 @@ function Channels(props) {
             document.documentElement.style.setProperty('--font_color6', 'rgba(255, 255, 255,0.6)'); //white
             document.documentElement.style.setProperty('--font_color2', 'rgba(255, 255, 255,0.2)'); //white
             document.documentElement.style.setProperty('--btn_color', 'rgba(255, 255, 255,0.2)'); //white
-            document.documentElement.style.setProperty('--cookies_back', 'rgba(13, 13, 13, 0.7)'); //white
+            document.documentElement.style.setProperty('--cookies_back', 'rgba(13, 13, 13, 0.7)');
+            document.documentElement.style.setProperty('--card_border', 'rgba(13, 13, 13, 0.7)');
         } else {
             document.documentElement.style.setProperty('--background-color', '#F8F0E3');
             document.documentElement.style.setProperty('--font_color', '#000');
@@ -143,7 +171,7 @@ function Channels(props) {
                 </div>
             </div>
 
-            <div className='filter' style={{ display: filter ? 'block' : 'none' }}>
+            <div className='filter' id="fade_div_component" style={{ display: !filter ? 'none' : 'block' }}>
                 <div style={{ cursor: "pointer", gap: 20 }}>
                     <label className='font16 p-3'>Channels</label>
                     <img src={theme ? filter_arrow : filter_arrow2} alt='' onClick={handleFilter} />
