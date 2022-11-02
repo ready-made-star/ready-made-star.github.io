@@ -1,7 +1,7 @@
 import { Card, Divider } from 'antd';
 import '../../Author/css/main.css';
 import '../../Author/css/card.css';
-import cardimg from '../../assets/cardimg.png';
+import cardimg from '../../assets/product_image.png';
 import pin from '../../assets/pin.png';
 import close from '../../assets/close.svg';
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -17,6 +17,10 @@ import user_avatar from '../../assets/user_avatar.png';
 import empty_location from '../../assets/empty_location.png';
 import video_play from '../../assets/video_play.svg';
 import heart from '../../assets/heart.svg';
+import pre_front from '../../assets/pre_front.png';
+import pre_left from '../../assets/pre_left.png';
+import pre_back from '../../assets/pre_back.png';
+import pre_right from '../../assets/pre_right.png';
 import Video from '../Video';
 import Checkout from '../../Checkout';
 import './productcard.css';
@@ -144,22 +148,29 @@ function ProductCard(props) {
                         </div>
                         <div>
                             <Swiper watchSlidesProgress={true} slidesPerView={2.3} className="mySwiper">
-                                <SwiperSlide onMouseOver={(e) => handlePlayBtn1(e)} onMouseLeave={(e) => { e.preventDefault(); e.stopPropagation(); setShowPlayButton1('none') }}>
+                            <SwiperSlide onMouseOver={(e) => handlePlayBtn1(e)} onMouseLeave={(e) => { e.preventDefault(); e.stopPropagation(); setShowPlayButton1('none') }}>
                                     <div className='video_image' style={{ cursor: "pointer" }}>
-                                        <img src={video_image} alt='' style={{ width: '100%' }} />
+                                        <img src={pre_front} alt='' style={{ width: '100%' }} />
                                     </div>
                                     <img className='video_play' onClick={handleVideo} src={video_play} alt='' style={{ display: showPlayButton1 }} />
                                 </SwiperSlide>
                                 <SwiperSlide onMouseOver={handlePlayBtn2} onMouseLeave={() => setShowPlayButton2('none')}>
                                     <div className='video_image' style={{ cursor: "pointer" }} >
-                                        <img src={video_image} alt='' style={{ width: '100%' }} />
+                                        <img src={pre_left} alt='' style={{ width: '100%' }} />
                                     </div>
                                     <img className='video_play' onClick={handleVideo} src={video_play} alt='' style={{ display: showPlayButton2 }} />
                                 </SwiperSlide>
-                                <SwiperSlide>
+                                <SwiperSlide onMouseOver={handlePlayBtn2} onMouseLeave={() => setShowPlayButton2('none')}>
                                     <div className='video_image' style={{ cursor: "pointer" }}>
-                                        <img src={video_image} alt='' style={{ width: '100%' }} />
+                                        <img src={pre_back} alt='' style={{ width: '100%' }} />
                                     </div>
+                                    <img className='video_play' onClick={handleVideo} src={video_play} alt='' style={{ display: showPlayButton2 }} />
+                                </SwiperSlide>
+                                <SwiperSlide onMouseOver={handlePlayBtn2} onMouseLeave={() => setShowPlayButton2('none')}>
+                                    <div className='video_image' style={{ cursor: "pointer" }} >
+                                        <img src={pre_right} alt='' style={{ width: '100%' }} />
+                                    </div>
+                                    <img className='video_play' onClick={handleVideo} src={video_play} alt='' style={{ display: showPlayButton2 }} />
                                 </SwiperSlide>
                             </Swiper>
                         </div>
@@ -214,7 +225,7 @@ function ProductCard(props) {
                             </div>
                             <div style={{ width: '80%', margin: '20px 0' }}>
                                 <label className='font12_6'>
-                                    Dolce & Gabbana's AW21 Womenswea r collection is a celebration of bold colour and '90s influences. This is reflected in the bright graffiti-style print of this shirt jacket.
+                                    Created, funded, and built by creative entrepreneur Allan Kingdom, Crypto Cut$ is the world’s first members-only crypto spa. As the first fashion item from the brand, the Crypto Cut$ Winter Beanie marks the start of the brand’s collection.
                                 </label>
                             </div>
 

@@ -1,5 +1,6 @@
 import './layout.css';
-import avatar1 from '../assets/creator.png';
+// import avatar from '../assets/creator.png';
+import avatar from '../assets/profile_avatar.jpg';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import {Link} from 'react-router-dom';
@@ -17,8 +18,8 @@ function AvatarGroup() {
                 <SwiperSlide>
                     <Link to='/author'>
                         <div className='each_avatar' style={{ cursor: "pointer" }}>
-                            <img src={avatar1} alt='' />
-                            <div className='font12'>@hanamontan</div>
+                            <img src={avatar} alt='' style={{ width:'100%', clipPath: "circle()" }} />
+                            <div className='font12'>@alankingdom</div>
                             <div className='font10 text-left'>Creator</div>
                         </div>
                     </Link>
@@ -26,8 +27,8 @@ function AvatarGroup() {
                 <SwiperSlide>
                     <Link to='/author'>
                         <div className='each_avatar' style={{ cursor: "pointer" }}>
-                            <img src={avatar1} alt='' />
-                            <div className='font12'>@hanamontan</div>
+                            <img src={avatar} alt=''  style={{ width:'100%', clipPath: "circle()" }}/>
+                            <div className='font12'>@alankingdom</div>
                             <div className='font10 text-left'>Creator</div>
                         </div>
                     </Link>
@@ -35,8 +36,8 @@ function AvatarGroup() {
                 <SwiperSlide>
                     <Link to='/author'>
                         <div className='each_avatar' style={{ cursor: "pointer" }}>
-                            <img src={avatar1} alt='' />
-                            <div className='font12'>@hanamontan</div>
+                            <img src={avatar} alt=''  style={{ width:'100%', clipPath: "circle()" }}/>
+                            <div className='font12'>@alankingdom</div>
                             <div className='font10 text-left'>Creator</div>
                         </div>
                     </Link>
@@ -44,8 +45,8 @@ function AvatarGroup() {
                 <SwiperSlide>
                     <Link to='/author'>
                         <div className='each_avatar' style={{ cursor: "pointer" }}>
-                            <img src={avatar1} alt='' />
-                            <div className='font12'>@hanamontan</div>
+                            <img src={avatar} alt=''  style={{ width:'100%', clipPath: "circle()" }}/>
+                            <div className='font12'>@alankingdom</div>
                             <div className='font10 text-left'>Creator</div>
                         </div>
                     </Link>
@@ -53,8 +54,8 @@ function AvatarGroup() {
                 <SwiperSlide>
                     <Link to='/author'>
                         <div className='each_avatar' style={{ cursor: "pointer" }}>
-                            <img src={avatar1} alt='' />
-                            <div className='font12'>@hanamontan</div>
+                            <img src={avatar} alt=''  style={{ width:'100%', clipPath: "circle()" }}/>
+                            <div className='font12'>@alankingdom</div>
                             <div className='font10 text-left'>Creator</div>
                         </div>
                     </Link>
@@ -62,8 +63,8 @@ function AvatarGroup() {
                 <SwiperSlide>
                     <Link to='/author'>
                         <div className='each_avatar' style={{ cursor: "pointer" }}>
-                            <img src={avatar1} alt='' />
-                            <div className='font12'>@hanamontan</div>
+                            <img src={avatar} alt=''  style={{ width:'100%', clipPath: "circle()" }}/>
+                            <div className='font12'>@alankingdom</div>
                             <div className='font10 text-left'>Creator</div>
                         </div>
                     </Link>
@@ -71,8 +72,8 @@ function AvatarGroup() {
                 <SwiperSlide>
                     <Link to='/author'>
                         <div className='each_avatar' style={{ cursor: "pointer" }}>
-                            <img src={avatar1} alt='' />
-                            <div className='font12'>@hanamontan</div>
+                            <img src={avatar} alt='' style={{ width:'100%', clipPath: "circle()" }}/>
+                            <div className='font12'>@alankingdom</div>
                             <div className='font10 text-left'>Creator</div>
                         </div>
                     </Link>
@@ -80,8 +81,8 @@ function AvatarGroup() {
                 <SwiperSlide>
                     <Link to='/author'>
                         <div className='each_avatar' style={{ cursor: "pointer" }}>
-                            <img src={avatar1} alt='' />
-                            <div className='font12'>@hanamontan</div>
+                            <img src={avatar} alt='' style={{ width:'100%', clipPath: "circle()" }}/>
+                            <div className='font12'>@alankingdom</div>
                             <div className='font10 text-left'>Creator</div>
                         </div>
                     </Link>
@@ -89,8 +90,8 @@ function AvatarGroup() {
                 <SwiperSlide>
                     <Link to='/author'>
                         <div className='each_avatar' style={{ cursor: "pointer" }}>
-                            <img src={avatar1} alt='' />
-                            <div className='font12'>@hanamontan</div>
+                            <img src={avatar} alt='' style={{ width:'100%', clipPath: "circle()" }}/>
+                            <div className='font12'>@alankingdom</div>
                             <div className='font10 text-left'>Creator</div>
                         </div>
                     </Link>
@@ -98,8 +99,8 @@ function AvatarGroup() {
                 <SwiperSlide>
                     <Link to='/author'>
                         <div className='each_avatar' style={{ cursor: "pointer" }}>
-                            <img src={avatar1} alt='' />
-                            <div className='font12'>@hanamontan</div>
+                            <img src={avatar} alt='' style={{ width:'100%', clipPath: "circle()" }} />
+                            <div className='font12'>@alankingdom</div>
                             <div className='font10 text-left'>Creator</div>
                         </div>
                     </Link>
@@ -107,8 +108,8 @@ function AvatarGroup() {
                 <SwiperSlide>
                     <Link to='/author'>
                         <div className='each_avatar' style={{ cursor: "pointer" }}>
-                            <img src={avatar1} alt='' />
-                            <div className='font12'>@hanamontan</div>
+                            <img src={avatar} alt='' style={{ width:'100%', clipPath: "circle()" }} />
+                            <div className='font12'>@alankingdom</div>
                             <div className='font10 text-left'>Creator</div>
                         </div>
                     </Link>

@@ -1,7 +1,7 @@
 import { Card, Drawer, Button, Divider } from 'antd';
 import './css/main.css';
 import './css/card.css';
-import cardimg from '../assets/cardimg.png';
+import cardimg from '../assets/product_image.png';
 import pin from '../assets/pin.png';
 import close from '../assets/close.svg';
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -149,6 +149,7 @@ function GraphicCard(props) {
                                     <div className='video_image' style={{ cursor: "pointer" }}>
                                         <img src={pre_back} alt='' style={{ width: '100%' }} />
                                     </div>
+                                    <img className='video_play' onClick={handleVideo} src={video_play} alt='' style={{ display: showPlayButton2 }} />
                                 </SwiperSlide>
                                 <SwiperSlide onMouseOver={handlePlayBtn2} onMouseLeave={() => setShowPlayButton2('none')}>
                                     <div className='video_image' style={{ cursor: "pointer" }} >
@@ -210,7 +211,7 @@ function GraphicCard(props) {
                             </div>
                             <div style={{ width: '80%', margin: '20px 0' }}>
                                 <label className='font12_6'>
-                                    Dolce & Gabbana's AW21 Womenswea r collection is a celebration of bold colour and '90s influences. This is reflected in the bright graffiti-style print of this shirt jacket.
+                                Created, funded, and built by creative entrepreneur Allan Kingdom, Crypto Cut$ is the world’s first members-only crypto spa. As the first fashion item from the brand, the Crypto Cut$ Winter Beanie marks the start of the brand’s collection.
                                 </label>
                             </div>
 

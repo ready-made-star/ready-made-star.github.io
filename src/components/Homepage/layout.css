@@ -36,10 +36,10 @@
     padding: 12px 0;
 }
 .each_avatar{
-    padding: 18px;
+    padding: 18px 10px;
     border-radius: 20px;
     border: 1px var(--font_color2) solid;
-    width: fit-content;
+    width: 115px;
 }
 .ant-drawer-content {
     color: var(--font_color);
@@ -55,6 +55,7 @@
     margin: 10px;
     border: 1px var(--font_color2) solid;
     border-radius: 7px;
+    overflow: hidden;
 }
 .video_play{
     position: absolute;

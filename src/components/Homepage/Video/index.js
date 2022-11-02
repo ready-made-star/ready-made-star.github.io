@@ -5,7 +5,8 @@ import prev from '../../../components/assets/prev.png';
 import next from '../../../components/assets/next.png';
 import play from '../../../components/assets/play.png';
 import volume_icon from '../../../components/assets/volume.png';
-import video_image from '../../../components/assets/video_image.png';
+import pre_left from '../../../components/assets/pre_left.png';
+import pre_back from '../../../components/assets/pre_back.png';
 import screen from '../../../components/assets/screen.png';
 import option from '../../../components/assets/option.png';
 import close from '../../../components/assets/close.svg';
@@ -65,12 +66,11 @@ function Video(props) {
         <Modal.Body>
           <img src={close} alt='' className='video_close' onClick={closeModal} />
           <div className="player">
-
-            <div className='w-100 d-flex align-items-center'>
+            <div className='w-100 d-flex align-items-center' style={{background: 'var(--background-color)', borderRadius:12}}>
               <video
                 className="player__video viewer"
                 autoPlay
-                src="/video.mp4"
+                src="/allan.mp4"
                 ref={videoEl}
                 onLoadedMetadata={handleLoadedMetadata}
               />
@@ -78,8 +78,8 @@ function Video(props) {
             </div>
 
             <div className='pre_images desktop_version'>
-              <img className='pre_image' src={video_image} alt='' />
-              <img className='pre_image' src={video_image} alt='' />
+              <img className='pre_image' src={pre_back} alt='' />
+              <img className='pre_image' src={pre_left} alt='' />
             </div>
 
             <div className="player__controls">
@@ -120,8 +120,8 @@ function Video(props) {
 
           <div className='mobile_version'>
             <div className='pre_images'>
-              <img className='pre_image' src={video_image} alt='' />
-              <img className='pre_image' src={video_image} alt='' />
+              <img className='pre_image' src={pre_back} alt='' />
+              <img className='pre_image' src={pre_left} alt='' />
             </div>
           </div>
         </Modal.Body>

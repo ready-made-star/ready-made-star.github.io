@@ -1,7 +1,8 @@
 import './css/main.css';
 import React, { useRef, useState } from 'react';
 import {Link} from 'react-router-dom';
-import avatar from '../assets/avatar.png';
+// import avatar from '../assets/avatar.png';
+import avatar from '../assets/profile_avatar.jpg';
 import arrow from '../assets/arrow.png';
 import arrow2 from '../assets/arrow2.png';
 import ellipse from '../assets/ellipse.png';
@@ -48,7 +49,7 @@ function ProfileCard(props) {
             <div className='gradient' style={{ position: "relative" }}>
                 <div style={{ width: '20%' }}>
                     <div className='profileavatar'>
-                        <img src={avatar} alt='' />
+                        <img src={avatar} alt='' style={{ width:'100%', clipPath: "circle()" }} />
                         <div style={{ display: 'flex', gap: 5 }}>
                             <div className='font10_2'>From</div>
                             <div className='font12'>12/26/2022</div>
@@ -61,7 +62,7 @@ function ProfileCard(props) {
                     <div className='profile_header'>
                         <div>
                             <div className='font16' style={{fontFamily: 'Vulf Sans Demo'}}>Alan Kingdom</div>
-                            <div className='font12_6'>@AlanKingdom</div>
+                            <div className='font12_6'>@alankingdom</div>
                         </div>
                         <div style={{ display: 'flex', gap: 10 }}>
                             <div>

@@ -40,14 +40,17 @@
 .pre_image {
     margin: 10px;
     width: 130px;
+    border-radius:7px;
 }
 .pre_images::-webkit-scrollbar{
     display:none;
 }
 
 .player__video {
-    width: 100%;
+    /* width: 100%; */
     border-radius: 12px;
+    height: 500px;
+    margin: auto;
 }
 
 .player__slider {
