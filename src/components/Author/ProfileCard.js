@@ -50,7 +50,7 @@ function ProfileCard(props) {
                 <div style={{ width: '20%' }}>
                     <div className='profileavatar'>
                         <img src={avatar} alt='' style={{ width:'100%', clipPath: "circle()" }} />
-                        <div style={{ display: 'flex', gap: 5 }}>
+                        <div className='profile_date'>
                             <div className='font10_2'>From</div>
                             <div className='font12'>12/26/2022</div>
                         </div>
@@ -85,7 +85,7 @@ function ProfileCard(props) {
                     </div>
 
                     <div className='person_content font12_6'>
-                        Allan Kingdom is a 3x Grammy Nominated recording artist, performer and producer. Coming from humble beginnings, and a loyal grassroots fanbase starting in his home town of St. Paul, Minnesota he represents a blend of Canadian, African, and American culture stemming from his diverse background. Allan has remained independent while touring internationally and collaborating with the likes of Paul McCartney, Kanye West, Denzel Curry, Flume, and many more... The young mogul continues to pave a new lane in Hip-Hop, entrepreneurship, and pop culture for younger generations to come.
+                        Allan Kingdom is a 3x Grammy Nominated recording artist, performer and producer. Coming from humble beginnings, and a loyal grassroots fanbase starting in his home town of St. Paul, Minnesota he represents a blend of Canadian, African, and American culture stemming from his diverse background.
                     </div>
                 </div>
                 <div className='profile_state'>

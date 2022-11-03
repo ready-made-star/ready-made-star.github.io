@@ -86,7 +86,7 @@ function Video(props) {
               <div className='desktop_version'>
                 <img src={prev} alt='' />
               </div>
-              <div style={{ width: '80%' }}>
+              <div style={{ width: '75%' }}>
                 <div className='buttons'>
                   <div className='d-flex align-items-center'>
                     <img src={play} alt='' onClick={handlePlayVideo} style={{ cursor: 'pointer' }} />

@@ -32,6 +32,12 @@
     color: var(--font_color) !important;
 }
 
+@media screen and (min-width: 681px) and (max-width: 1200px){
+    .style{
+        width: 50%;
+    }
+}
+
 @media screen and (max-width: 680px) {
     .style{
         margin:0;

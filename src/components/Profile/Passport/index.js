@@ -23,7 +23,7 @@ function Passport() {
         <div className='pass_main'>
           <div className='pass_front' style={{ display: front ? 'flex' : 'none' }}>
 
-            <div style={{width: '68%'}}>
+            <div className='pass_info' style={{width: '68%'}}>
               <div className='d-flex pass_row'>
                 <div className='pass_item'>
                   <label className='pass_title'>Full Name</label>
@@ -49,7 +49,7 @@ function Passport() {
                 </div>
               </div>
               <div className='d-flex pass_row'>
-                <div className='pass_item'>
+                <div className='pass_item w-100'>
                   <label className='pass_title'>Address</label>
                   <label className='pass_content'>855 N Vermont Ave Los Angeles CA 90029 USA</label>
                 </div>
@@ -61,7 +61,7 @@ function Passport() {
                 </div>
               </div>
               <div className='d-flex pass_row'>
-                <div className='pass_item'>
+                <div className='pass_item w-75'>
                   <label className='pass_content'>7374 2454 5540 0126</label>
                 </div>
                 <div className='pass_item'>
@@ -77,22 +77,22 @@ function Passport() {
                 </div>
               </div>
             </div>
-            <div>
+            <div className='w-25'>
               <div className='pass_identify'>
                 <div className='pass_avatar p-3 w-100'>
-                  <img src={pass_avatar} alt='passcode_avatar' className='d-flex mx-auto' />
+                  <img src={pass_avatar} alt='passcode_avatar' className='d-flex mx-auto w-100' />
                 </div>
-                <div className='pass_code p-3 w-100'>
-                  <img src={pass_code} alt='passcode_code' className='mx-auto' />
+                <div className='pass_code p-2 w-100'>
+                  <img src={pass_code} alt='passcode_code' className='mx-auto w-100' />
                 </div>
               </div>
               <div className='barcode'>
-                <img src={pass_2code} alt='barcode' />
+                <img className='w-100 h-100' src={pass_2code} alt='barcode' />
               </div>
             </div>
           </div>
           <div className='pass_back' style={{ display: front ? 'none' : 'flex' }}>
-            <img src={pass_logo} alt='pass_logo' />
+            <img className='pass_logo' src={pass_logo} alt='pass_logo' />
           </div>
         </div>
 

@@ -100,6 +100,14 @@ body {
   box-shadow: 1px 1000px 1px var(--background-color) inset;
 }
 
+@media screen and (min-width: 681px) and (max-width: 1200px){
+  .cookies{
+    font-size: 12px;
+    width:65%;
+    right:45%;
+  }
+}
+
 @media screen and (max-width: 680px) {
   .mobile_version {
     display: block;

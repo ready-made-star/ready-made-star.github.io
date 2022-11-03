@@ -10,6 +10,9 @@ function AvatarGroup() {
     if (window.innerWidth < 680) {
         avatar_count = 4.2;
     }
+    else if(window.innerWidth<1200){
+        avatar_count = 5;
+    }
     else
         avatar_count = 10.2;
     return (

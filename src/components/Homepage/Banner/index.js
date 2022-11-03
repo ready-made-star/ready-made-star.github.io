@@ -11,12 +11,12 @@ function Banner(props) {
         <div className="banner">
             <div className="innerDIV">
             </div>
-            <div style={{display:'grid', marginRight: '16%', textAlign: 'left'}}>
+            <div className='banner_text'>
                 <label className='font24'>Drip? Drop <RiDropFill size={20} style={{marginTop:8 }}/></label>
                 <label className='font16_6'>Become a Creator</label>
                 
             </div>
-            <div style={{marginRight: '8%'}}>
+            <div className='banner_app'>
                 {/* <img className='m-2' style={{cursor: 'pointer'}} src={playstore} alt='playstore' /> */}
                 <a href='https://testflight.apple.com/join/djiWh2kE'><img className='m-2' style={{cursor: 'pointer'}} src={theme?appstore:appstore2} alt='appstore' /></a>
             </div>

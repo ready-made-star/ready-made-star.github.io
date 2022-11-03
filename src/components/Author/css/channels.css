@@ -17,7 +17,6 @@
 .channel_spotify {
     bottom: 10px;
     position: absolute;
-    left: 20px;
 }
 
 .filter .channel_spotify {
@@ -103,6 +102,20 @@
 }
 @media screen and (max-width: 680px) {
     .channels {
-        display: none;
+        display: none !important;
+    }
+}
+@media screen and (min-width: 681px) and (max-width: 1200px){
+    .channel_text{
+        display:none !important;
+    }
+    .channels .channel_item{
+        justify-content: center;
+    }
+    .filter .channel_item{
+        padding: 0;
+    }
+    .ant-collapse-content > .ant-collapse-content-box{
+        padding:5px !important;
     }
 }

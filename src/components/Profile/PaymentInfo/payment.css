@@ -33,6 +33,18 @@
 .ant-radio-group{
     display: flex !important;
 }
+
+@media screen and (min-width: 681px) and (max-width: 1200px){
+    .payment_info{
+        border: none;
+        width: 50%;
+    }
+    .payment_buttons{
+        width: calc(82% - var(--filter_width));
+        justify-content: space-between;
+    }
+}
+
 @media screen and (max-width: 680px) {
     .payment_info{
         margin:0;

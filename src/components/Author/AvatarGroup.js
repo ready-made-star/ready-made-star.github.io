@@ -8,6 +8,9 @@ function AvatarGroup() {
     if (window.innerWidth < 680) {
         avatar_count = 4;
     }
+    // else if(window.innerWidth < 1200){
+    //     avatar_count = 8;
+    // }
     else
         avatar_count = 10.1;
     return (
@@ -15,67 +18,67 @@ function AvatarGroup() {
             <Swiper watchSlidesProgress={true} slidesPerView={avatar_count} className="mySwiper">
                 <SwiperSlide>
                     <div style={{cursor:"pointer"}}>
-                        <img src={avatar1} alt='' />
+                        <img src={avatar1} alt='' style={{ width:'100%', clipPath: "circle()" }}  />
                         <div>Minimal</div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div style={{cursor:"pointer"}}>
-                        <img src={avatar1} alt='' />
+                        <img src={avatar1} alt='' style={{ width:'100%', clipPath: "circle()" }}  />
                         <div>Minimal</div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div style={{cursor:"pointer"}}>
-                        <img src={avatar1} alt='' />
+                        <img src={avatar1} alt='' style={{ width:'100%', clipPath: "circle()" }}  />
                         <div>Minimal</div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div style={{cursor:"pointer"}}>
-                        <img src={avatar1} alt='' />
+                        <img src={avatar1} alt='' style={{ width:'100%', clipPath: "circle()" }}  />
                         <div>Minimal</div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div style={{cursor:"pointer"}}>
-                        <img src={avatar1} alt='' />
+                        <img src={avatar1} alt='' style={{ width:'100%', clipPath: "circle()" }}  />
                         <div>Minimal</div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div style={{cursor:"pointer"}}>
-                        <img src={avatar1} alt='' />
+                        <img src={avatar1} alt='' style={{ width:'100%', clipPath: "circle()" }}  />
                         <div>Minimal</div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div style={{cursor:"pointer"}}>
-                        <img src={avatar1} alt='' />
+                        <img src={avatar1} alt='' style={{ width:'100%', clipPath: "circle()" }}  />
                         <div>Minimal</div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div style={{cursor:"pointer"}}>
-                        <img src={avatar1} alt='' />
+                        <img src={avatar1} alt='' style={{ width:'100%', clipPath: "circle()" }}  />
                         <div>Minimal</div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div style={{cursor:"pointer"}}>
-                        <img src={avatar1} alt='' />
+                        <img src={avatar1} alt='' style={{ width:'100%', clipPath: "circle()" }}  />
                         <div>Minimal</div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div style={{cursor:"pointer"}}>
-                        <img src={avatar1} alt='' />
+                        <img src={avatar1} alt='' style={{ width:'100%', clipPath: "circle()" }}  />
                         <div>Minimal</div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div style={{cursor:"pointer"}}>
-                        <img src={avatar1} alt='' />
+                        <img src={avatar1} alt='' style={{ width:'100%', clipPath: "circle()" }}  />
                         <div>Minimal</div>
                     </div>
                 </SwiperSlide>

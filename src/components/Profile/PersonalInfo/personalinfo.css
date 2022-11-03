@@ -93,6 +93,23 @@
     border-color: #EB4949 !important;
 }
 
+@media screen and (min-width: 681px) and (max-width: 1200px){
+    .personal_info{
+        display: block;
+    }
+    .personal_info2{
+        margin-left: calc(18% + var(--filter_width));
+        width: 50%;
+    }
+    .personal_info1{
+        border: none;
+        width: 50%;
+    }
+    .save_buttons{
+        justify-content: space-between;
+    }
+}
+
 @media screen and (max-width: 680px) {
     .personal_info1 {
         margin-left:0;

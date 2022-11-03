@@ -77,14 +77,12 @@
 .person_content {
     text-align: left;
     padding-top: 12px;
-    width: 78%;
     font-family: 'Vulf Sans Demo';
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
     line-height: 18px;
     color: var(--font_color6);
-
 }
 
 .profile_state {
@@ -99,7 +97,6 @@
 }
 
 .state_value {
-    border-bottom: 1px var(--font_color2) solid;
     padding: 12px 24px;
     display: flex;
     gap: 20px;
@@ -392,6 +389,38 @@
     margin-top: 15px;
 }
 
+.profile_date{
+    display: flex;
+    gap: 5px;
+}
+
+.state_first_part{
+    height: 50%;
+    border-bottom: 1px var(--font_color2) solid;
+    display: grid;
+    align-items: center;
+}
+.state_second_part{
+    display: grid;
+    align-items: center;
+}
+@media screen and (min-width: 681px) and (max-width: 1200px){
+    .state_value{
+        display: block;
+    }
+    .profile_date{
+        display:block;
+    }
+    .person_content{
+        width: 100%;
+    }
+    .main{
+        padding: 10px;
+    }
+    .location{
+        padding: 7px 10px;
+    }
+}
 @media screen and (max-width: 680px) {
     .desktop_version {
         display: none
@@ -445,7 +474,7 @@
 
     .state_second_part {
         width: 50%;
-        padding-top: 12%
+        padding-top: 12%;
     }
 
     .state_value {

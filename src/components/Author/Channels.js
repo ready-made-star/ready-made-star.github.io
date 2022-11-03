@@ -57,8 +57,14 @@ function Channels(props) {
     const [showRaffle, setShowRaffle] = useState(false);
     const [locateView, setLocationView] = useState(true);
     let mobileView = false;
+    let tablet = false;
     // let filter = false;
-
+    if(window.innerWidth>680 && window.innerWidth<1200){
+        tablet = true;
+    }
+    else{
+        tablet = false;
+    }
     const flag = (filter)=>{
       
         if(filter)
@@ -131,9 +137,9 @@ function Channels(props) {
             document.documentElement.style.setProperty('--cookies_back', 'rgba(248, 240, 227, 0.7)'); //white
         }
         if (filter) {
-            document.documentElement.style.setProperty('--filter_width', '220px');
+            document.documentElement.style.setProperty('--filter_width', !tablet? '220px':'180px');
         } else {
-            document.documentElement.style.setProperty('--filter_width', '100px');
+            document.documentElement.style.setProperty('--filter_width', tablet? '80px': '100px');
         }
 
     }, [theme, filter]);
@@ -147,22 +153,22 @@ function Channels(props) {
                 </div>
                 <div className='channel_item' style={{ marginTop: 30, cursor: "pointer" }}>
                     <img src={theme ? ellipse : ellipse2} alt='' />
-                    <div className='font12_6'>Now</div>
+                    <div className='font12_6 channel_text'>Now</div>
                 </div>
                 <div className='channel_item' style={{ cursor: "pointer" }}>
                     <img src={theme ? presale : presale2} alt='' />
-                    <div className='font12_6'>Presale</div>
+                    <div className='font12_6 channel_text'>Presale</div>
                 </div>
                 <div className='channel_item' style={{ cursor: "pointer" }} onClick={() => setShowRaffle(true)}>
                     <img src={theme ? raffle : raffle2} alt='' />
-                    <div className='font12_6'>Raffle</div>
+                    <div className='font12_6 channel_text'>Raffle</div>
                 </div>
                 <div className='channel_item' style={{ cursor: "pointer" }}>
                     <img src={theme ? pin : pin2} alt='' />
-                    <div className='font12_6'>Pin</div>
+                    <div className='font12_6 channel_text'>Pin</div>
                 </div>
                 <div className='channel_spotify'>
-                    <div style={{ margin: '15px 0' }}>
+                    <div>
                         <img src={spotify} alt='' />
                     </div>
                     <div style={{ margin: '15px 0' }}>

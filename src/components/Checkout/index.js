@@ -242,7 +242,7 @@ function CheckOut(props) {
         >
             
             <Modal.Body className='login_part'>
-                <div style={{ display: enterPhoneNumber }}>
+                <div className='phone' style={{ display: enterPhoneNumber }}>
                     <div className='checkout_header font16'>Enter Phone Number</div>
                     <div className='checkout_body'>
                         <PhoneNumber />

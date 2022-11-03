@@ -28,3 +28,9 @@
     left: 2%;
     top: 3%;
 }
+
+@media screen and (min-width: 681px) and (max-width: 1200px){
+    .full_pre_image{
+        width: 22%;
+    }
+}
