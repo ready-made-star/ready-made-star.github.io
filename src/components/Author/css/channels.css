@@ -11,7 +11,7 @@
     display: flex;
     align-items: center;
     gap: 7px;
-    margin: 10px 0;
+    margin: 25px 0;
 }
 
 .channel_spotify {
@@ -117,5 +117,8 @@
     }
     .ant-collapse-content > .ant-collapse-content-box{
         padding:5px !important;
+    }
+    .channel_image{
+        width: 16px;
     }
 }

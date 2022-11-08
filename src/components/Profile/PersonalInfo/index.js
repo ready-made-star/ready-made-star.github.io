@@ -50,18 +50,18 @@ function PersonalInfo() {
                         <div>Personal Info</div>
                     </div>
                     <div className='info_each'>
-                        <label className='font12_6' style={{padding:'10px 0'}}>Full name</label>
+                        <label className='font12_mono' style={{padding:'10px 0'}}>Full name</label>
                         <Input />
                     </div>
                     <div className='info_each'>
-                        <label className='font12_6' style={{padding:'10px 0'}}>Nike name</label>
+                        <label className='font12_mono' style={{padding:'10px 0'}}>Nike name</label>
                         <Input />
                     </div>
 
                     <div className='info_each'>
-                        <label className='font12_6' style={{padding:'10px 0'}}>Day</label>
+                        <label className='font12_mono' style={{padding:'10px 0'}}>Day</label>
                         <div style={{ display: 'flex', gap: 10 }}>
-                            <div className='day_year'>
+                            <div className='day_year font14_w4'>
                                 <Dropdown overlay={menu}>
                                     <a onClick={(e) => e.preventDefault()}>
                                         <Space>
@@ -71,7 +71,7 @@ function PersonalInfo() {
                                     </a>
                                 </Dropdown>
                             </div>
-                            <div className='day_year'>
+                            <div className='day_year font14_w4'>
                                 <Dropdown overlay={menu}>
                                     <a onClick={(e) => e.preventDefault()}>
                                         <Space>
@@ -81,7 +81,7 @@ function PersonalInfo() {
                                     </a>
                                 </Dropdown>
                             </div>
-                            <div className='day_year'>
+                            <div className='day_year font14_w4'>
                                 <Dropdown overlay={menu}>
                                     <a onClick={(e) => e.preventDefault()}>
                                         <Space>
@@ -97,11 +97,11 @@ function PersonalInfo() {
                         <PhoneNumber />
                     </div>
                     <div className='info_each'>
-                        <label className='font12_6' style={{padding:'10px 0'}}>Email</label>
+                        <label className='font12_mono' style={{padding:'10px 0'}}>Email</label>
                         <Input />
                     </div>
-                    <div className='info_each'>
-                        <label className='font12_6' style={{padding:'10px 0'}}>Preferred Communication</label>
+                    <div className='info_each font14_w4'>
+                        <label className='font12_mono' style={{padding:'10px 0'}}>Preferred Communication</label>
                         <div>
                             <Radio.Group options={plainOptions} onChange={onChange1} value={value1} />
                         </div>
@@ -110,11 +110,11 @@ function PersonalInfo() {
 
                 <div className='personal_info2'>
                     <div className='font20 info_title'>
-                        <div className='font12_6' style={{padding:'10px 0'}}>Address</div>
+                        <div style={{padding:'10px 0'}}>Address</div>
                     </div>
                     <div className='info_each'>
-                        <label className='font12_6' style={{padding:'10px 0'}}>Country</label>
-                        <div className='drop_under'>
+                        <label className='font12_mono' style={{padding:'10px 0'}}>Country</label>
+                        <div className='drop_under font14_w4'>
                             <Dropdown overlay={menu}>
                                 <a onClick={(e) => e.preventDefault()}>
                                     <Space>
@@ -126,28 +126,28 @@ function PersonalInfo() {
                         </div>
                     </div>
                     <div className='info_each'>
-                        <label className='font12_6' style={{padding:'10px 0'}}>Street</label>
+                        <label className='font12_mono' style={{padding:'10px 0'}}>Street</label>
                         <Input />
                     </div>
 
                     <div className='info_each' style={{ display: 'flex', gap: 10 }}>
                         <div>
-                            <label className='font12_6' style={{padding:'10px 0'}}>Building</label>
+                            <label className='font12_mono' style={{padding:'10px 0'}}>Building</label>
                             <Input />
                         </div>
                         <div>
-                            <label className='font12_6' style={{padding:'10px 0'}}>Apartment</label>
+                            <label className='font12_mono' style={{padding:'10px 0'}}>Apartment</label>
                             <Input />
                         </div>
                         <div>
-                            <label className='font12_6' style={{padding:'10px 0'}}>Zip</label>
+                            <label className='font12_mono' style={{padding:'10px 0'}}>Zip</label>
                             <Input />
                         </div>
                     </div>
 
                     <div>
-                        <label className='font12_6' style={{padding:'10px 0'}}>City</label>
-                        <div className='drop_under'>
+                        <label className='font12_mono' style={{padding:'10px 0'}}>City</label>
+                        <div className='drop_under font14_w4'>
                             <Dropdown overlay={menu}>
                                 <a onClick={(e) => e.preventDefault()}>
                                     <Space>
@@ -159,8 +159,8 @@ function PersonalInfo() {
                         </div>
                     </div>
                     <div className='info_each'>
-                        <label className='font12_6' style={{padding:'10px 0'}}>States</label>
-                        <div className='drop_under'>
+                        <label className='font12_mono' style={{padding:'10px 0'}}>States</label>
+                        <div className='drop_under font14_w4'>
                             <Dropdown overlay={menu}>
                                 <a onClick={(e) => e.preventDefault()}>
                                     <Space>

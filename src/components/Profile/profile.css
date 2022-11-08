@@ -54,8 +54,9 @@
 
 .editer {
     position: relative;
-    top: 45px;
-    right: 30px;
+    bottom: -36px;
+    right: 25px;
+    width:15%;
 }
 
 .profile_body {
@@ -97,10 +98,6 @@ a:hover {
 }
 
 @media screen and (min-width: 681px) and (max-width: 1200px){
-    .editer {
-        top: -35px;
-        left: 80px;
-    }
     .profile_menu{
         padding: 20px 15px;
     }

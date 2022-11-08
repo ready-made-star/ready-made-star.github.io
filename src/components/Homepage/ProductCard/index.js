@@ -1,7 +1,6 @@
 import { Card, Divider } from 'antd';
 import '../../Author/css/main.css';
 import '../../Author/css/card.css';
-import cardimg from '../../assets/product_image.png';
 import pin from '../../assets/pin.png';
 import close from '../../assets/close.svg';
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -108,24 +107,30 @@ function ProductCard(props) {
                         width: '100%', borderRadius: 12, border: '1px solid var(--font_color2)', cursor: 'pointer'
                     }}
                     onClick={() => setShowCard(true)}
-                    cover={<img alt="example" src={cardimg} style={{ width: '100%', borderRadius: '12px 12px 0 0', maxWidth: '-webkit-fill-available' }} />}
+                    cover={<img alt="example" src={props.cardimg} style={{ width: '100%', borderRadius: '12px 12px 0 0', maxWidth: '-webkit-fill-available' }} />}
                 >
                     <div className='home_card_content'>
                         <div className='space_between p-1' style={{ borderBottom: '1px var(--font_color2) solid' }}>
                             <div>
                                 <div className='font10_2'>Date released</div>
-                                <div className='font10'>12/26/2022</div>
+                                <div className='font10'>{props.data_released}</div>
                             </div>
                             <div className='d-flex'>
-                                <button className='cardbtn' style={{ cursor: "pointer" }} ><BsGem />Fashion</button>
-                                <button className='pinbtn' style={{ cursor: "pointer" }} ><TbPin />Pin</button>
+                                <button className='cardbtn' style={{ borderColor: props.border_color }} >
+                                    <img src={props.category_icon} at='category_icon' />
+                                    {props.category_name}
+                                </button>
+                                <button className='pinbtn' style={{ background: props.background }} >
+                                    <img src={props.status_icon} at='status_icon' />
+                                    {props.status_name}    
+                                </button>
                             </div>
                         </div>
                         <div className='space_between p-1'>
                             <label className='font10_2'>Drop from</label>
                             <div className='d-flex align-items-center' style={{ gap: 10 }}>
-                                <label>@hannamontana</label>
-                                <div><img src={user_avatar} alt='' style={{ width: 30, height: 30 }} /></div>
+                                <label>{props.creator_name}</label>
+                                <div><img src={props.creator_icon} alt='' style={{ width: 30, height: 30 }} /></div>
                             </div>
                         </div>
                     </div>

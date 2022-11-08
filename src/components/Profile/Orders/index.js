@@ -41,7 +41,7 @@ function PersonalInfo() {
                 <div className='desktop_version'>
                     <div className='orders'>
                         <div className='orders1'>
-                            <div style={{ marginBottom: 24 }}>
+                            <div style={{ marginBottom: 24, border: '1px solid #EB4949', borderRadius: 12  }}>
                                 <ProductCard />
                             </div>
                             <div style={{ marginBottom: 24 }}>
@@ -66,15 +66,15 @@ function PersonalInfo() {
                                     <label className='font12'>Jun 3</label>
                                 </div>
                                 <StepLine1 />
-                                <div>
+                                <div style={{ width: 55 }}>
                                     <img src="/images/step2.png" alt='' />
-                                    <label className='font12'>On its way</label>
+                                    <label className='font12' style={{ width: 120 }}>On its way</label>
                                     <label className='font12'>Jun 13</label>
                                 </div>
                                 <StepLine2 />
-                                <div style={{ width: 70 }}>
-                                    <img src="/images/step3.png" alt='' className='w-100' />
-                                    <label className='font12'>Out for delivery</label>
+                                <div style={{ width: 55 }}>
+                                    <img src="/images/step3.png" alt='' />
+                                    <label className='font12' style={{marginLeft:-17}}>Out for delivery</label>
                                 </div>
                                 <StepLine2 />
                                 <div>
@@ -108,7 +108,7 @@ function PersonalInfo() {
                     <div>
                         <Swiper watchSlidesProgress={true} slidesPerView={1.2} className="mySwiper">
                             <SwiperSlide>
-                                <div style={{ cursor: "pointer", margin: '0 10px' }}>
+                                <div style={{ cursor: "pointer", margin: '0 10px', border: '1px solid #EB4949', borderRadius: 12 }}>
                                     <ProductCard />
                                 </div>
                             </SwiperSlide>
@@ -179,7 +179,7 @@ function PersonalInfo() {
                     <div className='orders1'>
                         <Swiper watchSlidesProgress={true} slidesPerView={2.2} className="mySwiper">
                             <SwiperSlide>
-                                <div style={{ cursor: "pointer", margin: '0 10px' }}>
+                                <div style={{ cursor: "pointer", margin: '0 10px', border: '1px solid #EB4949', borderRadius: 12  }}>
                                     <ProductCard />
                                 </div>
                             </SwiperSlide>

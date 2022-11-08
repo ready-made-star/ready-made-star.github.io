@@ -1,6 +1,6 @@
 .personal_info1 {
     display: block;
-    width: 25%;
+    width: 30%;
     padding: 0 48px 0 48px;
     margin: 48px 0;
     border-right: 1px var(--font_color2) solid;
@@ -32,9 +32,12 @@
 }
 
 .info_each {
-    margin: 24px 0;
+    margin: 14px 0;
 }
 
+.ant-space-item{
+    padding: 12px 0;
+}
 .drop_under {
     border-bottom: 1px solid var(--font_color2);
 }

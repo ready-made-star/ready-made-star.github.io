@@ -61,7 +61,7 @@ function Passport() {
                 </div>
               </div>
               <div className='d-flex pass_row'>
-                <div className='pass_item w-75'>
+                <div className='pass_item w-50'>
                   <label className='pass_content'>7374 2454 5540 0126</label>
                 </div>
                 <div className='pass_item'>
@@ -80,7 +80,7 @@ function Passport() {
             <div className='w-25'>
               <div className='pass_identify'>
                 <div className='pass_avatar p-3 w-100'>
-                  <img src={pass_avatar} alt='passcode_avatar' className='d-flex mx-auto w-100' />
+                  <img src={pass_avatar} alt='passcode_avatar' className='d-flex mx-auto w-100 h-100' />
                 </div>
                 <div className='pass_code p-2 w-100'>
                   <img src={pass_code} alt='passcode_code' className='mx-auto w-100' />

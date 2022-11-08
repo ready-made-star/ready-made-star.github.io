@@ -34,13 +34,20 @@
   font-family: "Vulf Sans Demo";
   src: url("/public/fonts/VulfSansDemo-Regular.otf");
 }
+@font-face {
+  font-family: "Vulf Mono Demo";
+  src: url("/public/fonts/vulfmonodemo-regular.otf");
+}
 
 .recoleta {
   font-family: "Recoleta" !important;
 }
 
-.vulfmono {
+.vulfsans {
   font-family: "Vulf Sans Demo" !important;
+}
+.vulfmono {
+  font-family: "Vulf Mono Demo" !important;
 }
 
 #map {

@@ -12,7 +12,7 @@ function AvatarGroup() {
     //     avatar_count = 8;
     // }
     else
-        avatar_count = 10.1;
+        avatar_count = 9.2;
     return (
         <div className="avatar_group">
             <Swiper watchSlidesProgress={true} slidesPerView={avatar_count} className="mySwiper">

@@ -25,8 +25,8 @@ function OrderedProduct(props) {
             <img src={order_icon} alt='' />
             <div style={{ display: 'grid' }}>
                 <label className='font12_2'>Brand name</label>
-                <label className='font14'>Item name</label>
-                <div style={{ display: 'flex', gap: 5 }}>
+                <label className='font14_w4 p-1'>Item name</label>
+                <div className='p-1' style={{ display: 'flex', gap: 5 }}>
                     <img src={theme ? decrease : decrease2} alt="test" onClick={handleDecrease} style={{ cursor: "pointer" }} />
                     <label>{count}</label>
                     <img src={theme ? increase : increase2} alt="test" onClick={handleIncrease} style={{ cursor: "pointer" }} />

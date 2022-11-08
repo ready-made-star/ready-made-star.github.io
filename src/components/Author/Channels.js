@@ -152,19 +152,19 @@ function Channels(props) {
                     <label className='font12 text-center'>Channels</label>
                 </div>
                 <div className='channel_item' style={{ marginTop: 30, cursor: "pointer" }}>
-                    <img src={theme ? ellipse : ellipse2} alt='' />
+                    <img src={theme ? ellipse : ellipse2} alt='' className='channel_image' />
                     <div className='font12_6 channel_text'>Now</div>
                 </div>
                 <div className='channel_item' style={{ cursor: "pointer" }}>
-                    <img src={theme ? presale : presale2} alt='' />
+                    <img src={theme ? presale : presale2} alt='' className='channel_image' />
                     <div className='font12_6 channel_text'>Presale</div>
                 </div>
                 <div className='channel_item' style={{ cursor: "pointer" }} onClick={() => setShowRaffle(true)}>
-                    <img src={theme ? raffle : raffle2} alt='' />
+                    <img src={theme ? raffle : raffle2} alt='' className='channel_image' />
                     <div className='font12_6 channel_text'>Raffle</div>
                 </div>
                 <div className='channel_item' style={{ cursor: "pointer" }}>
-                    <img src={theme ? pin : pin2} alt='' />
+                    <img src={theme ? pin : pin2} alt='' className='channel_image' />
                     <div className='font12_6 channel_text'>Pin</div>
                 </div>
                 <div className='channel_spotify'>

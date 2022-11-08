@@ -12,6 +12,7 @@ import { DownOutlined } from '@ant-design/icons';
 import {HiQuestionMarkCircle} from 'react-icons/hi';
 import close from '../../components/assets/close.svg';
 import Success from './success';
+import {IoIosAlert} from 'react-icons/io';
 
 const onClick = ({ key }) => {
     message.info(`Click on item ${key}`);
@@ -296,23 +297,26 @@ function CheckOut(props) {
             <Modal.Body className='checkout_part'>
             <img src={close} alt='' className='close_login' onClick={()=>closeModal()} style={{ cursor: "pointer" }}/>
                 <div>
-                    <div className='checkout_header'>Order details</div>
+                    <div className='checkout_header font16'>Order details</div>
                     <div className='checkout_body'>
                         <OrderedProduct />
                         <OrderedProduct />
                     </div>
                     <div className='order_footer p-3'>
-                        <div className='space_between'>
+                        <div className='space_between m-1'>
                             <label className='font12_6'>Subtotal</label>
-                            <label className='font12'>$357</label>
+                            <label className='font12 recoleta'>$357</label>
                         </div>
-                        <div className='space_between'>
+                        <div className='space_between m-1'>
                             <label className='font12_6'>Delivery</label>
-                            <label className='font12'>free</label>
+                            <label className='font12 recoleta'>free</label>
                         </div>
-                        <div className='space_between'>
-                            <label className='font12_6'>Tax</label>
-                            <label className='font12'>$0</label>
+                        <div className='space_between m-1'>
+                            <div className='d-flex align-items-center font12_6' style={{gap: 10}}>
+                                <label>Tax </label>
+                                <IoIosAlert size={20}/>
+                            </div>
+                            <label className='font12 recoleta'>$0</label>
                         </div>
                         <div className='order_footer_middle text-center p-2'>
                             <label className='font12'>We pledge 1% of our profit to positive environmental, climate, and social causes.</label>
