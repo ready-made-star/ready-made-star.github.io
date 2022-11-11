@@ -1,20 +1,27 @@
+.graphic_card{
+    border: 1px solid var(--font_color2);
+    border-radius: 12px;
+}
+
 .size_button{
-    background: transparent;
-    padding: 9px 7px;
-    border-radius: 100px;
-    width: 60px;
-    border:none;
-    cursor: pointer;
+    background: transparent !important;
+    padding: 9px 7px !important;
+    border-radius: 100px !important;
+    width: 50px !important;
+    border:none !important;
+    cursor: pointer !important;
+    color: var(--font_color) !important;
+    height: 100% !important;
 }
 .size_button:hover{
-    background: #EB4949;;
+    background: #EB4949 !important;
 }
 .size_button:active{
-    background: #EB4949;;
+    background: #EB4949 !important;
 
 }
 .size_button:focus{
-    background: #EB4949;;
+    background: #EB4949 !important;
 
 }
 
@@ -37,9 +44,13 @@
 .graphic_card .ant-card {
     background: none;
 }
+
 .home_card_content{
     display: block;
     padding: 6px 12px;
+}
+.ant-card-bordered{
+    border:none !important;
 }
 @media screen and (max-width: 679px) {
     .ant-drawer-content-wrapper{

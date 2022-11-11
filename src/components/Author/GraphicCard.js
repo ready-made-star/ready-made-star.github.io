@@ -29,7 +29,7 @@ import { connect } from 'react-redux';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import { FaLink, FaTwitter } from 'react-icons/fa';
 import { AiTwotoneMail } from 'react-icons/ai';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { FiCopy } from 'react-icons/fi';
 
 function GraphicCard(props) {
@@ -50,7 +50,7 @@ function GraphicCard(props) {
             <div className='space_between'>
                 <div><FaLink /></div>
                 <div><Link to='https://auradrops.com/brian_yips'>https://auradrops.com/brian</Link></div>
-                <div style={{cursor:'pointer'}}><FiCopy /></div>
+                <div style={{ cursor: 'pointer' }}><FiCopy /></div>
             </div>
             <div style={{ display: 'flex', alignItems: 'center', margin: '12px 0' }}>
                 <AiTwotoneMail /><div style={{ marginLeft: 20 }}>Email</div>
@@ -99,19 +99,25 @@ function GraphicCard(props) {
             <div className='graphic_card'>
                 <Card
                     style={{
-                        width: '100%', borderRadius: 12, border: '1px solid var(--font_color2)', cursor: 'pointer'
+                        width: '100%', cursor: 'pointer'
                     }}
                     onClick={() => setShowCard(true)}
-                    cover={<img alt="example" src={cardimg} style={{ width: '100%', borderRadius: '12px 12px 0 0', maxWidth: '-webkit-fill-available' }} />}
+                    cover={<img alt="example" src={props.cardimg} style={{ width: '100%', borderRadius: '12px 12px 0 0', maxWidth: '-webkit-fill-available' }} />}
                 >
                     <div className='card_content'>
-                        <div>
+                        <div className='text-left'>
                             <div className='font10_2'>Date released</div>
-                            <div className='font10'>12/26/2022</div>
+                            <div className='font10'>{props.data_released}</div>
                         </div>
                         <div className='d-flex'>
-                            <button className='cardbtn' style={{ cursor: "pointer" }} ><BsGem />Fashion</button>
-                            <button className='pinbtn' style={{ cursor: "pointer" }} ><TbPin />Pin</button>
+                            <button className='cardbtn font12' style={{ borderColor: props.border_color }} >
+                                <img src={props.category_icon} at='category_icon' />
+                                {props.category_name}
+                            </button>
+                            <button className='pinbtn font12 text-white' style={{ background: props.background }} >
+                                <img src={props.status_icon} alt='status_icon' />
+                                {props.status_name}
+                            </button>
                         </div>
                     </div>
                 </Card>
@@ -161,11 +167,11 @@ function GraphicCard(props) {
                         </div>
 
                         <div className='space_between'>
-                            <div>
+                            <div style={{display:'grid'}}>
                                 <label className='font16'>Dolce && Gabbana</label>
                                 <label className='font12_6'>Graffiti-print shirt jacket</label>
                             </div>
-                            <div className='d-flex' style={{gap:10}}>
+                            <div className='d-flex' style={{ gap: 10 }}>
                                 <div>
                                     <OverlayTrigger
                                         rootClose
@@ -186,8 +192,14 @@ function GraphicCard(props) {
                             <Divider />
                         </div>
                         <div className='d-flex'>
-                            <button className='cardbtn' style={{ cursor: "pointer" }} ><BsGem />Fashion</button>
-                            <button className='pinbtn' style={{ cursor: "pointer" }} ><TbPin />Pin</button>
+                            <button className='cardbtn' style={{ borderColor: props.border_color }} >
+                                <img src={props.category_icon} at='category_icon' />
+                                {props.category_name}
+                            </button>
+                            <button className='pinbtn' style={{ background: props.background }} >
+                                <img src={props.status_icon} alt='status_icon' />
+                                {props.status_name}
+                            </button>
                             <button className='cardbtn' style={{ cursor: "pointer" }} >Selling fast!</button>
                         </div>
                         <div style={{ display: 'flex', margin: '20px 0', gap: 10 }}>
@@ -211,7 +223,7 @@ function GraphicCard(props) {
                             </div>
                             <div style={{ width: '80%', margin: '20px 0' }}>
                                 <label className='font12_6'>
-                                Created, funded, and built by creative entrepreneur Allan Kingdom, Crypto Cut$ is the world’s first members-only crypto spa. As the first fashion item from the brand, the Crypto Cut$ Winter Beanie marks the start of the brand’s collection.
+                                    Created, funded, and built by creative entrepreneur Allan Kingdom, Crypto Cut$ is the world’s first members-only crypto spa. As the first fashion item from the brand, the Crypto Cut$ Winter Beanie marks the start of the brand’s collection.
                                 </label>
                             </div>
 

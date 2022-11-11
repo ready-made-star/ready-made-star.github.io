@@ -92,6 +92,7 @@
     height: 100%;
 }
 .pass_rotate{
+    display: flex;
     gap: 20px;
     cursor: pointer;
     justify-content: center;
@@ -105,10 +106,15 @@
     align-items: center;
 }
 
-.pass_info{
+.pass_info1{
     display: grid;
     align-content: space-around;
     padding: 15px 0;
+    width: 68%;
+}
+
+.pass_info2{
+    width:25%;
 }
 @media screen and (min-width: 681px) and (max-width: 1200px){
     .pass_content{
@@ -132,5 +138,48 @@
     }
     .pass_back{
         background-size: 40%;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .passport{
+        margin-left: 0;
+        width: 100%;
+        padding: 50px 24px;
+    }
+    .pass_main{
+        width:100%;
+        height: auto;
+    }
+    .pass_front{
+        display: grid !important;
+    }
+    .pass_info1{
+        order: 2;
+        width: 100%;
+    }
+    .pass_info2{
+        order: 1;
+        display: inline-flex;
+        width:100%;
+    }
+    .pass_identify{
+        margin-left: 20px;
+    }
+    .barcode{
+        margin-top:0;
+        padding:30px;
+        aspect-ratio: 1/1;
+    }
+    .pass_content{
+        font-size: 14px;
+        font-weight: 600;
+    }
+    .pass_row{
+        width:auto;
+        margin: 0 20px;
+    }
+    .pass_rotate{
+        display:none;
     }
 }

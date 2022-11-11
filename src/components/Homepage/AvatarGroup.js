@@ -22,7 +22,7 @@ function AvatarGroup() {
                     // when window width is >= 640px
                     350: {
                         width: 350,
-                        slidesPerView: 3,
+                        slidesPerView: 2.5,
                     },
                     640: {
                         width: 640,

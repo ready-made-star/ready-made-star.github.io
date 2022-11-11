@@ -72,7 +72,7 @@ function ProfileCard(props) {
                                 <OverlayTrigger
                                     rootClose
                                     trigger='click'
-                                    placement="bottom"
+                                    placement="bottom-end"
                                     delay={{ show: 250, hide: 400 }}
                                     overlay={renderTooltip}
                                     onExit={() => setShow(false)}
@@ -93,21 +93,21 @@ function ProfileCard(props) {
                         <div className='font10' style={{ padding: '12px 24px 0 24px' }}>Available drop types</div>
                         <div className='state_value'>
                             <div className='state_half'>
-                                <div className='channel_item' style={{ cursor: "pointer" }}>
+                                <div className='profile_item' style={{ cursor: "pointer" }}>
                                     <img src={theme?ellipse:ellipse2} alt='' />
                                     <div className='font12'>Now</div>
                                 </div>
-                                <div className='channel_item' style={{ cursor: "pointer" }}>
+                                <div className='profile_item' style={{ cursor: "pointer" }}>
                                     <img src={theme?presale:presale2} alt='' />
                                     <div className='font12'>Presale</div>
                                 </div>
                             </div>
                             <div className='state_half'>
-                                <div className='channel_item' style={{ cursor: "pointer" }}>
+                                <div className='profile_item' style={{ cursor: "pointer" }}>
                                     <img src={theme?raffle:raffle2} alt='' />
                                     <div className='font12'>Raffle</div>
                                 </div>
-                                <div className='channel_item' style={{ cursor: "pointer" }}>
+                                <div className='profile_item' style={{ cursor: "pointer" }}>
                                     <img src={theme?pin:pin2} alt='' />
                                     <div className='font12'>Pin</div>
                                 </div>

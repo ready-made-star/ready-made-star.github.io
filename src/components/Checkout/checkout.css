@@ -93,6 +93,11 @@ label{
     color: #EB4949 !important;
     
 }
+#tax{
+    border: 1px solid var(--font_color2);
+    width: 200px;
+    text-align: left;
+}
 @media screen and (max-width: 680px) {
     .modal-content{
         display:grid;

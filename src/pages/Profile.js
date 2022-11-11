@@ -14,7 +14,6 @@ function Profile() {
     
     return (
         <>
-            <AuthorHeader />
             <div className="profile_body">
                 <Channels />
                 <ProfileMenu />

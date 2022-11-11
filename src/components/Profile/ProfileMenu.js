@@ -62,7 +62,7 @@ function ProfileMenu() {
                 <Swiper watchSlidesProgress={true} slidesPerView={3.2} className="mySwiper">
                     <SwiperSlide>
                         <div style={{ cursor: "pointer" }}>
-                            <img style={{ width: 50, height: 50 }} src={profile_avatar} alt='' />
+                            <img style={{ width: 65, height: 65 }} src={profile_avatar} alt='' />
                             <img className='editer' src={edit} alt='' style={{ cursor: "pointer" }} />
                         </div>
                     </SwiperSlide>

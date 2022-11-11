@@ -11,7 +11,7 @@
     display: flex;
     align-items: center;
     gap: 7px;
-    margin: 25px 0;
+    margin: 13px 0;
 }
 
 .channel_spotify {
@@ -75,50 +75,81 @@
     font-size: 14px;
     line-height: 22px;
 }
-.ant-tabs-ink-bar{
+
+.ant-tabs-ink-bar {
     background: #EB4949 !important;
-    height:3px !important;
+    height: 3px !important;
 }
-.channel_viewer{
+
+.channel_viewer {
     display: flex;
-    gap: 10px;
+    gap: 5px;
     align-items: center;
 }
-.grid_view{
-    cursor: pointer;
-    color: var(--font_color6);
-    display:flex;
-}
-.full_view{
+
+.grid_view {
     cursor: pointer;
     color: var(--font_color6);
     display: flex;
 }
-.full_view:focus{
+
+.full_view {
+    cursor: pointer;
+    color: var(--font_color6);
+    display: flex;
+}
+
+.full_view:focus {
     color: var(--font_color);
 }
-.grid_view:focus{
-    color:var(--font_color);
+
+.grid_view:focus {
+    color: var(--font_color);
 }
+
 @media screen and (max-width: 680px) {
     .channels {
         display: none !important;
     }
+
+    .filter {
+        width: 220px;
+        height: 100%;
+    }
+
+    .menu_close {
+        z-index: 2;
+        position: absolute;
+        left: 200px;
+        top: 20px;
+
+    }
+    .filter .channel_spotify {
+        display: flex;
+        justify-content: flex-end;
+        width: 200px;
+    }
 }
-@media screen and (min-width: 681px) and (max-width: 1200px){
-    .channel_text{
-        display:none !important;
+
+@media screen and (min-width: 681px) and (max-width: 1200px) {
+    .channel_text {
+        display: none !important;
     }
-    .channels .channel_item{
+
+    .channels .channel_item {
         justify-content: center;
+        margin: 25px 0;
     }
-    .filter .channel_item{
+
+    .filter .channel_item {
         padding: 0;
     }
-    .ant-collapse-content > .ant-collapse-content-box{
-        padding:5px !important;
+
+    .ant-collapse-content>.ant-collapse-content-box {
+        padding: 5px !important;
     }
-    .channel_image{
+
+    .channel_image {
         width: 16px;
     }
 }

@@ -5,7 +5,6 @@ import GlobalView from "../components/GlobalView";
 function GlobeMap() {
     return (
         <>
-            <AuthorHeader />
             <div className="author_body w-100">
                 <Channels />
                 <GlobalView />

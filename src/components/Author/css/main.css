@@ -39,13 +39,12 @@
 }
 
 .profile_description {
-    border-right: 1px var(--font_color6) solid;
+    border-right: 1px var(--font_color2) solid;
     padding: 12px 24px;
     width: 55%;
 }
 
 .profile_connect {
-    width: 74px;
     height: 28px;
     background: transparent;
     border: 1px solid var(--font_color);
@@ -264,6 +263,7 @@
     display: flex;
     align-items: center;
     padding: 4px 10px 4px 8px;
+    gap: 5px;
     cursor: pointer;
 }
 
@@ -275,6 +275,7 @@
     display: flex;
     align-items: center;
     padding: 4px 10px 4px 8px;
+    gap: 5px;
     cursor: pointer;
 }
 
@@ -300,6 +301,7 @@
     border-radius: 5px;
     color: var(--font_color);
     padding: 18px 16px;
+    /* margin-top: 15px; */
 }
 
 .tooltip-inner {
@@ -384,17 +386,13 @@
     gap: 20px;
 }
 
-#button-tooltip {
-    margin-top: 15px;
-}
-
 .profile_date{
     display: flex;
     gap: 5px;
 }
 
 .state_first_part{
-    height: 50%;
+    min-height: 50%;
     border-bottom: 1px var(--font_color2) solid;
     display: grid;
     align-items: center;
@@ -403,9 +401,17 @@
     display: grid;
     align-items: center;
 }
+
+.profile_item{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin: 10px 0;
+}
 @media screen and (min-width: 681px) and (max-width: 1200px){
     .state_value{
         display: block;
+        padding:0 24px;
     }
     .profile_date{
         display:block;
@@ -446,7 +452,8 @@
     }
 
     .profileavatar {
-        left: 13%;
+        left: 4%;
+        width: 30%;
     }
 
     .profile_header {

@@ -23,14 +23,14 @@ function Passport() {
         <div className='pass_main'>
           <div className='pass_front' style={{ display: front ? 'flex' : 'none' }}>
 
-            <div className='pass_info' style={{width: '68%'}}>
+            <div className='pass_info1'>
               <div className='d-flex pass_row'>
                 <div className='pass_item'>
                   <label className='pass_title'>Full Name</label>
                   <label className='pass_content'>Dmytro Ryzo</label>
                 </div>
                 <div className='pass_item'>
-                  <label className='pass_title'>Nike Name</label>
+                  <label className='pass_title'>NickName</label>
                   <label className='pass_content'>Hwameng</label>
                 </div>
                 <div className='pass_item'>
@@ -77,7 +77,7 @@ function Passport() {
                 </div>
               </div>
             </div>
-            <div className='w-25'>
+            <div className='pass_info2'>
               <div className='pass_identify'>
                 <div className='pass_avatar p-3 w-100'>
                   <img src={pass_avatar} alt='passcode_avatar' className='d-flex mx-auto w-100 h-100' />
@@ -96,7 +96,7 @@ function Passport() {
           </div>
         </div>
 
-        <div className='pass_rotate d-flex p-5 mx-auto' >
+        <div className='pass_rotate p-5 mx-auto' >
           <div className='mt-3'>
             <img src={pass_left} alt='pass_left' />
           </div>

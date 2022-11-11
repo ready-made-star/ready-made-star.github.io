@@ -33,6 +33,13 @@
 .ant-radio-group{
     display: flex !important;
 }
+.payment_cvc .ant-input{
+    border-bottom: none !important;
+    height:70%;
+}
+.payment_cvc{
+    border-bottom: 1px solid var(--font_color2);
+}
 
 @media screen and (min-width: 681px) and (max-width: 1200px){
     .payment_info{

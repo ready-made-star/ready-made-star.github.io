@@ -104,25 +104,25 @@ function ProductCard(props) {
             <div className='graphic_card'>
                 <Card
                     style={{
-                        width: '100%', borderRadius: 12, border: '1px solid var(--font_color2)', cursor: 'pointer'
+                        width: '100%', cursor: 'pointer'
                     }}
                     onClick={() => setShowCard(true)}
                     cover={<img alt="example" src={props.cardimg} style={{ width: '100%', borderRadius: '12px 12px 0 0', maxWidth: '-webkit-fill-available' }} />}
                 >
                     <div className='home_card_content'>
                         <div className='space_between p-1' style={{ borderBottom: '1px var(--font_color2) solid' }}>
-                            <div>
+                            <div className='text-left'>
                                 <div className='font10_2'>Date released</div>
                                 <div className='font10'>{props.data_released}</div>
                             </div>
                             <div className='d-flex'>
-                                <button className='cardbtn' style={{ borderColor: props.border_color }} >
+                                <button className='cardbtn font12' style={{ borderColor: props.border_color }} >
                                     <img src={props.category_icon} at='category_icon' />
                                     {props.category_name}
                                 </button>
-                                <button className='pinbtn' style={{ background: props.background }} >
+                                <button className='pinbtn font12 text-white' style={{ background: props.background }} >
                                     <img src={props.status_icon} at='status_icon' />
-                                    {props.status_name}    
+                                    {props.status_name}
                                 </button>
                             </div>
                         </div>
@@ -153,7 +153,7 @@ function ProductCard(props) {
                         </div>
                         <div>
                             <Swiper watchSlidesProgress={true} slidesPerView={2.3} className="mySwiper">
-                            <SwiperSlide onMouseOver={(e) => handlePlayBtn1(e)} onMouseLeave={(e) => { e.preventDefault(); e.stopPropagation(); setShowPlayButton1('none') }}>
+                                <SwiperSlide onMouseOver={(e) => handlePlayBtn1(e)} onMouseLeave={(e) => { e.preventDefault(); e.stopPropagation(); setShowPlayButton1('none') }}>
                                     <div className='video_image' style={{ cursor: "pointer" }}>
                                         <img src={pre_front} alt='' style={{ width: '100%' }} />
                                     </div>
@@ -181,11 +181,11 @@ function ProductCard(props) {
                         </div>
 
                         <div className='space_between'>
-                            <div>
+                            <div style={{display:'grid'}}>
                                 <label className='font16'>Dolce && Gabbana</label>
                                 <label className='font12_6'>Graffiti-print shirt jacket</label>
                             </div>
-                            <div className='d-flex' style={{gap:10}}>
+                            <div className='d-flex' style={{ gap: 10 }}>
                                 <div>
                                     <OverlayTrigger
                                         rootClose
@@ -205,16 +205,22 @@ function ProductCard(props) {
                             <Divider />
                         </div>
                         <div className='d-flex'>
-                            <button className='cardbtn' style={{ cursor: "pointer" }} ><BsGem />Fashion</button>
-                            <button className='pinbtn' style={{ cursor: "pointer" }} ><TbPin />Pin</button>
+                            <button className='cardbtn' style={{ borderColor: props.border_color }} >
+                                <img src={props.category_icon} at='category_icon' />
+                                {props.category_name}
+                            </button>
+                            <button className='pinbtn' style={{ background: props.background }} >
+                                <img src={props.status_icon} alt='status_icon' />
+                                {props.status_name}
+                            </button>
                             <button className='cardbtn' style={{ cursor: "pointer" }} >Selling fast!</button>
                         </div>
                         <div style={{ display: 'flex', margin: '20px 0', gap: 10 }}>
                             <div className='size_part'>
-                                <button className='size_button'>S 46</button>
-                                <button className='size_button'>M 17</button>
-                                <button className='size_button'>L 5</button>
-                                <button className='size_button'>XL 25</button>
+                                <Button className='size_button'>S 46</Button>
+                                <Button className='size_button'>M 17</Button>
+                                <Button className='size_button'>L 5</Button>
+                                <Button className='size_button'>XL 25</Button>
                             </div>
                             <div className='size_part'>
                                 <div className='color_button'></div>

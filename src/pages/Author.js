@@ -5,7 +5,6 @@ import Main from "../components/Author/Main";
 function Author() {
     return (
         <>
-            <AuthorHeader />
             <div className="author_body">
                 <Channels />
                 <Main />

@@ -121,7 +121,7 @@ function Channels(props) {
     useEffect(() => {
         localStorage.setItem('mode', JSON.stringify(mode));
         if (theme == true) {
-            document.documentElement.style.setProperty('--background-color', '#0D0D0D'); //black
+            document.documentElement.style.setProperty('--background-color', '#1E1E1E'); //black
             document.documentElement.style.setProperty('--font_color', '#fff'); //white
             document.documentElement.style.setProperty('--font_color6', 'rgba(255, 255, 255,0.6)'); //white
             document.documentElement.style.setProperty('--font_color2', 'rgba(255, 255, 255,0.2)'); //white
@@ -131,8 +131,8 @@ function Channels(props) {
         } else {
             document.documentElement.style.setProperty('--background-color', '#F8F0E3');
             document.documentElement.style.setProperty('--font_color', '#000');
-            document.documentElement.style.setProperty('--font_color6', 'rgba(13, 13, 13, 0.4)');
-            document.documentElement.style.setProperty('--font_color2', 'rgba(13, 13, 13, 0.4)');
+            document.documentElement.style.setProperty('--font_color6', 'rgba(13, 13, 13, 0.6)');
+            document.documentElement.style.setProperty('--font_color2', 'rgba(13, 13, 13, 0.2)');
             document.documentElement.style.setProperty('--btn_color', '#0D0D0D'); //white
             document.documentElement.style.setProperty('--cookies_back', 'rgba(248, 240, 227, 0.7)'); //white
         }
@@ -178,9 +178,9 @@ function Channels(props) {
             </div>
 
             <div className='filter' id="fade_div_component" style={{ display: !filter ? 'none' : 'block' }}>
-                <div style={{ cursor: "pointer", gap: 20 }}>
-                    <label className='font16 p-3'>Channels</label>
-                    <img src={theme ? filter_arrow : filter_arrow2} alt='' onClick={handleFilter} />
+                <div style={{ cursor: "pointer", gap: 20 }}  onClick={handleFilter}>
+                    <label className='font16 p-3' style={{cursor:'pointer'}}>Channels</label>
+                    <img src={theme ? filter_arrow : filter_arrow2} alt='' />
                 </div>
                 <div className='channel_viewer pl-3'>
                     <Link to='/'>

@@ -1,6 +1,8 @@
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
+import Overlay from 'react-bootstrap/Overlay';
+import Tooltip from 'react-bootstrap/Tooltip';
 import './checkout.css';
 import PhoneNumber from './PhoneNumber';
 import ReactInputVerificationCode from 'react-input-verification-code';
@@ -230,6 +232,9 @@ function CheckOut(props) {
         console.log('button closed');
         props.onHide(!showCheckout)
     }
+    const [showTax, setShowTax] = useState(false);
+    const targetTax = useRef(null);
+
 
 
     return (
@@ -314,7 +319,18 @@ function CheckOut(props) {
                         <div className='space_between m-1'>
                             <div className='d-flex align-items-center font12_6' style={{gap: 10}}>
                                 <label>Tax </label>
-                                <IoIosAlert size={20}/>
+                                <div ref={targetTax} onClick={()=>setShowTax(!showTax)}>
+                                    <IoIosAlert size={20}/>
+                                </div>
+                                <Overlay target={targetTax.current} show={showTax} placement="right">
+                                    {(props) => (
+                                    <Tooltip id="tax" {...props}>
+                                        <div className='text-left'>
+                                        Aura is required by law to collect sales tax in certain US states on behalf of our sellers. We don’t profit from this tax, and it’s not an Aura fee. 
+                                        </div>
+                                    </Tooltip>
+                                    )}
+                                </Overlay>
                             </div>
                             <label className='font12 recoleta'>$0</label>
                         </div>

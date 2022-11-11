@@ -54,7 +54,7 @@ function PersonalInfo() {
                     </div>
 
 
-                    <div className='space_between' style={{ display: 'flex', marginTop:24, gap:10 }}>
+                    <div style={{ display: 'flex', marginTop:24, gap:10 }}>
                         <div className='day_year'>
                             <label className='font12'>Day</label>
                             <Dropdown overlay={menu}>
@@ -77,7 +77,7 @@ function PersonalInfo() {
                                 </a>
                             </Dropdown>
                         </div>
-                        <div style={{width:'100%'}}>
+                        <div className='payment_cvc' style={{width:'100%'}}>
                             <label className='font12 text-center'>CVC</label>
                             <Input />
                         </div>

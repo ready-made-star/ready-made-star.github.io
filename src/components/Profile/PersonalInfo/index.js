@@ -54,7 +54,7 @@ function PersonalInfo() {
                         <Input />
                     </div>
                     <div className='info_each'>
-                        <label className='font12_mono' style={{padding:'10px 0'}}>Nike name</label>
+                        <label className='font12_mono' style={{padding:'10px 0'}}>Nickname</label>
                         <Input />
                     </div>
 

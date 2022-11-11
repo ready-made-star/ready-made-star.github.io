@@ -8,7 +8,10 @@ import cardimg from '../../../components/assets/fullscreenimage.jpg';
 import cardimg2 from '../../../components/assets/fullscreenimage2.jpg';
 import { BsGem } from 'react-icons/bs';
 import { TbPin } from 'react-icons/tb';
-
+const fashion = "images/fashion.png";
+const fashion2 = "images/fashion2.png";
+const ellipse = 'images/ellipse.png';
+const ellipse2 = 'images/ellipse2.png';
 function Video() {
 
 
@@ -17,8 +20,14 @@ function Video() {
             <label className='font12 text-left p-2' style={{ fontFamily: 'Vulf Mono Demo' }}>DROP</label>
             <div className="player mb-1">
                 <div className='full_buttons d-flex'>
-                    <button className='cardbtn font14_w4' style={{ cursor: "pointer", color: 'black', border: '1px solid #4B355A' }} ><BsGem />Fashion</button>
-                    <button className='pinbtn font14_w4' style={{ cursor: "pointer" }} ><TbPin />Pin</button>
+                    <button className='cardbtn font12' style={{ color:'black', borderColor: '#4B355A' }} >
+                        <img src={fashion2} at='category_icon' />
+                        <label> Fashion</label>
+                    </button>
+                    <button className='pinbtn font12' style={{ background: '#4B355A' }} >
+                        <img src={ellipse} at='status_icon' />
+                        <label> Pin</label>
+                    </button>
                 </div>
                 <div className='w-100 d-flex align-items-center'>
                     <img src={cardimg} alt='cardimage' className='fullcard_image' />
@@ -34,8 +43,14 @@ function Video() {
             </div>
             <div className="player mt-1">
                 <div className='full_buttons d-flex'>
-                    <button className='cardbtn font14_w4' style={{ cursor: "pointer", color: 'black', border: '1px solid #4B355A' }} ><BsGem />Fashion</button>
-                    <button className='pinbtn font14_w4' style={{ cursor: "pointer" }} ><TbPin />Pin</button>
+                    <button className='cardbtn font12' style={{ borderColor: '#4B355A' }} >
+                        <img src={fashion} at='category_icon' />
+                        Fashion
+                    </button>
+                    <button className='pinbtn font12' style={{ background: '#4B355A' }} >
+                        <img src={ellipse} at='status_icon' />
+                        Pin
+                    </button>
                 </div>
                 <div className='w-100 d-flex align-items-center'>
                     <img src={cardimg2} alt='cardimage' className='fullcard_image' />

@@ -128,5 +128,9 @@
     .save_buttons{
         margin: 0;
         justify-content: space-between;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background: black;
     }
 }

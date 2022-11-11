@@ -63,7 +63,7 @@ body {
 }
 
 .cookies {
-  gap:10px;
+  gap: 10px;
   background: var(--cookies_back);
   border: 1px solid rgba(163, 88, 88, 0.2);
   /* backdrop-filter: blur(14px); */
@@ -98,7 +98,9 @@ body {
   background-origin: border-box;
   background-clip: content-box, border-box;
   box-shadow: 1px 1000px 1px var(--background-color) inset;
+  cursor: pointer;
 }
+
 .cookies_btn1 {
   /* backdrop-filter: blur(14px); */
   /* background: #0D0D0D; */
@@ -117,17 +119,81 @@ body {
   background-origin: border-box;
   background-clip: content-box, border-box;
   box-shadow: 1px 1000px 1px var(--background-color) inset;
+  cursor: pointer;
 }
 
-@media screen and (min-width: 681px) and (max-width: 1200px){
-  .cookies{
+.cookies_text {
+  display: flex;
+  gap: 5px;
+}
+
+.cookies_buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.logined_badge {
+  /* display: flex; */
+  border-radius: 100px;
+  border: 1px solid red;
+  height: 50px;
+  width: 50px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.badge {
+  position: absolute;
+  left: 65%;
+  bottom: 60%;
+  font-size: 14px;
+  background: var(--background-color);
+  width: 24px;
+  height: 22px;
+  border-radius: 10px;
+}
+
+.badge2 {
+  position: absolute;
+  left: 65%;
+  bottom: 60%;
+  font-size: 14px;
+  background: var(--background-color);
+  width: 24px;
+  height: 22px;
+  border-radius: 10px;
+}
+
+.login_avatar {
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  background-repeat: no-repeat;
+  background-position: 45% 45%;
+  height: 100%;
+}
+
+img {
+  height: auto;
+}
+.mobile_spotify{
+  display: none;
+}
+@media screen and (min-width: 681px) and (max-width: 1200px) {
+  .cookies {
     font-size: 12px;
-    width:80%;
-    right:45%;
+    width: 80%;
+    right: 45%;
   }
 }
 
 @media screen and (max-width: 680px) {
+  .logined_badge {
+    width: 45px;
+    height: 45px;
+  }
+
   .mobile_version {
     display: block;
   }
@@ -140,5 +206,35 @@ body {
     display: flex;
     position: static;
     padding-top: 48px;
+  }
+
+  .cookies {
+    width: 94%;
+    padding: 10px;
+    height: auto;
+    bottom: -5%;
+  }
+
+  .cookies_buttons {
+    display: block;
+    text-align: end;
+  }
+
+  .cookies_text {
+    display: block;
+    text-align: left;
+  }
+
+  .cookies_btn1 {
+    margin-bottom: 5px;
+  }
+
+  .cookies_btn {
+    width: 122px;
+  }
+  .mobile_spotify{
+    display: block;
+    position: fixed;
+    bottom: 5%;
   }
 }
