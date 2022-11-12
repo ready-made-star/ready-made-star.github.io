@@ -3,7 +3,7 @@ import { useState } from 'react';
 import './favorite.css';
 import heart from '../../../components/assets/heart.png';
 import {connect} from 'react-redux';
-
+import spotify from '../../assets/spotify.png';
 
 const cardimg = "images/product_image.png";
 const product_creator = "images/product_creator.png";
@@ -183,6 +183,7 @@ function Favorites(props) {
                         </div>
                     ))}
                 </div>
+                <img className='mobile_spotify' src={spotify} alt='spotify' style={{ bottom: '1%' }} />
             </div>
         </>
     )

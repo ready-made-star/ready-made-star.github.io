@@ -194,8 +194,8 @@ function Channels(props) {
                         </div>
                     </Link>
                     <Link to='/globemap'>
-                        <div onClick={locationView}>
-                            <img src={theme ? (locateView ? location : location_click) : (locateView ? location2 : location_click2)} alt='' style={{ cursor: "pointer", width: 20 }} />
+                        <div onClick={locationView} style={{paddingBottom: 4}}>
+                            <img src={locateView ? location2 : location} alt='' style={{ cursor: "pointer", width: 19, height:19 }} />
                         </div>
                     </Link>
                 </div>
@@ -310,11 +310,6 @@ function Channels(props) {
                 <div className='tray'>
 
                     <img src={close} alt='' onClick={() => setShowRaffle(false)} style={{ cursor: 'pointer' }} />
-
-                    <div>
-
-                    </div>
-
 
                 </div>
 

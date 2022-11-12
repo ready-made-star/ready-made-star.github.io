@@ -4,6 +4,7 @@ import { DownOutlined } from '@ant-design/icons';
 import { Input, Dropdown, Space, Menu, Radio, Button } from 'antd';
 import './payment.css';
 import { useState } from 'react';
+import spotify from '../../assets/spotify.png';
 const menu = (
     <Menu
         items={[
@@ -93,6 +94,7 @@ function PersonalInfo() {
                     <button className='cancel_button font16'>Cancel</button>
                 </div>
             </div>
+            <img className='mobile_spotify' src={spotify} alt='spotify' style={{ bottom: '14%'}} />
         </>
     )
 }

@@ -4,6 +4,7 @@ import Main from "../components/Homepage/Body";
 import { Drawer, Button } from 'antd';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import spotify from '../components/assets/spotify.png';
 function Homepage(props) {
     const [showCookies, setShowCookies] = useState('true')
     return (
@@ -11,6 +12,7 @@ function Homepage(props) {
             <div className="homepage_body">
                 <Channels />
                 <Main show={props} />
+                <img className='mobile_spotify' src={spotify} alt='spotify' style={{ bottom: showCookies ? '11%' : '1%' }} />
                 <div className="cookies" style={{ display: showCookies ? 'flex' : 'none' }}>
                     <div className="cookies_text">
                         <label>This site is using cookies to improve your visiting experience.</label>

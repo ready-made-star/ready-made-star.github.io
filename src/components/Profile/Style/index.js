@@ -4,6 +4,8 @@ import { DownOutlined } from '@ant-design/icons';
 import { Select, Tag, Button } from 'antd';
 import './style.css';
 import { useState } from 'react';
+import spotify from '../../assets/spotify.png';
+
 const options = [
     {
         value: 'Womenswear',
@@ -116,6 +118,7 @@ function Style() {
                     <button className='cancel_button'>Cancel</button>
                 </div>
             </div>
+            <img className='mobile_spotify' src={spotify} alt='spotify' style={{ bottom: '14%' }} />
         </>
     )
 }

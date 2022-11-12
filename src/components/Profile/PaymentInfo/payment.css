@@ -1,4 +1,4 @@
-.payment_info{
+.payment_info {
     display: block;
     width: 25%;
     padding: 48px;
@@ -7,19 +7,22 @@
     background-color: var(--background-color);
     margin-left: calc(18% + var(--filter_width));
     text-align: left;
-    
+
 }
-.payment_select{
+
+.payment_select {
     text-align: center;
     margin-bottom: 28px;
 }
-.day_year{
+
+.day_year {
     width: 100%;
     border-bottom: 1px solid var(--font_color2);
 }
-.payment_buttons{
-    position:absolute;
-    bottom:0%;
+
+.payment_buttons {
+    position: absolute;
+    bottom: 0%;
     padding: 30px;
     background-color: var(--background-color);
     gap: 20px;
@@ -30,36 +33,44 @@
 .ant-radio-group-large .ant-radio-button-wrapper {
     width: 50%;
 }
-.ant-radio-group{
+
+.ant-radio-group {
     display: flex !important;
 }
-.payment_cvc .ant-input{
+
+.payment_cvc .ant-input {
     border-bottom: none !important;
-    height:70%;
+    height: 70%;
 }
-.payment_cvc{
+
+.payment_cvc {
     border-bottom: 1px solid var(--font_color2);
 }
 
-@media screen and (min-width: 681px) and (max-width: 1200px){
-    .payment_info{
+@media screen and (min-width: 681px) and (max-width: 1200px) {
+    .payment_info {
         border: none;
         width: 50%;
     }
-    .payment_buttons{
+
+    .payment_buttons {
         width: calc(82% - var(--filter_width));
         justify-content: space-between;
     }
 }
 
 @media screen and (max-width: 680px) {
-    .payment_info{
-        margin:0;
+    .payment_info {
+        margin: 0;
         width: 100%;
     }
-    .payment_buttons{
-        position: inherit;
-        margin:0;
+
+    .payment_buttons {
+        margin: 0;
         justify-content: space-between;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background: black;
     }
 }

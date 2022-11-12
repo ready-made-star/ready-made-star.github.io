@@ -8,6 +8,7 @@ import { styled } from "@mui/material/styles";
 import Map from '../map/Map';
 import Marker from '../map/Marker';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import spotify from '../../assets/spotify.png';
 import { useState } from 'react';
 import { connect } from 'react-redux';
 const apiKey = "AIzaSyAT9SH59Z75iR8OUEcfv-mTklD6xMDHs80";
@@ -331,6 +332,7 @@ function PersonalInfo(props) {
                         </div>
                     </div>
                 </div>
+                <img className='mobile_spotify' src={spotify} alt='spotify' style={{ bottom: '1%' }} />
             </div>
         </>
     )

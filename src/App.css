@@ -230,11 +230,11 @@ img {
   }
 
   .cookies_btn {
-    width: 122px;
+    width: max-content;
   }
   .mobile_spotify{
     display: block;
     position: fixed;
-    bottom: 5%;
+    /* bottom: 5%; */
   }
 }

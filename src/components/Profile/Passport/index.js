@@ -12,6 +12,7 @@ import pass_rotate from '../../assets/pass_rotate.png';
 import pass_left from '../../assets/pass_left.png';
 import pass_right from '../../assets/pass_right.png';
 import pass_logo from '../../assets/pass_logo.png';
+import spotify from '../../assets/spotify.png';
 // import {useState} from 'react';
 
 function Passport() {
@@ -107,6 +108,7 @@ function Passport() {
             <img src={pass_right} alt='pass_right' />
           </div>
         </div>
+        <img className='mobile_spotify' src={spotify} alt='spotify' style={{ bottom: '1%' }} />
       </div>
     </>
   )
