@@ -2,6 +2,7 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import React, { useState, useRef } from 'react';
 import Overlay from 'react-bootstrap/Overlay';
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Tooltip from 'react-bootstrap/Tooltip';
 import './checkout.css';
 import PhoneNumber from './PhoneNumber';
@@ -15,6 +16,7 @@ import {HiQuestionMarkCircle} from 'react-icons/hi';
 import close from '../../components/assets/close.svg';
 import Success from './success';
 import {IoIosAlert} from 'react-icons/io';
+import {MdOutlineKeyboardArrowDown} from 'react-icons/md';
 
 const onClick = ({ key }) => {
     message.info(`Click on item ${key}`);
@@ -60,9 +62,33 @@ function CheckOut(props) {
     const [footerName, setFooterName] = useState('Continue');
     const [activeKey, setActiveKey] = useState('1');
     const [showSuccess, setShowSuccess] = useState(false);
-
+    const [showDelivery, setShowDelivery] = useState(false);
+    const [showTax, setShowTax] = useState(false);
     const [value2, setValue2] = useState('Credit card');
-
+    const delivery = (props) => (
+        <Tooltip id="button-tooltip1" {...props} >
+            <div className='space_between'>
+                <label>Item Name</label>
+                <label>$0</label>
+            </div>
+            <div className='space_between'>
+                <label>Item Name</label>
+                <label>$0</label>
+            </div>
+            <div className='space_between'>
+                <label>Item Name</label>
+                <label>$0</label>
+            </div>
+        </Tooltip>
+    );
+    const tax = (props) => (
+        <Tooltip id="button-tooltip" {...props} >
+            <div>
+                <label>Aura is required by law to collect sales tax in certain US states on behalf of our sellers. We don’t profit from this tax, and it’s not an Aura fee.</label>
+            </div>
+            
+        </Tooltip>
+    );
     const handleSendNumber = () => {
         setEnterPhoneNumber('none');
         setEnterSMS('block');
@@ -75,6 +101,12 @@ function CheckOut(props) {
 
     const handleClose = () => {
         setShowCheckout(false);
+    }
+    const handleShareDelivery = () => {
+        setShowDelivery(!showDelivery);
+    }
+    const handleShareTax = () => {
+        setShowTax(!showTax);
     }
     const handleDelivery = () => {
         switch(activeKey){
@@ -232,10 +264,6 @@ function CheckOut(props) {
         console.log('button closed');
         props.onHide(!showCheckout)
     }
-    const [showTax, setShowTax] = useState(false);
-    const targetTax = useRef(null);
-
-
 
     return (
         <>
@@ -313,24 +341,36 @@ function CheckOut(props) {
                             <label className='font12 recoleta'>$357</label>
                         </div>
                         <div className='space_between m-1'>
-                            <label className='font12_6'>Delivery</label>
+                            <div className='d-flex'>
+                                <label className='font12_6 mr-2'>Delivery </label>
+                                <OverlayTrigger
+                                    rootClose
+                                    trigger='click'
+                                    placement="bottom-start"
+                                    delay={{ show: 250, hide: 400 }}
+                                    overlay={delivery}
+                                    onExit={() => setShowDelivery(false)}
+                                >
+                                {/* <MdOutlineKeyboardArrowDown size={15} onClick={handleShareDelivery}/> */}
+                                <label className='d-flex align-items-end' onClick={handleShareDelivery}><MdOutlineKeyboardArrowDown size={20}/></label>
+                                </OverlayTrigger>
+                            </div>
                             <label className='font12 recoleta'>free</label>
                         </div>
                         <div className='space_between m-1'>
                             <div className='d-flex align-items-center font12_6' style={{gap: 10}}>
-                                <label>Tax </label>
-                                <div ref={targetTax} onClick={()=>setShowTax(!showTax)}>
-                                    <IoIosAlert size={20}/>
-                                </div>
-                                <Overlay target={targetTax.current} show={showTax} placement="right">
-                                    {(props) => (
-                                    <Tooltip id="tax" {...props}>
-                                        <div className='text-left'>
-                                        Aura is required by law to collect sales tax in certain US states on behalf of our sellers. We don’t profit from this tax, and it’s not an Aura fee. 
-                                        </div>
-                                    </Tooltip>
-                                    )}
-                                </Overlay>
+                                <label className='mr-2'>Tax </label>
+                                <OverlayTrigger
+                                    rootClose
+                                    trigger='click'
+                                    placement="right"
+                                    delay={{ show: 250, hide: 400 }}
+                                    overlay={tax}
+                                    onExit={() => setShowTax(false)}
+                                >
+                                    <label className='d-flex align-items-end' onClick={handleShareTax}><IoIosAlert size={20}/></label>
+                                </OverlayTrigger>
+                                
                             </div>
                             <label className='font12 recoleta'>$0</label>
                         </div>

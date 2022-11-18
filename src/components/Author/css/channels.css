@@ -83,7 +83,7 @@
 
 .channel_viewer {
     display: flex;
-    gap: 5px;
+    gap: 10px;
     align-items: center;
 }
 

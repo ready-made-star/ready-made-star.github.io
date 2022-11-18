@@ -99,7 +99,16 @@ function Header(props) {
     const [timer, setTimer] = useState('block');
     const [logined, setLogin] = useState(false);
     const [showMenu, setShowMenu] = useState(false);
+    const [locateView, setLocationView] = useState(true);
 
+    useEffect(() => {
+        localStorage.setItem('logined', JSON.stringify(logined));
+    }, [logined]);
+    
+    const locationView = () => {
+        setLocationView(!locateView);
+        setShowMenu(false);
+    }
 
     const handleSwitch = () => {
         toggleTheme(!theme)
@@ -306,18 +315,18 @@ function Header(props) {
                         <label className='font16 p-3' style={{ cursor: 'pointer' }}>Channels</label>
                         <div className='channel_viewer pl-3'>
                             <Link to='/'>
-                                <div className='grid_view' tabIndex="1">
+                                <div className='grid_view' tabIndex="1" onClick={()=>(setLocationView(true), setShowMenu(false))}>
                                     <MdGridView size={25} />
                                 </div>
                             </Link>
                             <Link to='/fullscreenview'>
-                                <div className='full_view' tabIndex="2">
+                                <div className='full_view' tabIndex="2" onClick={()=>(setLocationView(true), setShowMenu(false))}>
                                     <CgLaptop size={25} />
                                 </div>
                             </Link>
                             <Link to='/globemap'>
-                                <div>
-                                    <img src={theme ? location : location2} alt='' style={{ cursor: "pointer", width: 20 }} />
+                                <div onClick={locationView}>
+                                    <img src={locateView ? location2 : location} alt='' style={{ cursor: "pointer", width: 20 }} />
                                 </div>
                             </Link>
                         </div>

@@ -121,4 +121,8 @@
     .pre_image{
         width: 65px;
     }
+    .mobile_pre_images{
+        border-radius: 12px;
+        background: var(--background-color);
+    }
 }

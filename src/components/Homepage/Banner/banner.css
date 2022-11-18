@@ -87,14 +87,15 @@
     .video_player{
         display: none;
     }
+    .video_player video{
+        display: none;
+    }
     .banner_text{
         display: flex;
         margin-right: 0;
         gap:10px;
     }
-    .innerDIV {
-        transform: rotate(25deg);
-    }
+    
     .banner{
         justify-content: normal;
     }

@@ -1,5 +1,4 @@
 import './css/main.css';
-import avatar1 from '../assets/avatar1.png';
 import GraphicCard from './GraphicCard';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";

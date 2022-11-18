@@ -1,7 +1,53 @@
 import './css/main.css';
-import avatar1 from '../assets/avatar1.png';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+
+const data = [
+    {
+        avatarUrl: "/images/avatar1.png",
+        name: "Minimal",
+    },
+    {
+        avatarUrl: "/images/avatar1.png",
+        name: "Minimal",
+    },
+    {
+        avatarUrl: "/images/avatar1.png",
+        name: "Minimal",
+    },
+    {
+        avatarUrl: "/images/avatar1.png",
+        name: "Minimal",
+    },
+    {
+        avatarUrl: "/images/avatar1.png",
+        name: "Minimal",
+    },
+    {
+        avatarUrl: "/images/avatar1.png",
+        name: "Minimal",
+    },
+    {
+        avatarUrl: "/images/avatar1.png",
+        name: "Minimal",
+    },
+    {
+        avatarUrl: "/images/avatar1.png",
+        name: "Minimal",
+    },
+    {
+        avatarUrl: "/images/avatar1.png",
+        name: "Minimal",
+    },
+    {
+        avatarUrl: "/images/avatar1.png",
+        name: "Minimal",
+    },
+    {
+        avatarUrl: "/images/avatar1.png",
+        name: "Minimal",
+    },
+]
 
 function AvatarGroup() {
     let avatar_count;
@@ -16,72 +62,15 @@ function AvatarGroup() {
     return (
         <div className="avatar_group">
             <Swiper watchSlidesProgress={true} slidesPerView={avatar_count} className="mySwiper">
-                <SwiperSlide>
-                    <div style={{cursor:"pointer"}}>
-                        <img src={avatar1} alt='' style={{ width:'100%', clipPath: "circle()" }}  />
-                        <div>Minimal</div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div style={{cursor:"pointer"}}>
-                        <img src={avatar1} alt='' style={{ width:'100%', clipPath: "circle()" }}  />
-                        <div>Minimal</div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div style={{cursor:"pointer"}}>
-                        <img src={avatar1} alt='' style={{ width:'100%', clipPath: "circle()" }}  />
-                        <div>Minimal</div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div style={{cursor:"pointer"}}>
-                        <img src={avatar1} alt='' style={{ width:'100%', clipPath: "circle()" }}  />
-                        <div>Minimal</div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div style={{cursor:"pointer"}}>
-                        <img src={avatar1} alt='' style={{ width:'100%', clipPath: "circle()" }}  />
-                        <div>Minimal</div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div style={{cursor:"pointer"}}>
-                        <img src={avatar1} alt='' style={{ width:'100%', clipPath: "circle()" }}  />
-                        <div>Minimal</div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div style={{cursor:"pointer"}}>
-                        <img src={avatar1} alt='' style={{ width:'100%', clipPath: "circle()" }}  />
-                        <div>Minimal</div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div style={{cursor:"pointer"}}>
-                        <img src={avatar1} alt='' style={{ width:'100%', clipPath: "circle()" }}  />
-                        <div>Minimal</div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div style={{cursor:"pointer"}}>
-                        <img src={avatar1} alt='' style={{ width:'100%', clipPath: "circle()" }}  />
-                        <div>Minimal</div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div style={{cursor:"pointer"}}>
-                        <img src={avatar1} alt='' style={{ width:'100%', clipPath: "circle()" }}  />
-                        <div>Minimal</div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div style={{cursor:"pointer"}}>
-                        <img src={avatar1} alt='' style={{ width:'100%', clipPath: "circle()" }}  />
-                        <div>Minimal</div>
-                    </div>
-                </SwiperSlide>
+                {data.map((item) => (
+                    <SwiperSlide>
+                        <div style={{ cursor: "pointer" }}>
+                            <img src={item.avatarUrl} alt='' />
+                            <div>{item.name}</div>
+                        </div>
+                    </SwiperSlide>
+                ))}
+
             </Swiper>
         </div>
     )

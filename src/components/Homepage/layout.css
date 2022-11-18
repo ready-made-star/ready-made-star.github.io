@@ -22,7 +22,7 @@
 .home_main{
     padding: 28px;
     width:calc(100% - var(--filter_width));
-    height: 91%;
+    min-height: 91%;
     display: flex;
     gap: 5%;
     margin-left: var(--filter_width);

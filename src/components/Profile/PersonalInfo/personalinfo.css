@@ -114,23 +114,30 @@
 }
 
 @media screen and (max-width: 680px) {
+
     .personal_info1 {
         margin-left:0;
         width: 100%;
+        padding: 0 30px;
     }
+
     .personal_info2 {
         /* margin-left:0; */
         width: 100%;
+        padding: 30px;
+        padding-bottom: 150px;
     }
+
     .personal_info{
         display: block;
     }
+
     .save_buttons{
         margin: 0;
         justify-content: space-between;
         position: fixed;
         bottom: 0;
         width: 100%;
-        background: black;
+        background: var(--background-color);
     }
 }

@@ -13,6 +13,8 @@ import ellipse2 from '../assets/ellipse2.png';
 import presale2 from '../assets/presal2.png';
 import raffle2 from '../assets/raffle2.png';
 import pin2 from '../assets/pin2.png';
+import dove from '../assets/dove.png';
+import dove2 from '../assets/dove2.png';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Button from 'react-bootstrap/Button';
 import Tooltip from 'react-bootstrap/Tooltip';
@@ -62,13 +64,16 @@ function ProfileCard(props) {
                     <div className='profile_header'>
                         <div>
                             <div className='font16' style={{fontFamily: 'Vulf Sans Demo'}}>Alan Kingdom</div>
-                            <div className='font12_6'>@alankingdom</div>
+                            <div className='d-flex' style={{gap:5}}>
+                                <img src={theme? dove2 : dove} alt='dove' style={{width: 20, height:20}}/>
+                                <label className='font12_6'>@alankingdom</label>
+                            </div>
                         </div>
-                        <div style={{ display: 'flex', gap: 10 }}>
+                        <div className='profile_buttons'>
                             <div>
                                 <button className='profile_connect' style={{ cursor: "pointer" }}>Connect</button>
                             </div>
-                            <div>
+                            <div className='d-flex justify-content-end'>
                                 <OverlayTrigger
                                     rootClose
                                     trigger='click'
@@ -117,11 +122,11 @@ function ProfileCard(props) {
                     <div className='state_second_part'>
                         <div className='space_between' style={{ padding: '12px 24px 5px' }}>
                             <div className='font12'>Connections</div>
-                            <div className='font20'>2.0K</div>
+                            <div className='type_value font20'>2.0K</div>
                         </div>
                         <div className='space_between' style={{ padding: '12px 24px 5px' }}>
                             <div className='font12'>Drops</div>
-                            <div className='font20'>734</div>
+                            <div className='font20 type_value'>734</div>
                         </div>
                     </div>
                 </div>

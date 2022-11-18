@@ -145,7 +145,7 @@
     .passport{
         margin-left: 0;
         width: 100%;
-        padding: 50px 24px;
+        padding: 50px 14px;
     }
     .pass_main{
         width:100%;
@@ -153,6 +153,7 @@
     }
     .pass_front{
         display: grid !important;
+        background-position: -61% 125%;
     }
     .pass_info1{
         order: 2;

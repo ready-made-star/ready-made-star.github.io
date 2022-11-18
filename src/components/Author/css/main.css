@@ -73,6 +73,11 @@
     width: 100%;
 }
 
+.profile_buttons {
+    display: flex;
+    gap: 10px
+}
+
 .person_content {
     text-align: left;
     padding-top: 12px;
@@ -143,6 +148,7 @@
     line-height: 18px;
     color: var(--font_color2);
 }
+
 .font12_6 {
     font-family: 'Vulf Sans Demo';
     font-style: normal;
@@ -219,6 +225,15 @@
     font-weight: 700;
     font-size: 24px;
     line-height: 32px;
+}
+
+.font18 {
+    font-family: 'Recoleta';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFFFFF;
 }
 
 .avatar_group {
@@ -301,6 +316,15 @@
     border-radius: 5px;
     color: var(--font_color);
     padding: 18px 16px;
+    /* margin-top: 15px; */
+}
+#button-tooltip1 {
+    width: 150px;
+    background-color: var(--background-color);
+    border: 1px solid var(--font_color2);
+    border-radius: 5px;
+    color: var(--font_color);
+    padding: 10px 10px;
     /* margin-top: 15px; */
 }
 
@@ -386,47 +410,65 @@
     gap: 20px;
 }
 
-.profile_date{
+.profile_date {
     display: flex;
     gap: 5px;
 }
 
-.state_first_part{
+.state_first_part {
     min-height: 50%;
     border-bottom: 1px var(--font_color2) solid;
     display: grid;
     align-items: center;
 }
-.state_second_part{
+
+.state_second_part {
     display: grid;
     align-items: center;
 }
 
-.profile_item{
+.profile_item {
     display: flex;
     align-items: center;
     gap: 7px;
     margin: 10px 0;
 }
-@media screen and (min-width: 681px) and (max-width: 1200px){
-    .state_value{
+
+@media screen and (min-width: 681px) and (max-width: 1200px) {
+    .state_value {
         display: block;
-        padding:0 24px;
+        padding: 0 24px;
     }
-    .profile_date{
-        display:block;
+
+    .profile_date {
+        display: block;
     }
-    .person_content{
+
+    .person_content {
         width: 100%;
     }
-    .main{
+
+    .main {
         padding: 10px;
     }
-    .location{
+
+    .location {
         padding: 7px 10px;
     }
 }
+
 @media screen and (max-width: 680px) {
+
+    .type_value {
+        font-size: 16px;
+    }
+
+    .profile_buttons {
+        display: grid;
+        gap: 2px;
+        justify-content: end;
+    }
+
     .desktop_version {
         display: none
     }
@@ -434,6 +476,7 @@
     .main {
         display: block;
         margin-left: 0px;
+        padding: 28px 14px;
     }
 
     .main_first_part {
@@ -447,7 +490,7 @@
     }
 
     .profile_description {
-        width: 87%;
+        width: 100%;
         border: none;
     }
 
@@ -457,8 +500,7 @@
     }
 
     .profile_header {
-        margin-left: 42%;
-        width: 80%;
+        padding-left: 34%;
     }
 
     .person_content {

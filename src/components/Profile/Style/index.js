@@ -118,7 +118,7 @@ function Style() {
                     <button className='cancel_button'>Cancel</button>
                 </div>
             </div>
-            <img className='mobile_spotify' src={spotify} alt='spotify' style={{ bottom: '14%' }} />
+            <img className='mobile_spotify' src={spotify} alt='spotify' style={{ bottom: 120 }} />
         </>
     )
 }

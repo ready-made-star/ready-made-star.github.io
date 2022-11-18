@@ -5,7 +5,7 @@ function Creators() {
     return (
         <>
             <div className="location" style={{ marginTop: 20 }}>
-                <div className='font20' style={{cursor:"pointer"}}>Similar creators</div>
+                <div className='font20 mb-3' style={{cursor:"pointer"}}>Similar creators</div>
                 <div className='desktop_version'>
                     <div style={{ display: 'flex', marginTop: 9, gap: 10, cursor:"pointer" }}>
                         <img src={creator1} alt='' />
@@ -30,7 +30,7 @@ function Creators() {
                 </div>
 
                 <div className='mobile_version'>
-                    <Swiper watchSlidesProgress={true} slidesPerView={3} className="mySwiper">
+                    <Swiper watchSlidesProgress={true} slidesPerView={2} className="mySwiper">
                         <SwiperSlide>
                             <div style={{display: 'flex', gap: 5}}>
                                 <img src={creator1} alt='' />

@@ -20,11 +20,11 @@ function OrderedProduct(props) {
     }
 
     return (
-        <div className='d-flex align-items-center' style={{ gap: 20 }}>
+        <div className='d-flex align-items-center product_row'>
             <MdClose style={{ cursor: "pointer" }} />
             <img src={order_icon} alt='' />
             <div style={{ display: 'grid' }}>
-                <label className='font12_2'>Brand name</label>
+                <label className='font12_2 p-1'>Brand name</label>
                 <label className='font14_w4 p-1'>Item name</label>
                 <div className='p-1' style={{ display: 'flex', gap: 5 }}>
                     <img src={theme ? decrease : decrease2} alt="test" onClick={handleDecrease} style={{ cursor: "pointer" }} />
@@ -33,9 +33,9 @@ function OrderedProduct(props) {
                 </div>
 
             </div>
-            <div className='text-center' style={{ display: 'flex', gap: 10 }}>
+            <div className='text-left' style={{ display: 'flex', gap: 10 }}>
                 <div>
-                    <div style={{ display: 'flex', gap: 10 }}>
+                    <div className='text-center' style={{ display: 'flex', gap: 10 }}>
                         <div style={{ display: 'grid' }}>
                             <label className='font12_6'>Size</label>
                             <label>L</label>

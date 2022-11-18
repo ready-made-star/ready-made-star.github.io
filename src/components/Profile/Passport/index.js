@@ -27,7 +27,7 @@ function Passport() {
             <div className='pass_info1'>
               <div className='d-flex pass_row'>
                 <div className='pass_item'>
-                  <label className='pass_title'>Full Name</label>
+                  <label className='pass_title'>FullName</label>
                   <label className='pass_content'>Dmytro Ryzo</label>
                 </div>
                 <div className='pass_item'>
@@ -35,7 +35,7 @@ function Passport() {
                   <label className='pass_content'>Hwameng</label>
                 </div>
                 <div className='pass_item'>
-                  <label className='pass_title'>Birthday</label>
+                  <label className='pass_title'>DOB</label>
                   <label className='pass_content'>1/21/1993</label>
                 </div>
               </div>
@@ -88,7 +88,7 @@ function Passport() {
                 </div>
               </div>
               <div className='barcode'>
-                <img className='w-100 h-100' src={pass_2code} alt='barcode' />
+                <img style={{width:'100%', height: 'auto', aspectRatio: '1/1'}} src={pass_2code} alt='barcode' />
               </div>
             </div>
           </div>

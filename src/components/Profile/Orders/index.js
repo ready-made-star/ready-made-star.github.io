@@ -213,10 +213,10 @@ function PersonalInfo(props) {
                             <label className='font12'>ORDER #123456</label>
                         </div>
                         <div className='delivery'>
-                            <div style={{ width: 55 }}>
+                            <div style={{ width: 55, display:'grid' }}>
                                 <img src="/images/step11.png" alt='' className='w-100' />
                                 <label className='font12'>Confirmed</label>
-                                <label className='font12'>Jun 3</label>
+                                <label className='font12' style={{margin:'auto'}}>Jun 3</label>
                             </div>
                             <StepLine1 />
                             <div style={{ width: 55, display: 'grid' }}>
@@ -289,10 +289,10 @@ function PersonalInfo(props) {
                             <label className='font12'>ORDER #123456</label>
                         </div>
                         <div className='delivery'>
-                            <div style={{ width: 55 }}>
+                            <div style={{ width: 55, display: 'grid' }}>
                                 <img src="/images/step11.png" alt='' className='w-100' />
                                 <label className='font12'>Confirmed</label>
-                                <label className='font12'>Jun 3</label>
+                                <label className='font12' style={{margin:'auto'}}>Jun 3</label>
                             </div>
                             <StepLine1 />
                             <div style={{ width: 55, display: 'grid' }}>

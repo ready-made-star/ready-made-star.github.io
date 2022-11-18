@@ -1,4 +1,4 @@
 .globemap{
     margin-left: var(--filter_width);
-    width: calc(100% - var(--filter_width));
+    width: calc(82% - var(--filter_width));
 }

@@ -5,7 +5,7 @@ import pin from '../../assets/pin.png';
 import close from '../../assets/close.svg';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Drawer, Button } from 'antd';
 import video_image from '../../assets/video_image.png';
 import arrow from '../../assets/arrow.png';
@@ -16,11 +16,14 @@ import user_avatar from '../../assets/user_avatar.png';
 import empty_location from '../../assets/empty_location.png';
 import video_play from '../../assets/video_play.svg';
 import heart from '../../assets/heart.svg';
+import heart2 from '../../assets/heart2.svg';
 import pre_front from '../../assets/pre_front.png';
 import pre_left from '../../assets/pre_left.png';
 import pre_back from '../../assets/pre_back.png';
 import pre_right from '../../assets/pre_right.png';
 import Video from '../Video';
+import Notification from '../../Notification';
+import LoginedNoti from '../../Notification/LoginedNoti';
 import Checkout from '../../Checkout';
 import './productcard.css';
 import { TbPin } from 'react-icons/tb';
@@ -38,12 +41,16 @@ function ProductCard(props) {
     const { theme } = { ...props };
     const [showCard, setShowCard] = useState(false);
     const [showVideo, setShowVideo] = useState(false);
+    const [showNotification, setShowNotification] = useState(false);
+    const [showLoginedNotification, setShowLoginedNotification] = useState(false);
     const [showPlayButton1, setShowPlayButton1] = useState('none');
     const [showPlayButton2, setShowPlayButton2] = useState('none');
     const [map, setMap] = useState(false);
     // const [drawerSize, setDrawerSize] = useState(1000);
     // const [mobileView, setMobileView] = useState(false)
     const [show, setShow] = useState(false);
+    const [logined, setLogin] = useState(false);
+    const [favor, setFavor] = useState(false);
     const handleShare = () => {
         setShow(!show);
     }
@@ -88,6 +95,10 @@ function ProductCard(props) {
         // alert(showVideo);
         setShowVideo(true);
     }
+    const handleNotification = () => {
+        // alert(showVideo);
+        setShowNotification(true);
+    }
     const handlePlayBtn1 = (e) => {
         e.preventDefault();
         e.stopPropagation()
@@ -99,6 +110,21 @@ function ProductCard(props) {
     const handleMap = () => {
         setMap(true);
     }
+    const handleFavorite = () =>{
+        if(logined) {
+            setFavor(!favor);
+            setShowLoginedNotification(!showLoginedNotification);
+        }
+        else{
+            setShowNotification(!showNotification);
+        }
+    }
+    
+    useEffect(() => {
+        const logined1 = JSON.parse(localStorage.getItem('logined'));
+        setLogin(logined1);
+    }, [logined]);
+    
     return (
         <>
             <div className='graphic_card'>
@@ -128,10 +154,12 @@ function ProductCard(props) {
                         </div>
                         <div className='space_between p-1'>
                             <label className='font10_2'>Drop from</label>
-                            <div className='d-flex align-items-center' style={{ gap: 10 }}>
-                                <label>{props.creator_name}</label>
-                                <div><img src={props.creator_icon} alt='' style={{ width: 30, height: 30 }} /></div>
-                            </div>
+                            <Link to='/profile/personalinfo'>
+                                <div className='d-flex align-items-center' style={{ gap: 10 }}>
+                                    <label>{props.creator_name}</label>
+                                    <div><img src={props.creator_icon} alt='' style={{ width: 30, height: 30 }} /></div>
+                                </div>
+                            </Link>
                         </div>
                     </div>
                 </Card>
@@ -181,7 +209,7 @@ function ProductCard(props) {
                         </div>
 
                         <div className='space_between'>
-                            <div style={{display:'grid'}}>
+                            <div style={{ display: 'grid' }}>
                                 <label className='font16'>Dolce && Gabbana</label>
                                 <label className='font12_6'>Graffiti-print shirt jacket</label>
                             </div>
@@ -220,7 +248,7 @@ function ProductCard(props) {
                                 <Button className='size_button'>S 46</Button>
                                 <Button className='size_button'>M 17</Button>
                                 <Button className='size_button'>L 5</Button>
-                                <Button className='size_button'>XL 25</Button>
+                                <Button className='size_button'>XL25</Button>
                             </div>
                             <div className='size_part'>
                                 <div className='color_button'></div>
@@ -272,29 +300,31 @@ function ProductCard(props) {
                             <div>
                                 <label className='font12_6'>Drop from</label>
                             </div>
-                            <div className='d-flex'>
-                                <label className='font12'>Hanna Montana</label>
-                                <img src={user_avatar} alt='' style={{ marginLeft: 10 }} />
-                            </div>
+                            <Link to='/profile/personalinfo'>
+                                <div className='d-flex'>
+                                    <label className='font12'>Hanna Montana</label>
+                                    <img src={user_avatar} alt='' style={{ marginLeft: 10 }} />
+                                </div>
+                            </Link>
                         </div>
                         <div style={{ height: 100 }}></div>
                     </div>
-                    <div className='space_between add_bag_btn' style={{ background: '#EB4949', padding: 24 }}>
+                    <div className='space_between add_bag_btn'>
                         <div style={{ width: '30%', borderRight: '1px solid rgb(0,0,0,0.2)', paddingRight: 15 }}>
                             <div className='space_between'>
-                                <label>shipping</label>
-                                <label>$35</label>
+                                <label className='font12_6'>Shipping</label>
+                                <label className='font12'>$35</label>
                             </div>
                             <div className='space_between'>
-                                <label>total</label>
-                                <label className='font20'>$1002</label>
+                                <label className='font12_6'>Total</label>
+                                <label className='total_price font20'>$1002</label>
                             </div>
                         </div>
                         <div>
                             <label className='font20' style={{ cursor: 'pointer' }}>add to bag</label>
                         </div>
-                        <div>
-                            <img src={heart} alt='' style={{ cursor: 'pointer' }} />
+                        <div onClick={handleFavorite}>
+                            <img src={!favor? heart: heart2} alt='' style={{ cursor: 'pointer' }} />
                         </div>
                     </div>
 
@@ -303,6 +333,14 @@ function ProductCard(props) {
                 <Video
                     show={showVideo}
                     onHide={() => setShowVideo(false)}
+                />
+                <Notification
+                    show={showNotification}
+                    onHide={() => setShowNotification(false)}
+                />
+                <LoginedNoti
+                    show={showLoginedNotification}
+                    onHide={() => setShowLoginedNotification(false)}
                 />
                 <MapWrapper
                     show={map}

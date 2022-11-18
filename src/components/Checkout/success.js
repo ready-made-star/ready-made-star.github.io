@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import './checkout.css';
 import close from '../../components/assets/close.svg';
 import success from '../../components/assets/success.png';
+import success2 from '../../components/assets/success2.png';
 
 function Success(props) {
     
@@ -19,7 +20,7 @@ function Success(props) {
             <Modal.Body>
                 <img src={close} alt='' className='close_login' onClick={() =>   props.onHide(false)} style={{ cursor: "pointer" }}/>
                 <div>
-                    <img className='d-flex' style={{margin:'auto'}} src={success} alt='' />
+                    <img className='d-flex' style={{margin:'auto'}} src={success2} alt='' />
                     <div className='font20 p-4 text-center'><label>Payment Received</label></div>
                     <div className='success_footer text-center font16' onClick={() =>  props.onHide(false)} style={{ cursor: "pointer" }}>OK</div>
                 </div>

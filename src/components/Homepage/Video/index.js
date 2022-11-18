@@ -119,7 +119,7 @@ function Video(props) {
           </div>
 
           <div className='mobile_version'>
-            <div className='pre_images'>
+            <div className='mobile_pre_images d-flex'>
               <img className='pre_image' src={pre_back} alt='' />
               <img className='pre_image' src={pre_left} alt='' />
             </div>

@@ -12,7 +12,7 @@ class GlobalView extends Component {
     }
     render() {
         return (
-            <div className='globemap w-100'>
+            <div className='globemap'>
                 <div style={{ padding: "1rem 0" }}>
                     {/* <button
                         className="btn"

@@ -183,7 +183,7 @@ function PersonalInfo() {
                     <button className='cancel_button font16'>Cancel</button>
                 </div>
             </div>
-            <img className='mobile_spotify' src={spotify} alt='spotify' style={{ bottom: '14%' }} />
+            <img className='mobile_spotify' src={spotify} alt='spotify' style={{ bottom: 120 }} />
         </>
     )
 }

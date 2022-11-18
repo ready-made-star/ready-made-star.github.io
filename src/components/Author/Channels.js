@@ -85,22 +85,6 @@ function Channels(props) {
     const handleFilter = () => {
         showFilter(!filter);
 
-        // let element = document.querySelector('#fade_div_component');
-        // if(!filter){
-
-        //     element.className = "";
-        //     element.className ='filter animate__animated animate__fadeInLeft';
-        //     filter = !filter;
-        // }
-        // else {
-
-        //     element.className = "";
-        //     element.className ='filter animate__animated animate__fadeOutLeft';
-        //     filter = !filter;
-        // }
-
-
-
     }
 
     const onChange = () => {
